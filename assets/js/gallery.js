@@ -171,6 +171,7 @@
   function updateLightbox() {
     var item = currentItems[activeIndex];
     if (!item) return;
+    lightbox.classList.toggle("lightbox--travel", item.category !== "cosplay");
     delete lightboxImg.dataset.fallback;
     lightboxImg.src = item.src;
     lightboxImg.alt = item.alt || item.title;

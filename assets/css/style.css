@@ -3262,3 +3262,370 @@ span.chip:hover {
     margin-left: 6px;
   }
 }
+
+/* =========================================================
+   22.10 跟著菲比去旅行：旅行手帳展區
+   ========================================================= */
+
+/* 展區入口卡換成淺色旅遊票卡 */
+.museum-index__link--travel {
+  background: #f7efdf;
+  border-color: #cbbd9d;
+  color: #203a45;
+}
+
+.museum-index__link--travel .museum-index__num {
+  color: #3f7f97;
+  border-right-color: rgba(63, 127, 151, 0.25);
+}
+
+.museum-index__link--travel .museum-index__body strong {
+  color: #203a45;
+}
+
+.museum-index__link--travel .museum-index__body em {
+  color: #6a7c80;
+}
+
+.museum-index__link--travel .museum-index__body em span {
+  color: #3f7f97;
+}
+
+.museum-index__link--travel .museum-index__arrow {
+  color: #3f7f97;
+}
+
+.museum-index__link--travel:hover {
+  background: #fff9ec;
+  border-color: #b9a77d;
+}
+
+/* 兩區之間的過場：紙膠帶 + 小飛機 */
+.museum-divider i {
+  color: #9fd6e8;
+  font-size: 1rem;
+  transform: rotate(-10deg);
+}
+
+/* 淺色旅行手帳頁面（滿版紙張） */
+#travel {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(46px, 6vw, 78px) 0 clamp(50px, 6vw, 78px);
+}
+
+#travel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background-color: #f6eedd;
+  background-image: radial-gradient(
+      rgba(59, 108, 126, 0.11) 1.2px,
+      transparent 1.2px
+    ),
+    linear-gradient(180deg, #fcf6e8 0%, #f2e5cc 100%);
+  background-size: 22px 22px, 100% 100%;
+  border-top: 1px dashed rgba(45, 75, 84, 0.3);
+  border-bottom: 1px dashed rgba(45, 75, 84, 0.3);
+  z-index: -1;
+}
+
+#travel::after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  z-index: 2;
+  width: 170px;
+  height: 24px;
+  transform: translateX(-50%) rotate(-1.5deg);
+  background: rgba(248, 227, 163, 0.88);
+  border: 1px solid rgba(74, 58, 50, 0.16);
+  border-radius: 2px;
+}
+
+#travel .museum-section__head {
+  position: relative;
+  max-width: 800px;
+  color: #203a45;
+}
+
+#travel .museum-section__kicker {
+  color: #5d8fa1;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+#travel .museum-section__kicker::before,
+#travel .museum-section__kicker::after {
+  background: rgba(93, 143, 161, 0.4);
+}
+
+#travel h2 {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 0 0.12em;
+  font-family: var(--font-body);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  color: #203a45;
+  background: linear-gradient(
+    transparent 68%,
+    rgba(143, 208, 234, 0.55) 68%,
+    rgba(143, 208, 234, 0.55) 94%,
+    transparent 94%
+  );
+}
+
+#travel h2 span {
+  color: #3f7f97;
+}
+
+#travel .museum-section__desc {
+  color: #5b6f75;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+#travel .museum-section__desc span {
+  padding: 2px 11px;
+  border: 1px dashed #6f9aab;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.5);
+  color: #3f7f97;
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.travel-stamp {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border: 2px dashed #6f9aab;
+  border-radius: 50%;
+  color: #4f7e90;
+  font-family: var(--font-display);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.7;
+  text-align: center;
+  transform: rotate(8deg);
+  opacity: 0.8;
+}
+
+/* 旅行作品：拍立得 / 明信片牆 */
+#travel .gallery-grid {
+  column-gap: clamp(22px, 2.6vw, 34px);
+}
+
+#travel .photo {
+  position: relative;
+  margin: 0 0 34px;
+  padding: 10px 10px 4px;
+  background: #fffdf7;
+  border: 1px solid rgba(52, 86, 97, 0.22);
+  border-radius: 3px;
+  box-shadow: 0 14px 26px -16px rgba(32, 58, 69, 0.5);
+  transform: rotate(-0.6deg);
+}
+
+#travel .photo:nth-child(3n + 2) {
+  transform: rotate(0.7deg);
+}
+
+#travel .photo:nth-child(3n) {
+  transform: rotate(-0.25deg);
+}
+
+#travel .photo:hover {
+  transform: rotate(0) translateY(-5px);
+  box-shadow: 0 22px 36px -16px rgba(32, 58, 69, 0.55);
+}
+
+#travel .photo__tape {
+  display: block;
+  top: 7px;
+  left: 50%;
+  z-index: 3;
+  width: 74px;
+  height: 20px;
+  border-color: rgba(74, 58, 50, 0.16);
+  border-radius: 2px;
+  transform: translateX(-50%) rotate(-3deg);
+  opacity: 0.92;
+}
+
+#travel .photo:nth-child(3n + 2) .photo__tape {
+  background: rgba(143, 208, 234, 0.82);
+  transform: translateX(-50%) rotate(2.5deg);
+}
+
+#travel .photo:nth-child(3n) .photo__tape {
+  background: rgba(249, 188, 205, 0.84);
+  transform: translateX(-50%) rotate(-1.5deg);
+}
+
+#travel .photo__media {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: #fff;
+  border: 1px solid rgba(52, 86, 97, 0.14);
+  border-radius: 2px;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+#travel .photo__media::before,
+#travel .photo__media::after {
+  display: none;
+}
+
+#travel .photo__media img {
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  background: #fff;
+  transform: none !important;
+}
+
+#travel .photo__body {
+  width: 100%;
+  margin: 0;
+  padding: 9px 4px 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+  font-family: var(--font-body);
+}
+
+#travel .photo__body::before {
+  content: attr(data-category);
+  display: block;
+  margin-bottom: 3px;
+  color: #5d8fa1;
+  font-family: var(--font-display);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+#travel .photo__title {
+  margin: 0 0 2px;
+  color: #203a45;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.55;
+}
+
+#travel .photo__meta {
+  justify-content: center;
+  color: #5d7b86;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* 旅行作品的明信片燈箱 */
+.page--gallery .lightbox.lightbox--travel .lightbox__figure {
+  padding: 14px 14px 12px;
+  background: #fffdf6;
+  border: 1px solid #d9c9a5;
+  border-image: none;
+  border-radius: 4px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  font-family: var(--font-body);
+}
+
+.page--gallery .lightbox.lightbox--travel .lightbox__figure::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 92px;
+  height: 24px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: rgba(143, 208, 234, 0.82);
+  border: 1px solid rgba(47, 91, 110, 0.18);
+  border-radius: 2px;
+}
+
+.page--gallery .lightbox.lightbox--travel .lightbox__figure img {
+  border: 1px solid rgba(43, 74, 87, 0.16);
+  outline: 0;
+  border-radius: 2px;
+}
+
+.page--gallery .lightbox.lightbox--travel .lightbox__caption {
+  font-family: var(--font-body);
+  color: #203a45;
+}
+
+.page--gallery .lightbox.lightbox--travel .lightbox__caption span {
+  color: #5b727c;
+  font-style: normal;
+}
+
+.page--gallery .lightbox.lightbox--travel .lightbox__counter {
+  color: #5d8fa1;
+  font-family: var(--font-body);
+}
+
+.page--gallery .lightbox.lightbox--travel .lightbox__close,
+.page--gallery .lightbox.lightbox--travel .lightbox__nav {
+  background: #eef7fa;
+  border-color: #5f8fa0;
+  color: #203a45;
+  box-shadow: 0 4px 0 #3f6673;
+}
+
+.page--gallery .lightbox.lightbox--travel .lightbox__close:hover,
+.page--gallery .lightbox.lightbox--travel .lightbox__nav:hover {
+  background: #d9eef5;
+}
+
+@media (max-width: 980px) {
+  .travel-stamp {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  #travel {
+    padding-block: 42px 48px;
+  }
+
+  #travel::after {
+    width: 130px;
+    height: 20px;
+    top: -9px;
+  }
+
+  #travel .photo {
+    margin-bottom: 28px;
+  }
+
+  #travel .photo__title {
+    font-size: 0.9rem;
+  }
+}
