@@ -1112,9 +1112,10 @@ h3 {
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-  gap: 30px 26px;
+  display: block;
+  column-count: 4;
+  column-width: 240px;
+  column-gap: 26px;
 }
 
 .gallery-empty {
@@ -2152,10 +2153,13 @@ h3 {
     margin-left: 0;
   }
 
-  .gallery-grid,
   .game-grid {
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 26px 20px;
+  }
+
+  .gallery-grid {
+    column-gap: 20px;
   }
 
   .footer-grid {
@@ -2194,7 +2198,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .gallery-grid,
   .game-grid {
     grid-template-columns: 1fr;
   }
@@ -2367,4 +2370,650 @@ span.chip:hover {
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
+}
+
+/* 直式作品（名畫 cosplay 照片） */
+.photo__media--portrait img {
+  aspect-ratio: 3 / 4;
+}
+
+.gallery-grid .photo {
+  display: block;
+  width: 100%;
+  margin: 0 0 30px;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+
+/* =========================================================
+   22. 古典畫廊（僅 gallery.html）
+   ========================================================= */
+.page--gallery {
+  --museum-wall: #2c3d35;
+  --museum-wall-deep: #1f2c26;
+  --gilt: #c9a55d;
+  --gilt-light: #ecd8a4;
+  --gilt-deep: #8a6a2f;
+  --museum-cream: #f5edda;
+  --museum-ink: #2e2418;
+  --museum-muted: #c7b898;
+  --font-serif: "Noto Serif TC", "Songti TC", "Songti SC", "STSong",
+    "Cormorant Garamond", Georgia, serif;
+  --font-serif-display: "Cormorant Garamond", "Noto Serif TC", "Songti TC",
+    "STSong", Georgia, serif;
+
+  background-color: var(--museum-wall);
+  background-image: radial-gradient(
+      ellipse at 50% -8%,
+      rgba(255, 244, 214, 0.16),
+      transparent 55%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 0 2px,
+      transparent 2px 9px
+    ),
+    radial-gradient(rgba(0, 0, 0, 0.14) 1px, transparent 1px);
+  background-size: auto, auto, 26px 26px;
+}
+
+.page--gallery .bg-deco {
+  display: none;
+}
+
+.page--gallery ::selection {
+  background: var(--gilt);
+  color: #1d1710;
+}
+
+.page--gallery .skip-link {
+  background: var(--gilt);
+  color: #241b11;
+}
+
+/* ---------- 22.1 頁首 ---------- */
+.page--gallery .site-header {
+  background: rgba(28, 40, 34, 0.92);
+  border-bottom: 1px solid rgba(201, 165, 93, 0.3);
+}
+
+.page--gallery .brand__avatar {
+  border-color: var(--gilt);
+  box-shadow: 0 0 0 2px rgba(201, 165, 93, 0.14), 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.page--gallery .brand__text strong {
+  color: var(--gilt-light);
+}
+
+.page--gallery .brand__text small {
+  color: var(--museum-muted);
+}
+
+.page--gallery .site-nav a {
+  color: #e9dfc8;
+}
+
+.page--gallery .site-nav a:hover {
+  background: rgba(201, 165, 93, 0.16);
+  color: var(--gilt-light);
+}
+
+.page--gallery .site-nav a[aria-current="page"] {
+  background: var(--gilt);
+  color: #2a2113;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.page--gallery .site-nav a.nav-cta {
+  background: var(--museum-cream);
+  color: var(--museum-ink);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.page--gallery .site-nav a.nav-cta:hover {
+  background: #fff8e8;
+  color: var(--museum-ink);
+}
+
+.page--gallery .nav-toggle {
+  background: transparent;
+  border-color: var(--gilt);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.page--gallery .nav-toggle span {
+  background: var(--gilt-light);
+}
+
+/* ---------- 22.2 展廳標頭 ---------- */
+.museum-hero {
+  position: relative;
+  padding: clamp(42px, 6.5vw, 86px) 0 clamp(28px, 4vw, 46px);
+  text-align: center;
+}
+
+.museum-hero::after {
+  content: "";
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  bottom: 14px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 165, 93, 0.6),
+    transparent
+  );
+}
+
+.museum-hero__inner {
+  position: relative;
+}
+
+.museum-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 0 0 15px;
+  color: var(--gilt);
+  font-family: var(--font-serif-display);
+  font-size: clamp(0.68rem, 1.2vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.museum-kicker__line {
+  display: inline-block;
+  width: clamp(28px, 6vw, 86px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gilt));
+}
+
+.museum-kicker__line:last-child {
+  background: linear-gradient(90deg, var(--gilt), transparent);
+}
+
+.museum-hero h1 {
+  margin: 0 0 16px;
+  color: var(--museum-cream);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(2.35rem, 5vw, 4.2rem);
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.museum-sub {
+  margin: 0 auto 24px;
+  color: rgba(233, 223, 200, 0.78);
+  font-family: var(--font-serif);
+  font-size: clamp(0.88rem, 1.45vw, 1rem);
+  letter-spacing: 0.06em;
+  line-height: 2.1;
+}
+
+.museum-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--gilt);
+}
+
+.museum-flourish span {
+  width: clamp(44px, 8vw, 116px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gilt));
+}
+
+.museum-flourish span:last-child {
+  background: linear-gradient(90deg, var(--gilt), transparent);
+}
+
+.museum-flourish i {
+  font-style: normal;
+  font-size: 0.78rem;
+}
+
+/* ---------- 22.3 展牆與工具列 ---------- */
+.museum-room {
+  padding: clamp(18px, 3vw, 36px) 0 clamp(46px, 6vw, 80px);
+  border-top: 1px solid rgba(201, 165, 93, 0.18);
+}
+
+.museum-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 24px;
+  margin-bottom: clamp(30px, 3.6vw, 44px);
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(201, 165, 93, 0.22);
+}
+
+.page--gallery .filter-bar {
+  gap: 8px;
+  padding: 0;
+}
+
+.page--gallery .chip {
+  padding: 7px 16px;
+  border: 1px solid rgba(201, 165, 93, 0.55);
+  border-radius: 2px;
+  background: rgba(16, 26, 21, 0.3);
+  color: #ded1b4;
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  box-shadow: none;
+}
+
+.page--gallery .chip:hover {
+  background: rgba(201, 165, 93, 0.16);
+  color: var(--gilt-light);
+  transform: none;
+}
+
+.page--gallery .chip[aria-pressed="true"] {
+  background: var(--gilt);
+  border-color: var(--gilt-light);
+  color: #2a2113;
+  box-shadow: inset 0 0 0 1px rgba(255, 247, 220, 0.4);
+}
+
+.page--gallery .chip > span[aria-hidden="true"] {
+  display: none;
+}
+
+.page--gallery .chip__count {
+  background: rgba(244, 236, 219, 0.12);
+  color: inherit;
+  font-family: var(--font-serif-display);
+}
+
+.page--gallery .chip[aria-pressed="true"] .chip__count {
+  background: rgba(42, 33, 19, 0.18);
+}
+
+.page--gallery .filter-count {
+  margin-left: 0;
+  color: var(--museum-muted);
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+/* ---------- 22.4 金框與銅牌標籤 ---------- */
+.page--gallery .gallery-grid {
+  column-gap: clamp(24px, 2.6vw, 38px);
+}
+
+.page--gallery .gallery-grid .photo {
+  margin: 0 0 clamp(30px, 3vw, 44px);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.page--gallery .photo:hover {
+  transform: translateY(-4px);
+  box-shadow: none;
+}
+
+.page--gallery .photo__tape {
+  display: none;
+}
+
+.page--gallery .photo__media {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(
+    135deg,
+    #6e5226 0%,
+    #d9bd82 15%,
+    #8a6a2f 32%,
+    #f0dda9 50%,
+    #a9843f 68%,
+    #e2c789 85%,
+    #5f451f 100%
+  );
+  border: 1px solid #3f2e15;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px rgba(45, 32, 15, 0.65),
+    0 20px 36px -16px rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.page--gallery .photo__media::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(255, 247, 220, 0.22);
+  box-shadow: inset 0 0 0 2px rgba(63, 46, 21, 0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page--gallery .photo__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 247, 220, 0.35);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.page--gallery .photo__media img {
+  border: 7px solid var(--museum-cream);
+  outline: 1px solid #8a6a2f;
+  border-radius: 0;
+  background: var(--museum-cream);
+  transform: none !important;
+}
+
+.page--gallery .photo:hover .photo__media {
+  transform: translateY(-4px);
+  filter: brightness(1.04);
+  box-shadow: 0 0 0 2px rgba(45, 32, 15, 0.65),
+    0 28px 46px -16px rgba(0, 0, 0, 0.9), 0 0 30px rgba(201, 165, 93, 0.16);
+}
+
+.page--gallery .photo__body {
+  width: calc(100% - 26px);
+  margin: 13px auto 0;
+  padding: 9px 10px 8px;
+  background: linear-gradient(180deg, #fbf6e9, #f1e6cf);
+  border: 1px solid #b49a5f;
+  border-radius: 1px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.28), 0 8px 18px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  font-family: var(--font-serif);
+}
+
+.page--gallery .photo__body::before {
+  content: attr(data-category);
+  display: block;
+  margin-bottom: 3px;
+  color: var(--gilt-deep);
+  font-family: var(--font-serif-display);
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+.page--gallery .photo__title {
+  margin: 0 0 2px;
+  color: var(--museum-ink);
+  font-family: var(--font-serif);
+  font-size: 0.87rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
+}
+
+.page--gallery .photo__meta {
+  justify-content: center;
+  color: #6b5a41;
+  font-family: var(--font-serif);
+  font-size: 0.68rem;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+
+.page--gallery .photo__meta .dot {
+  opacity: 0.4;
+}
+
+/* ---------- 22.5 說明與空狀態 ---------- */
+.page--gallery .gallery-note {
+  margin-top: 28px;
+  padding: 16px 20px;
+  background: rgba(14, 23, 18, 0.34);
+  border: 1px solid rgba(201, 165, 93, 0.3);
+  border-radius: 2px;
+  color: var(--museum-muted);
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.9;
+}
+
+.page--gallery .gallery-note strong {
+  color: var(--gilt-light);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.page--gallery .gallery-empty {
+  background: rgba(14, 23, 18, 0.24);
+  border: 1px dashed rgba(201, 165, 93, 0.4);
+  border-radius: 2px;
+  color: var(--museum-muted);
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* ---------- 22.6 頁尾 ---------- */
+.page--gallery .site-footer {
+  margin-top: clamp(20px, 4vw, 46px);
+  background: var(--museum-wall-deep);
+  border-top: 1px solid rgba(201, 165, 93, 0.3);
+  padding-block: 46px 24px;
+  color: #d9cdb4;
+}
+
+.page--gallery .footer-brand strong {
+  color: var(--gilt-light);
+}
+
+.page--gallery .footer-brand p,
+.page--gallery .footer-note p {
+  color: #b7aa90;
+}
+
+.page--gallery .footer-links h4,
+.page--gallery .footer-note h4 {
+  color: var(--gilt);
+  letter-spacing: 0.2em;
+}
+
+.page--gallery .footer-links a {
+  color: #e3d7bd;
+}
+
+.page--gallery .footer-links a:hover {
+  color: var(--gilt-light);
+  text-decoration-color: rgba(201, 165, 93, 0.6);
+}
+
+.page--gallery .footer-brand img {
+  border-color: var(--gilt);
+  box-shadow: 0 0 0 2px rgba(201, 165, 93, 0.14);
+}
+
+.page--gallery .footer-bottom {
+  margin-top: 34px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(201, 165, 93, 0.2);
+  color: #a99a7e;
+}
+
+.page--gallery .footer-bottom .heart {
+  color: #d98f9f;
+}
+
+/* ---------- 22.7 博物館燈箱 ---------- */
+.page--gallery .lightbox {
+  background: rgba(7, 11, 9, 0.9);
+}
+
+.page--gallery .lightbox__figure {
+  padding: 16px 16px 14px;
+  background: var(--museum-cream);
+  border: 10px solid transparent;
+  border-image: linear-gradient(
+      135deg,
+      #f4e6c4,
+      #c9a55d 20%,
+      #8a6a2f 45%,
+      #ecd8a4 65%,
+      #7a5b28
+    )
+    1;
+  border-radius: 0;
+  box-shadow: 0 34px 80px rgba(0, 0, 0, 0.7);
+  font-family: var(--font-serif);
+}
+
+.page--gallery .lightbox__figure img {
+  max-height: 64vh;
+  border: 6px solid var(--museum-cream);
+  outline: 1px solid var(--gilt-deep);
+  border-radius: 0;
+}
+
+.page--gallery .lightbox__caption {
+  display: block;
+  padding-top: 12px;
+  color: var(--museum-ink);
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+}
+
+.page--gallery .lightbox__caption strong {
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.page--gallery .lightbox__caption span {
+  display: block;
+  margin-top: 2px;
+  color: #6b5a41;
+  font-size: 0.76rem;
+  font-style: italic;
+}
+
+.page--gallery .lightbox__counter {
+  color: var(--gilt-deep);
+  font-family: var(--font-serif-display);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+}
+
+.page--gallery .lightbox__close,
+.page--gallery .lightbox__nav {
+  background: var(--museum-cream);
+  border-color: var(--gilt-deep);
+  color: var(--museum-ink);
+  box-shadow: 0 4px 0 #5c441f;
+}
+
+.page--gallery .lightbox__close:hover,
+.page--gallery .lightbox__nav:hover {
+  background: var(--gilt-light);
+}
+
+/* ---------- 22.8 響應式 ---------- */
+@media (max-width: 980px) {
+  .page--gallery .gallery-grid {
+    column-gap: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .page--gallery .site-nav {
+    background: #1b2822;
+    border-color: var(--gilt);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .page--gallery .site-nav a {
+    color: #eadfc8;
+  }
+
+  .page--gallery .site-nav a:hover {
+    background: rgba(201, 165, 93, 0.16);
+    color: #fff6de;
+  }
+
+  .page--gallery .site-nav a[aria-current="page"] {
+    background: var(--gilt);
+    color: #2a2113;
+  }
+
+  .page--gallery .site-nav a.nav-cta {
+    background: var(--museum-cream);
+    color: var(--museum-ink);
+  }
+
+  .museum-hero {
+    padding-top: 38px;
+  }
+
+  .museum-kicker {
+    gap: 10px;
+    letter-spacing: 0.22em;
+  }
+
+  .museum-kicker__line {
+    width: 26px;
+  }
+
+  .museum-hero h1 {
+    letter-spacing: 0.04em;
+  }
+
+  .page--gallery .chip {
+    padding: 6px 13px;
+    font-size: 0.76rem;
+    letter-spacing: 0.06em;
+  }
+
+  .page--gallery .filter-count {
+    width: 100%;
+  }
+
+  .page--gallery .photo__media {
+    padding: 10px;
+  }
+
+  .page--gallery .photo__media img {
+    border-width: 5px;
+  }
+
+  .page--gallery .photo__body {
+    width: calc(100% - 16px);
+    padding: 8px 8px 7px;
+  }
+
+  .page--gallery .lightbox__figure {
+    padding: 12px 12px 10px;
+    border-width: 8px;
+  }
+
+  .page--gallery .lightbox__figure img {
+    border-width: 4px;
+    max-height: 62vh;
+  }
 }

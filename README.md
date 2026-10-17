@@ -1,6 +1,6 @@
 # Phoebe 小星球 · 菲比的相簿與遊戲小屋
 
-給 **Phoebe（菲比）** 的可愛風專屬網站：旅行相簿、世界名畫 cosplay 照片，還有 7 款可以直接玩的網頁小遊戲。
+給 **Phoebe（菲比）** 的可愛風專屬網站：一座古典畫廊風的相簿、世界名畫 cosplay 照片，還有 7 款可以直接玩的網頁小遊戲。
 純靜態網站（HTML + CSS + 原生 JavaScript），沒有建置流程、沒有後端，**可以直接放上 GitHub Pages**。
 
 ![網站預覽](assets/img/og-cover.jpg)
@@ -10,7 +10,7 @@
 ## 這個網站有什麼
 
 - **首頁**：角色主視覺、角色檔案、精選相簿、遊戲專區、小屋日記。
-- **相簿**：旅行／名畫 cosplay／日常三種分類，可篩選、點開放大、左右切換（支援鍵盤與手機滑動）。
+- **古典畫廊（相簿）**：旅行／名畫 cosplay／日常三種分類，深綠展牆、金色畫框、銅牌標籤與襯線字體；可篩選、點開放大、左右切換（支援鍵盤與手機滑動）。
 - **遊戲專區**：7 款小遊戲，手機可玩，最高分自動存在瀏覽器裡。
 - **關於菲比**：角色小檔案、小故事、網站製作方式、版權說明。
 - **404 頁**：迷路時也有可愛的畫面。
@@ -65,7 +65,7 @@ phoebe-chubby/
 │   ├── js/
 │   │   ├── site.js           # 導覽、進場動畫、最高分、小幫手
 │   │   ├── gallery-data.js   # ★ 相簿資料（要加照片改這裡）
-│   │   └── gallery.js        # 相簿篩選、燈箱
+│   │   └── gallery.js        # 古典畫廊篩選、燈箱
 │   ├── img/
 │   │   ├── phoebe/           # 角色原圖、去背圖、方形圖、頭像
 │   │   ├── gallery/          # 相簿示範插圖
@@ -88,10 +88,10 @@ phoebe-chubby/
 │       ├── jumper.js
 │       ├── 2048.js
 │       └── breakout.js
-├── photos/                   # 放你自己的真實照片（目前是空資料夾）
-│   ├── travel/
-│   ├── cosplay/
-│   └── daily/
+├── photos/                   # 你的真實照片
+│   ├── travel/               # 旅行照
+│   ├── cosplay/              # 4 件名畫 cosplay（網站用 JPEG）＋ thumbs/ 縮圖
+│   └── daily/                # 日常照
 └── tools/
     ├── make_placeholders.py  # 產生 15 張示範插圖（可重跑）
     ├── contact_sheet.jpg     # 15 張示範插圖的檢查表
@@ -103,8 +103,21 @@ phoebe-chubby/
 
 ## 換成自己的照片
 
-相簿目前放的是 **網站內建的示範插圖**（由 `tools/make_placeholders.py` 畫出來的），
-之後可以換成菲比的真實照片。有兩種做法，選一種就好。
+相簿目前混合了 **15 張網站內建的示範插圖**（由 `tools/make_placeholders.py` 畫出來）與 **4 件名畫 cosplay 作品**。
+要繼續換成自己的照片，有兩種做法，選一種就好。
+
+### 目前已加入的名畫 cosplay
+
+| 檔案（網站用） | 原始檔 | 作品 |
+| --- | --- | --- |
+| `photos/cosplay/napoleon-alps.jpg` | `photos/cosplay/01.png` | 大衛《跨越阿爾卑斯山的拿破崙》 |
+| `photos/cosplay/mona-lisa.jpg` | `photos/cosplay/03.PNG` | 達文西《蒙娜麗莎》 |
+| `photos/cosplay/girl-with-pearl-earring.jpg` | `photos/cosplay/02.png` | 維梅爾《戴珍珠耳環的少女》 |
+| `photos/cosplay/van-gogh-hat.jpg` | `photos/cosplay/04.png` | 梵谷《草帽自畫像》 |
+
+- 網站用的大圖已壓成 1400×1867、quality 85 的 JPEG；相簿卡片另外使用 `photos/cosplay/thumbs/` 裡的 600×800 縮圖。
+- 原始高解析 PNG（`01.png`～`04.png`，共約 28 MB）留在 `photos/cosplay/` 當母檔，並已寫進 `.gitignore`，不會被推上 GitHub。
+- 資料設定在 `assets/js/gallery-data.js`；新作品放在 cosplay 分類最前面，卡片的 `portrait: true` 會用 3:4 直式比例，`thumb` 指定縮圖。
 
 ### 方法一：直接覆蓋檔案（最快）
 
@@ -138,11 +151,13 @@ phoebe-chubby/
 ```js
 {
   src: "photos/travel/my-trip.jpg",   // 相對於網站根目錄
+  thumb: "photos/travel/thumbs/my-trip.jpg", // 選填：卡片縮圖
   title: "京都的楓葉",                  // 照片標題
   meta: "京都 · 清水寺 · 秋天",          // 標題下面的小字
   category: "travel",                 // travel / cosplay / daily
   demo: false,                        // 自己的照片設 false
   alt: "Phoebe 在京都清水寺前的楓葉樹下", // 給螢幕閱讀器與 SEO
+  portrait: false,                    // 直式照片設 true（卡片用 3:4）
   position: "center 40%"              // 選填：裁切時要對準的位置
 },
 ```
@@ -153,8 +168,8 @@ phoebe-chubby/
 
 ### 首頁的「最近的照片」
 
-首頁那 4 張是直接寫在 `index.html` 裡的固定內容（`assets/img/gallery/` 內的四張圖）。
-想換首頁精選照片，直接改這四個 `<img src="...">` 就好。
+首頁那 4 張是直接寫在 `index.html` 裡的固定內容，目前是新加入的 4 件名畫 cosplay（使用 `photos/cosplay/thumbs/` 縮圖、直式卡片）。
+想換首頁精選照片，直接改這四個 `<img src="...">` 與標題就好。
 
 ---
 

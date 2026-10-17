@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>相簿 · Phoebe 小星球</title>
-  <meta name="description" content="Phoebe 的旅行照片、世界名畫 cosplay 與日常生活相簿。">
-  <meta name="theme-color" content="#fff8e7">
-  <meta property="og:title" content="菲比的相簿 · Phoebe 小星球">
-  <meta property="og:description" content="旅行、名畫 cosplay、還有日常的小小收藏。">
+  <title>古典畫廊 · Phoebe 小星球</title>
+  <meta name="description" content="Phoebe 的古典畫廊：旅行風景、世界名畫 cosplay 與日常片段，以金色畫框掛在深綠色展牆上。">
+  <meta name="theme-color" content="#2c3d35">
+  <meta property="og:title" content="菲比的古典畫廊 · Phoebe 小星球">
+  <meta property="og:description" content="旅行、名畫 cosplay、還有日常的小小收藏，一起走進這座古典畫廊。">
   <meta property="og:image" content="assets/img/og-cover.jpg">
   <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="assets/img/favicon.png" sizes="64x64" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -44,28 +44,38 @@
   </header>
 
   <main id="main">
-    <header class="page-hero wrap">
-      <p class="section-kicker">PHOTO ALBUM</p>
-      <h1>菲比的相簿</h1>
-      <p>旅行途中的風景、世界名畫的 cosplay、還有平常日子裡的小碎片。<br>點一下照片，可以放大慢慢看。</p>
-      <span class="page-hero__sparkles" aria-hidden="true">✦<span>✦</span></span>
+    <header class="museum-hero">
+      <div class="wrap museum-hero__inner">
+        <p class="museum-kicker">
+          <span class="museum-kicker__line" aria-hidden="true"></span>
+          Galleria Phoebe
+          <span class="museum-kicker__line" aria-hidden="true"></span>
+        </p>
+        <h1>菲比的古典畫廊</h1>
+        <p class="museum-sub">
+          旅行風景、名畫 cosplay 與日常片段，<br>
+          靜靜掛在這面深綠色的牆上。
+        </p>
+        <div class="museum-flourish" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+      </div>
     </header>
 
-    <section class="section section--tight" aria-label="照片列表">
+    <section class="museum-room" aria-label="作品牆">
       <div class="wrap">
-        <div class="filter-bar" id="gallery-filters" role="group" aria-label="照片分類">
-          <span class="filter-count" id="gallery-count">全部照片・15 張</span>
+        <div class="museum-toolbar">
+          <div class="filter-bar filter-bar--museum" id="gallery-filters" role="group" aria-label="作品分類"></div>
+          <p class="filter-count" id="gallery-count" aria-live="polite">全部作品・19 件</p>
         </div>
 
         <div class="gallery-grid" id="gallery-grid"></div>
 
         <div class="gallery-empty" id="gallery-empty" hidden>
-          這個分類還沒有照片，等菲比拍回來就會補上啦 ♡
+          這一區暫時沒有作品，館長正在準備中。
         </div>
 
         <p class="gallery-note">
-          <strong>小小說明：</strong>相簿目前放的是網站內建的示範插圖，之後會慢慢換成真實照片。
-          如果你手邊有照片想放進來，方法寫在專案的 README 裡。
+          <strong>館藏說明：</strong>本畫廊收錄網站示範插圖與名畫 cosplay 系列；新作會陸續掛上這面牆。
+          作品點一下即可靠近欣賞。
         </p>
       </div>
     </section>
@@ -92,7 +102,7 @@
         <div class="footer-note">
           <h4>小提醒</h4>
           <p>照片與角色版權屬原作者所有，僅作粉絲分享使用。</p>
-          <p>本站示範插圖由網站內建程式繪製。</p>
+          <p>部分照片為示範插圖，部分為名畫 cosplay 作品。</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -102,7 +112,7 @@
     </div>
   </footer>
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="照片放大檢視" aria-hidden="true">
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="作品放大檢視" aria-hidden="true">
     <figure class="lightbox__figure">
       <img id="lightbox-img" alt="">
       <figcaption class="lightbox__caption">
@@ -111,8 +121,8 @@
       </figcaption>
       <p class="lightbox__counter" id="lightbox-counter"></p>
       <button class="lightbox__close" id="lightbox-close" type="button" aria-label="關閉">✕</button>
-      <button class="lightbox__nav lightbox__prev" id="lightbox-prev" type="button" aria-label="上一張">‹</button>
-      <button class="lightbox__nav lightbox__next" id="lightbox-next" type="button" aria-label="下一張">›</button>
+      <button class="lightbox__nav lightbox__prev" id="lightbox-prev" type="button" aria-label="上一件作品">‹</button>
+      <button class="lightbox__nav lightbox__next" id="lightbox-next" type="button" aria-label="下一件作品">›</button>
     </figure>
   </div>
 

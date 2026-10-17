@@ -82,7 +82,7 @@
         setFilter(cat.id);
       });
 
-      filterBar.insertBefore(button, countEl);
+      filterBar.appendChild(button);
     });
   }
 
@@ -101,8 +101,8 @@
   }
 
   function updateCount() {
-    var label = activeFilter === "all" ? "全部照片" : categoryLabel[activeFilter] || "照片";
-    countEl.textContent = label + "・" + currentItems.length + " 張";
+    var label = activeFilter === "all" ? "全部作品" : categoryLabel[activeFilter] || "作品";
+    countEl.textContent = label + "・" + currentItems.length + " 件";
     if (emptyEl) {
       if (currentItems.length === 0) emptyEl.removeAttribute("hidden");
       else emptyEl.setAttribute("hidden", "");
@@ -113,6 +113,7 @@
   function buildCard(item, index) {
     var card = document.createElement("article");
     card.className = "photo";
+    card.dataset.category = item.category || "";
 
     var tape = document.createElement("span");
     tape.className = "photo__tape";
@@ -121,17 +122,36 @@
 
     var media = document.createElement("button");
     media.type = "button";
-    media.className = "photo__media";
-    media.setAttribute("aria-label", "放大照片：" + item.title);
+    media.className = "photo__media" + (item.portrait ? " photo__media--portrait" : "");
+    media.setAttribute("aria-label", "放大作品：" + item.title);
 
     var image = document.createElement("img");
     image.alt = item.alt || item.title;
     image.loading = "lazy";
-    image.width = 1200;
-    image.height = 900;
+    image.width = item.portrait ? 600 : 1200;
+    image.height = item.portrait ? 800 : 900;
     if (item.position) image.style.objectPosition = item.position;
-    image.src = item.src;
+    image.src = item.thumb || item.src;
+
+    var attempts = 0;
     image.addEventListener("error", function () {
+      attempts += 1;
+
+      /* 第一次失敗：等一下再試一次（偶發的連線問題） */
+      if (attempts === 1) {
+        window.setTimeout(function () {
+          var retrySrc = image.currentSrc || image.src;
+          image.src = retrySrc + (retrySrc.indexOf("?") >= 0 ? "&" : "?") + "retry=1";
+        }, 500);
+        return;
+      }
+
+      /* 縮圖失敗就換大圖 */
+      if (attempts === 2 && item.thumb && item.src !== item.thumb) {
+        image.src = item.src;
+        return;
+      }
+
       if (media.classList.contains("is-missing")) return;
       media.classList.add("is-missing");
       image.remove();
@@ -149,6 +169,7 @@
 
     var body = document.createElement("div");
     body.className = "photo__body";
+    body.dataset.category = item.category || "";
 
     var title = document.createElement("h3");
     title.className = "photo__title";
@@ -306,7 +327,7 @@
     if (lightboxImg.dataset.fallback === "1") return;
     lightboxImg.dataset.fallback = "1";
     lightboxImg.src = FALLBACK_IMAGE;
-    lightboxImg.alt = "這張照片還在準備中";
+    lightboxImg.alt = "這件作品還在準備中";
   });
 
   /* ---------- 初始化 ---------- */

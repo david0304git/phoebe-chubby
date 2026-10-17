@@ -2,3 +2,9 @@
 .preview/
 __pycache__/
 *.pyc
+
+# 相簿原始高解析 PNG（網站用 photos/cosplay/ 的優化 JPEG）
+photos/cosplay/01.png
+photos/cosplay/02.png
+photos/cosplay/03.PNG
+photos/cosplay/04.png

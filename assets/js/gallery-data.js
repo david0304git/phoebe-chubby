@@ -9,6 +9,8 @@
    - demo     是否是網站內建的示範插圖（true / false）
    - alt      圖片替代文字（給螢幕閱讀器與 SEO）
    - position 選填，CSS object-position，例如 "center 30%"
+   - thumb    選填，相簿卡片用的縮圖（沒有就載入 src）
+   - portrait 選填，直式照片設 true，卡片會用 3:4 比例顯示
    ========================================================= */
 window.PHOEBE_GALLERY = {
   // 把真實照片換好之後，改成 false 就不會顯示「示範圖」小標
@@ -71,6 +73,46 @@ window.PHOEBE_GALLERY = {
       alt: "Phoebe 在阿爾卑斯雪山與雪松之間"
     },
     {
+      src: "photos/cosplay/napoleon-alps.jpg",
+      thumb: "photos/cosplay/thumbs/napoleon-alps.jpg",
+      portrait: true,
+      title: "名畫 cosplay：跨越阿爾卑斯山",
+      meta: "大衛《跨越阿爾卑斯山的拿破崙》· 1801",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 扮成拿破崙，騎著白馬、披著紅色披風跨越阿爾卑斯山"
+    },
+    {
+      src: "photos/cosplay/mona-lisa.jpg",
+      thumb: "photos/cosplay/thumbs/mona-lisa.jpg",
+      portrait: true,
+      title: "名畫 cosplay：蒙娜麗莎（寫實版）",
+      meta: "達文西《蒙娜麗莎》· 1503",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 扮成蒙娜麗莎，穿著深色長袍、背景是文藝復興風景"
+    },
+    {
+      src: "photos/cosplay/girl-with-pearl-earring.jpg",
+      thumb: "photos/cosplay/thumbs/girl-with-pearl-earring.jpg",
+      portrait: true,
+      title: "名畫 cosplay：戴珍珠耳環的少女（寫實版）",
+      meta: "維梅爾《戴珍珠耳環的少女》· 1665",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 扮成戴珍珠耳環的少女，藍色頭巾、深色背景與珍珠耳環"
+    },
+    {
+      src: "photos/cosplay/van-gogh-hat.jpg",
+      thumb: "photos/cosplay/thumbs/van-gogh-hat.jpg",
+      portrait: true,
+      title: "名畫 cosplay：梵谷的草帽",
+      meta: "梵谷《草帽自畫像》· 1887",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 戴著草帽、藍色領巾，以梵谷厚塗筆觸畫成的自畫像風格"
+    },
+    {
       src: "assets/img/gallery/cosplay-starry-night.jpg",
       title: "名畫 cosplay：星夜",
       meta: "梵谷《星夜》· 1889",
@@ -88,7 +130,7 @@ window.PHOEBE_GALLERY = {
     },
     {
       src: "assets/img/gallery/cosplay-mona-lisa.jpg",
-      title: "名畫 cosplay：蒙娜麗莎",
+      title: "名畫 cosplay：蒙娜麗莎（插畫版）",
       meta: "達文西《蒙娜麗莎》· 1503",
       category: "cosplay",
       demo: true,
@@ -104,7 +146,7 @@ window.PHOEBE_GALLERY = {
     },
     {
       src: "assets/img/gallery/cosplay-pearl.jpg",
-      title: "名畫 cosplay：戴珍珠耳環的少女",
+      title: "名畫 cosplay：戴珍珠耳環的少女（插畫版）",
       meta: "維梅爾《戴珍珠耳環的少女》· 1665",
       category: "cosplay",
       demo: true,
