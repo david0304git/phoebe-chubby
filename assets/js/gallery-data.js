@@ -97,10 +97,10 @@ window.PHOEBE_GALLERY = {
       thumb: "photos/cosplay/thumbs/painter-phoebe.jpg",
       portrait: true,
       title: "畫家菲比",
-      meta: "維傑·勒布倫《戴草帽的自畫像》風格 · 1782",
+      meta: "約書亞·雷諾茲《自畫像》· 約 1747–1749",
       category: "cosplay",
       demo: false,
-      alt: "Phoebe 戴著草帽、手持畫筆，扮成古典畫家"
+      alt: "Phoebe 戴著草帽、手持畫筆，扮成約書亞·雷諾茲的自畫像"
     },
     {
       src: "photos/cosplay/milkmaid.jpg",
@@ -111,6 +111,16 @@ window.PHOEBE_GALLERY = {
       category: "cosplay",
       demo: false,
       alt: "Phoebe 扮成倒牛奶的女僕，在廚房裡倒牛奶"
+    },
+    {
+      src: "photos/cosplay/scream.jpg",
+      thumb: "photos/cosplay/thumbs/scream.jpg",
+      portrait: true,
+      title: "吶喊菲比",
+      meta: "孟克《吶喊》· 1893",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 扮成孟克《吶喊》裡的人物，在橋上摀著臉尖叫"
     },
     {
       src: "photos/cosplay/salvator-mundi.jpg",
@@ -161,46 +171,6 @@ window.PHOEBE_GALLERY = {
       category: "cosplay",
       demo: false,
       alt: "Phoebe 戴著草帽、藍色領巾，以梵谷厚塗筆觸畫成的自畫像風格"
-    },
-    {
-      src: "assets/img/gallery/cosplay-starry-night.jpg",
-      title: "菲比的星夜",
-      meta: "梵谷《星夜》· 1889",
-      category: "cosplay",
-      demo: true,
-      alt: "Phoebe 扮成梵谷星夜裡的主角，周圍是藍色漩渦星空"
-    },
-    {
-      src: "assets/img/gallery/cosplay-scream.jpg",
-      title: "菲比的吶喊",
-      meta: "孟克《吶喊》· 1893",
-      category: "cosplay",
-      demo: true,
-      alt: "Phoebe 站在孟克吶喊的橘色波浪天空與橋上"
-    },
-    {
-      src: "assets/img/gallery/cosplay-mona-lisa.jpg",
-      title: "蒙娜菲比（插畫版）",
-      meta: "達文西《蒙娜麗莎》· 1503",
-      category: "cosplay",
-      demo: true,
-      alt: "Phoebe 扮成蒙娜麗莎，背景是文藝復興風格的風景"
-    },
-    {
-      src: "assets/img/gallery/cosplay-sunflowers.jpg",
-      title: "菲比的向日葵",
-      meta: "梵谷《向日葵》· 1888",
-      category: "cosplay",
-      demo: true,
-      alt: "Phoebe 在梵谷向日葵畫作的暖黃色背景前"
-    },
-    {
-      src: "assets/img/gallery/cosplay-pearl.jpg",
-      title: "戴珍珠耳環的菲比（插畫版）",
-      meta: "維梅爾《戴珍珠耳環的少女》· 1665",
-      category: "cosplay",
-      demo: true,
-      alt: "Phoebe 扮成戴珍珠耳環的少女，深色背景與藍色頭巾"
     },
     {
       src: "assets/img/gallery/daily-cafe.jpg",

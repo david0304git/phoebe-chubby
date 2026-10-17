@@ -10,9 +10,10 @@
 ## 這個網站有什麼
 
 - **首頁**：角色主視覺、角色檔案、精選相簿、遊戲專區、小屋日記。
-- **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 14 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（旅行＋旅途日常 10 件，淺色旅行手帳＋拍立得＋紙膠帶）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
+- **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 10 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（旅行＋旅途日常 10 件，淺色旅行手帳＋拍立得＋紙膠帶）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
 - **遊戲專區**：7 款小遊戲，手機可玩，最高分自動存在瀏覽器裡。
 - **關於菲比**：角色小檔案、小故事、網站製作方式、版權說明。
+- **語言切換**：繁體中文、简体中文、English、日本語、한국어；頁首可切換，選擇會存在瀏覽器，套用到全站與遊戲頁。
 - **404 頁**：迷路時也有可愛的畫面。
 - 全部頁面都是響應式，支援減少動效（`prefers-reduced-motion`）。
 
@@ -64,6 +65,8 @@ phoebe-chubby/
 │   │   └── games.css         # 遊戲頁與遊戲棋盤共用樣式
 │   ├── js/
 │   │   ├── site.js           # 導覽、進場動畫、最高分、小幫手
+│   │   ├── i18n.js           # 語言切換器與翻譯套用邏輯
+│   │   ├── i18n/             # 繁中以外的語言檔（zh-Hans / en / ja / ko）
 │   │   ├── gallery-data.js   # ★ 相簿資料（要加照片改這裡）
 │   │   └── gallery.js        # 古典畫廊兩展區、燈箱
 │   ├── img/
@@ -90,12 +93,13 @@ phoebe-chubby/
 │       └── breakout.js
 ├── photos/                   # 你的真實照片
 │   ├── travel/               # 旅行照
-│   ├── cosplay/              # 4 件名畫 cosplay（網站用 JPEG）＋ thumbs/ 縮圖
+│   ├── cosplay/              # 10 件名畫 cosplay（網站用 JPEG）＋ thumbs/ 縮圖
 │   └── daily/                # 日常照
 └── tools/
     ├── make_placeholders.py  # 產生 15 張示範插圖（可重跑）
     ├── contact_sheet.jpg     # 15 張示範插圖的檢查表
     ├── build_report.txt      # 產圖報告（尺寸、角色位置）
+    ├── i18n-source.json      # 全站翻譯來源字串（397 條）
     └── browser-check.mjs     # 開發用：headless Chrome 截圖與錯誤檢查
 ```
 
@@ -103,7 +107,7 @@ phoebe-chubby/
 
 ## 換成自己的照片
 
-相簿目前混合了 **15 張網站內建的示範插圖**（由 `tools/make_placeholders.py` 畫出來）與 **4 件名畫 cosplay 作品**。
+相簿目前有 **10 件名畫 cosplay 照片**、**6 張旅行示範插圖**與 **4 張日常示範插圖**；第一展區只顯示 10 件照片，另外 5 張舊的名畫示範插圖（星夜、吶喊、蒙娜麗莎插畫、向日葵、珍珠插畫）已從古典區移出，但檔案仍保留在 `assets/img/gallery/`。
 要繼續換成自己的照片，有兩種做法，選一種就好。
 
 ### 目前已加入的名畫 cosplay
@@ -116,17 +120,19 @@ phoebe-chubby/
 | `photos/cosplay/van-gogh-hat.jpg` | `photos/cosplay/04.png` | 梵谷《草帽自畫像》 | 菲比的草帽 |
 | `photos/cosplay/unknown-woman.jpg` | `photos/cosplay/05.png` | 克拉姆斯柯依《無名女郎》 | 無名菲比 |
 | `photos/cosplay/letter-writer.jpg` | `photos/cosplay/06.png` | 古典書信肖像 · 19 世紀 | 寫信的菲比 |
-| `photos/cosplay/painter-phoebe.jpg` | `photos/cosplay/07.png` | 維傑·勒布倫《戴草帽的自畫像》風格 | 畫家菲比 |
+| `photos/cosplay/painter-phoebe.jpg` | `photos/cosplay/07.png` | 約書亞·雷諾茲《自畫像》· 約 1747–1749 | 畫家菲比 |
 | `photos/cosplay/milkmaid.jpg` | `photos/cosplay/08.png` | 維梅爾《倒牛奶的女僕》 | 倒牛奶的菲比 |
+| `photos/cosplay/scream.jpg` | `photos/cosplay/09.png` | 孟克《吶喊》 | 吶喊菲比 |
 | `photos/cosplay/salvator-mundi.jpg` | `photos/cosplay/10.png` | 達文西《救世主》 | 救世主菲比 |
 
-> 05–10 中目前收到 05、06、07、08、10 五張；`09.png` 尚未加入，補上後可以再放進第一展區。
+> 05–10 六張都已加入第一展區；五張舊的示範插圖（星夜、吶喊、蒙娜麗莎插畫、向日葵、珍珠插畫）已從古典區移出，不再顯示。
 
 作品標題採用菲比化名稱（例如「蒙娜菲比」）；下方小字保留原畫家與原畫名，方便辨識。
 
 - 網站用的大圖已壓成 1400×1867、quality 85 的 JPEG；相簿卡片另外使用 `photos/cosplay/thumbs/` 裡的 600×800 縮圖。
-- 原始高解析 PNG（`01.png`～`10.png`，共約 54 MB）留在 `photos/cosplay/` 當母檔，並已寫進 `.gitignore`，不會被推上 GitHub。
+- 原始高解析 PNG（`01.png`～`10.png`，共約 65 MB）留在 `photos/cosplay/` 當母檔，並已寫進 `.gitignore`，不會被推上 GitHub。
 - 資料設定在 `assets/js/gallery-data.js`；新作品放在 cosplay 分類最前面，卡片的 `portrait: true` 會用 3:4 直式比例，`thumb` 指定縮圖。
+- 翻譯字串在 `assets/js/i18n/<語言>.js`，以繁體中文原文為 key；要改文案時，同步更新語言檔即可。
 - 分區規則：`cosplay` 進第一展區「跟著菲比賞名畫」；`travel` 與 `daily` 進第二展區「跟著菲比去旅行」。
 
 ### 方法一：直接覆蓋檔案（最快）
@@ -141,11 +147,11 @@ phoebe-chubby/
 | `travel-okinawa.jpg` | 旅行：沖繩海邊 |
 | `travel-taipei.jpg` | 旅行：台北夜晚 |
 | `travel-alps.jpg` | 旅行：阿爾卑斯雪景 |
-| `cosplay-starry-night.jpg` | 名畫 cosplay：星夜 |
-| `cosplay-scream.jpg` | 名畫 cosplay：吶喊 |
-| `cosplay-mona-lisa.jpg` | 名畫 cosplay：蒙娜麗莎 |
-| `cosplay-sunflowers.jpg` | 名畫 cosplay：向日葵 |
-| `cosplay-pearl.jpg` | 名畫 cosplay：戴珍珠耳環的少女 |
+| `cosplay-starry-night.jpg` | 名畫 cosplay：星夜（已從古典區移出，僅保留檔案） |
+| `cosplay-scream.jpg` | 名畫 cosplay：吶喊（已從古典區移出，僅保留檔案） |
+| `cosplay-mona-lisa.jpg` | 名畫 cosplay：蒙娜麗莎（已從古典區移出，僅保留檔案） |
+| `cosplay-sunflowers.jpg` | 名畫 cosplay：向日葵（已從古典區移出，僅保留檔案） |
+| `cosplay-pearl.jpg` | 名畫 cosplay：戴珍珠耳環的少女（已從古典區移出，僅保留檔案） |
 | `daily-cafe.jpg` | 日常：咖啡廳 |
 | `daily-books.jpg` | 日常：書櫃 |
 | `daily-rain.jpg` | 日常：雨天窗邊 |

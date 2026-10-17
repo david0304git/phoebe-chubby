@@ -1,0 +1,2615 @@
+[
+  {
+    "key": "Phoebe 小星球 · 非官方粉絲網站",
+    "contexts": [
+      "404.html:text",
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "回到上一頁",
+    "contexts": [
+      "404.html:text"
+    ]
+  },
+  {
+    "key": "回小星球首頁",
+    "contexts": [
+      "404.html:text"
+    ]
+  },
+  {
+    "key": "找不到你要的頁面，可能是連結打錯了，或這頁還在旅行中還沒回來。",
+    "contexts": [
+      "404.html:text"
+    ]
+  },
+  {
+    "key": "菲比在這顆星球上迷路了",
+    "contexts": [
+      "404.html:text"
+    ]
+  },
+  {
+    "key": "404 · 迷路的菲比 · Phoebe 小星球",
+    "contexts": [
+      "404.html:title"
+    ]
+  },
+  {
+    "key": "Phoebe 的頭像",
+    "contexts": [
+      "about.html:attr:alt",
+      "index.html:attr:alt"
+    ]
+  },
+  {
+    "key": "Phoebe 小星球 首頁",
+    "contexts": [
+      "about.html:attr:aria-label",
+      "gallery.html:attr:aria-label",
+      "games.html:attr:aria-label",
+      "games/2048.html:attr:aria-label",
+      "games/breakout.html:attr:aria-label",
+      "games/catch-stars.html:attr:aria-label",
+      "games/jumper.html:attr:aria-label",
+      "games/memory.html:attr:aria-label",
+      "games/puzzle.html:attr:aria-label",
+      "games/whack.html:attr:aria-label",
+      "index.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "主要導覽",
+    "contexts": [
+      "about.html:attr:aria-label",
+      "gallery.html:attr:aria-label",
+      "games.html:attr:aria-label",
+      "games/2048.html:attr:aria-label",
+      "games/breakout.html:attr:aria-label",
+      "games/catch-stars.html:attr:aria-label",
+      "games/jumper.html:attr:aria-label",
+      "games/memory.html:attr:aria-label",
+      "games/puzzle.html:attr:aria-label",
+      "games/whack.html:attr:aria-label",
+      "index.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "和菲比說說話",
+    "contexts": [
+      "about.html:attr:aria-label",
+      "gallery.html:attr:aria-label",
+      "games.html:attr:aria-label",
+      "index.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "開啟選單",
+    "contexts": [
+      "about.html:attr:aria-label",
+      "gallery.html:attr:aria-label",
+      "games.html:attr:aria-label",
+      "games/2048.html:attr:aria-label",
+      "games/breakout.html:attr:aria-label",
+      "games/catch-stars.html:attr:aria-label",
+      "games/jumper.html:attr:aria-label",
+      "games/memory.html:attr:aria-label",
+      "games/puzzle.html:attr:aria-label",
+      "games/whack.html:attr:aria-label",
+      "index.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "關於菲比的介紹",
+    "contexts": [
+      "about.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "2024 · 相遇",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "2025 · 出發",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "2026 · 開張",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "3 月 14 日",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "Phoebe 小星球",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "Phoebe（菲比）",
+    "contexts": [
+      "about.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "「今天也要閃閃發光！」",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "不管是翻翻相簿、玩一場小遊戲，還是只是剛好路過， 都希望你能在這裡找到一點點開心的感覺。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "全部在前端執行，離線也能玩",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "前進相簿",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "口頭禪",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "名字",
+    "contexts": [
+      "about.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "喜歡的話，歡迎分享給朋友 ♡",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "在某個下雨的午后，第一次看到菲比的插畫，就這樣記住了那雙紫色的眼睛。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "奶油小可愛",
+    "contexts": [
+      "about.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "如果你想留下什麼，可以去找找菲比的小幫手（右下角那個圓圓的頭像）， 她會偷偷跟你說一些小事。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "存在你的瀏覽器裡，不會上傳",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "小提醒",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "小星球開張",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "帶著相機跑了東京、巴黎、沖繩，也慢慢學會在鏡頭前擺出最可愛的姿勢。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "我的小故事",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "把照片和遊戲搬進這個小屋，希望每個來訪的人都能笑著離開。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "擅長",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "擺姿勢拍照、名畫模仿",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "旅行、名畫 cosplay、還有好多小遊戲。",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "暱稱",
+    "contexts": [
+      "about.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "最喜歡",
+    "contexts": [
+      "about.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "最高分",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "本站為非官方粉絲網站，角色與相關作品版權屬原作者所有，無商業用途。 網站內建的示範插圖由專案的產圖腳本繪製；名畫 cosplay 作品由站長提供。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "準備好一起逛逛了嗎？",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "照片",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "照片與角色版權屬原作者所有，僅作粉絲分享使用。",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "版權說明：",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "生日",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "由 JavaScript 產生卡片，點開可以放大",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "相簿",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "相簿裡有旅行和名畫 cosplay，遊戲專區有 7 款小遊戲在等你。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "示範插圖 ＋ 名畫 cosplay 作品",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "第一次相遇",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "給來訪的你",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "網站的小秘密",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "草莓蛋糕、星星、旅行",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "菲比小星球",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "角色小檔案",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "謝謝你點開這個小小的網站。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "跳到主要內容",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "身高",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "這是一個純靜態的可愛小網站，沒有資料庫、沒有登入，也不需要下載任何東西。 打開瀏覽器就能看照片、玩遊戲。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "這裡寫著她的小檔案、小故事，還有這座小星球的製作方式。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "逛逛小屋",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "遊戲",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "遊戲專區",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "金色長髮、紫色眼睛，喜歡旅行、名畫和甜點。",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "開始到處旅行",
+    "contexts": [
+      "about.html:text"
+    ]
+  },
+  {
+    "key": "關於菲比",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "非官方粉絲網站，用愛心製作。",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "首頁",
+    "contexts": [
+      "about.html:text",
+      "gallery.html:text",
+      "games.html:text",
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "關於菲比 · Phoebe 小星球",
+    "contexts": [
+      "about.html:title"
+    ]
+  },
+  {
+    "key": "Phoebe 在古典書房裡提筆寫信",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在台北夜晚的燈籠街道上，背景是城市燈火",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在咖啡廳裡，桌上有拉花咖啡與蛋糕",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在巴黎艾菲爾鐵塔前的黃昏景色裡",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在沖繩沙灘上，背景是藍綠色的大海與棕櫚樹",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在生日派對上，有氣球、彩旗和蛋糕",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在藍天與積雪富士山前的合照",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在阿爾卑斯雪山與雪松之間",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在雨天的窗邊，窗外是模糊的城市",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 戴著草帽、手持畫筆，扮成約書亞·雷諾茲的自畫像",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 戴著草帽、藍色領巾，以梵谷厚塗筆觸畫成的自畫像風格",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 扮成《無名女郎》，坐在雪地馬車上",
+    "contexts": [
+      "assets/js/gallery-data.js:js",
+      "index.html:attr:alt"
+    ]
+  },
+  {
+    "key": "Phoebe 扮成倒牛奶的女僕，在廚房裡倒牛奶",
+    "contexts": [
+      "assets/js/gallery-data.js:js",
+      "index.html:attr:alt"
+    ]
+  },
+  {
+    "key": "Phoebe 扮成孟克《吶喊》裡的人物，在橋上摀著臉尖叫",
+    "contexts": [
+      "assets/js/gallery-data.js:js",
+      "index.html:attr:alt"
+    ]
+  },
+  {
+    "key": "Phoebe 扮成戴珍珠耳環的少女，藍色頭巾、深色背景與珍珠耳環",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 扮成拿破崙，騎著白馬、披著紅色披風跨越阿爾卑斯山",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 扮成救世主，手持水晶球",
+    "contexts": [
+      "assets/js/gallery-data.js:js",
+      "index.html:attr:alt"
+    ]
+  },
+  {
+    "key": "Phoebe 扮成蒙娜麗莎，穿著深色長袍、背景是文藝復興風景",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 站在擺滿彩色書本的書櫃前",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 站在櫻花樹下，背景是東京的紅色鳥居",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "下午的咖啡廳",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "下雨天的窗邊",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "倒牛奶的菲比",
+    "contexts": [
+      "assets/js/gallery-data.js:js",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "克拉姆斯柯依《無名女郎》· 1883",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "全部",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "古典書信肖像 · 19 世紀",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "台北 · 迪化街 · 冬夜",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "台北的燈籠夜",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "名畫 cosplay",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "吶喊菲比",
+    "contexts": [
+      "assets/js/gallery-data.js:js",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "大衛《跨越阿爾卑斯山的拿破崙》· 1801",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "孟克《吶喊》· 1893",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "富士山下的晴天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "寫信的菲比",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "巴黎 · 塞納河畔 · 秋天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "巴黎的黃昏",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "戴珍珠耳環的菲比",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "拿破菲比",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "救世主菲比",
+    "contexts": [
+      "assets/js/gallery-data.js:js",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "旅行",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "日常",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "日常 · 慶生",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "日常 · 甜點時間",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "日常 · 閱讀",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "日常 · 雨天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "書櫃前的小時光",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "東京 · 目黑川 · 春天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "梵谷《草帽自畫像》· 1887",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "櫻花季的東京",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "沖繩 · 古宇利島 · 夏天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "沖繩的海風",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "河口湖 · 山梨 · 冬天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "無名菲比",
+    "contexts": [
+      "assets/js/gallery-data.js:js",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "瑞士 · 少女峰 · 初冬",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "生日派對！",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "畫家菲比",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "約書亞·雷諾茲《自畫像》· 約 1747–1749",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "維梅爾《倒牛奶的女僕》· 1658",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "維梅爾《戴珍珠耳環的少女》· 1665",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "菲比的草帽",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "蒙娜菲比",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "達文西《救世主》· 1500",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "達文西《蒙娜麗莎》· 1503",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "阿爾卑斯的初雪",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "今天想去哪裡拍照呢？📸",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "偷偷跟你說，我最喜歡星星接接樂了 ✦",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "拍名畫的時候，記得要擺出神祕的微笑喔。",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "換照片的方法寫在 README 裡，超簡單的～",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "旅行照片放進 photos/ 資料夾就可以了！",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "最少",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "最快",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "最高",
+    "contexts": [
+      "assets/js/site.js:js",
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "最高 LV.",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "步",
+    "contexts": [
+      "assets/js/site.js:js",
+      "games/js/memory.js:js",
+      "games/js/puzzle.js:js"
+    ]
+  },
+  {
+    "key": "發呆的時候，最適合玩一場小遊戲了。",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "要不要去玩菲比拼圖？我已經在裡面了！",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "記得把這個網站加到我的最愛 ⭐",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "這個小屋是用滿滿的愛心做成的喔 ♡",
+    "contexts": [
+      "assets/js/site.js:js"
+    ]
+  },
+  {
+    "key": "還沒玩過",
+    "contexts": [
+      "assets/js/site.js:js",
+      "games.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "上一件作品",
+    "contexts": [
+      "gallery.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "下一件作品",
+    "contexts": [
+      "gallery.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "作品放大檢視",
+    "contexts": [
+      "gallery.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "展區導覽",
+    "contexts": [
+      "gallery.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "畫廊展區",
+    "contexts": [
+      "gallery.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "關閉",
+    "contexts": [
+      "gallery.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "10 件",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "件",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "件 · 兩個展區",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "分別收藏在古典展牆與旅行手帳裡。",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "去旅行",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "名畫 cosplay ·",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "從文藝復興到印象派，菲比把自己畫進世界名畫裡。",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "把旅途的風景與小日常，貼進這本旅行手帳。",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "旅行風景、名畫 cosplay 與日常片段，",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "旅行風景與旅途日常 ·",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "第一展區集結名畫 cosplay，第二展區收藏旅行風景與旅途日常。 作品點一下即可靠近欣賞，燈箱內可以用左右鍵切換。",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "菲比的古典畫廊",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "賞名畫",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "跟著菲比",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "跟著菲比去旅行",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "跟著菲比賞名畫",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "部分照片為示範插圖，部分為名畫 cosplay 作品。",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "館藏",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "館藏說明：",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "古典畫廊 · Phoebe 小星球",
+    "contexts": [
+      "gallery.html:title"
+    ]
+  },
+  {
+    "key": "小遊戲列表",
+    "contexts": [
+      "games.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "30 秒內敲中冒出頭的地鼠，小心炸彈地鼠會扣生命！",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "Phoebe 自動向前跑，按一下跳過障礙物，看你能跑多遠。",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "下一款遊戲製作中",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "全部都是免費的小網頁遊戲，手機也能玩。",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "分數只會存在你自己的瀏覽器裡（localStorage），換一台裝置或清除瀏覽資料就會歸零，不會上傳到任何地方。",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "動作",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "反應",
+    "contexts": [
+      "games.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "小提醒：",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "小菲比跳跳",
+    "contexts": [
+      "games.html:text",
+      "games/jumper.html:text"
+    ]
+  },
+  {
+    "key": "想玩什麼呢？菲比正在想下一款小遊戲，歡迎在心裡偷偷許願 ♡",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "所有遊戲都在瀏覽器裡執行，不需要註冊或下載。",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "打地鼠",
+    "contexts": [
+      "games.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "把打亂的 Phoebe 照片拼回原樣，滑動方塊就能移動，越少步數越厲害。",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "把相同數字的方塊合併，一路合到 2048 吧！支援滑動與方向鍵。",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "數字合合樂",
+    "contexts": [
+      "games.html:text",
+      "games/2048.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "星星打磚塊",
+    "contexts": [
+      "games.html:text",
+      "games/breakout.html:text"
+    ]
+  },
+  {
+    "key": "星星接接樂",
+    "contexts": [
+      "games.html:text",
+      "games/catch-stars.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "最高分會自動記在這台裝置上，來挑戰菲比的紀錄吧！",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "照片與角色版權屬原作者所有。",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "用緞帶板子接住星星球，把粉彩磚塊通通打下來，一關接著一關。",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "益智",
+    "contexts": [
+      "games.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "看看菲比",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "移動小籃子接住掉下來的星星，小心別接到炸彈！限時 45 秒。",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "翻開兩張一樣的圖案，用最少的步數把所有卡片配對完成。",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "菲比拼圖",
+    "contexts": [
+      "games.html:text",
+      "games/puzzle.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "記憶",
+    "contexts": [
+      "games.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "記憶翻翻牌",
+    "contexts": [
+      "games.html:text",
+      "games/memory.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "許願池",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "開始玩",
+    "contexts": [
+      "games.html:text",
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "🎮 7 款遊戲",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "🏆 自動記分",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "📱 手機可玩",
+    "contexts": [
+      "games.html:text"
+    ]
+  },
+  {
+    "key": "遊戲專區 · Phoebe 小星球",
+    "contexts": [
+      "games.html:title"
+    ]
+  },
+  {
+    "key": "2048 數字盤面，使用方向鍵、方向按鈕或在盤面上滑動",
+    "contexts": [
+      "games/2048.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "往上移動",
+    "contexts": [
+      "games/2048.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "往下移動",
+    "contexts": [
+      "games/2048.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "往右移動",
+    "contexts": [
+      "games/2048.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "往左移動",
+    "contexts": [
+      "games/2048.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "方向按鈕",
+    "contexts": [
+      "games/2048.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "MINI GAME · 數字",
+    "contexts": [
+      "games/2048.html:text"
+    ]
+  },
+  {
+    "key": "← 更多小遊戲",
+    "contexts": [
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "分數",
+    "contexts": [
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "合併時得到的分數就是新方塊的數值，例如 8 + 8 合併得 16 分。",
+    "contexts": [
+      "games/2048.html:text"
+    ]
+  },
+  {
+    "key": "合出 2048 就算達標，可以繼續挑戰 4096、8192。",
+    "contexts": [
+      "games/2048.html:text"
+    ]
+  },
+  {
+    "key": "回遊戲專區",
+    "contexts": [
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "怎麼玩",
+    "contexts": [
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "方向鍵、畫面上的方向按鈕，或直接在盤面上滑動都可以操作。",
+    "contexts": [
+      "games/2048.html:text"
+    ]
+  },
+  {
+    "key": "步數",
+    "contexts": [
+      "games/2048.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "用方向鍵、方向按鈕或在盤面上滑動，把相同數字的方塊合併成兩倍。合出 2048 就達標，看看你能不能更大！",
+    "contexts": [
+      "games/2048.html:text"
+    ]
+  },
+  {
+    "key": "相同數字的方塊碰在一起就會合併成兩倍，每塊每步只會合併一次。",
+    "contexts": [
+      "games/2048.html:text"
+    ]
+  },
+  {
+    "key": "繼續玩",
+    "contexts": [
+      "games/2048.html:text"
+    ]
+  },
+  {
+    "key": "重新開始",
+    "contexts": [
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/js/2048.js:js",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "開始遊戲",
+    "contexts": [
+      "games/2048.html:text",
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/jumper.html:text",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "💡 盤面沒有空位、也不能再合併時就結束了。最高分會自動存在這台裝置上。",
+    "contexts": [
+      "games/2048.html:text"
+    ]
+  },
+  {
+    "key": "數字合合樂 · Phoebe 小星球",
+    "contexts": [
+      "games/2048.html:title"
+    ]
+  },
+  {
+    "key": "星星打磚塊遊戲畫面，使用滑鼠、手指或左右方向鍵移動板子，點擊或空白鍵發球",
+    "contexts": [
+      "games/breakout.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "MINI GAME · 反應",
+    "contexts": [
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "滑鼠移動、手指拖曳，或按 ← → 鍵移動緞帶板子。",
+    "contexts": [
+      "games/breakout.html:text"
+    ]
+  },
+  {
+    "key": "生命",
+    "contexts": [
+      "games/breakout.html:text",
+      "games/catch-stars.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "移動緞帶板子接住星星球，把粉彩愛心磚塊一顆顆打下來。點擊畫面或按空白鍵發球，三條命用完就結束囉！",
+    "contexts": [
+      "games/breakout.html:text"
+    ]
+  },
+  {
+    "key": "過關有獎金，球速也會變快；球掉出畫面底部就扣 1 條命。",
+    "contexts": [
+      "games/breakout.html:text"
+    ]
+  },
+  {
+    "key": "點擊畫面或按空白鍵發球，球碰到板子會依落點改變角度。",
+    "contexts": [
+      "games/breakout.html:text"
+    ]
+  },
+  {
+    "key": "💗 每打掉一顆愛心磚 +10 分，清空全部磚塊就進入下一關。",
+    "contexts": [
+      "games/breakout.html:text"
+    ]
+  },
+  {
+    "key": "💡 共 3 條命，生命歸零遊戲就結束。分數會自動存在這台裝置上。",
+    "contexts": [
+      "games/breakout.html:text"
+    ]
+  },
+  {
+    "key": "星星打磚塊 · Phoebe 小星球",
+    "contexts": [
+      "games/breakout.html:title"
+    ]
+  },
+  {
+    "key": "星星接接樂遊戲畫面，使用滑鼠、手指或左右方向鍵移動籃子",
+    "contexts": [
+      "games/catch-stars.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "⭐ 星星 +10 分起，連續接住會加成，最高 ×3。",
+    "contexts": [
+      "games/catch-stars.html:text"
+    ]
+  },
+  {
+    "key": "接住所有星星吧！",
+    "contexts": [
+      "games/catch-stars.html:text"
+    ]
+  },
+  {
+    "key": "滑鼠移動、手指拖曳，或按 ← → 鍵移動籃子。",
+    "contexts": [
+      "games/catch-stars.html:text"
+    ]
+  },
+  {
+    "key": "移動滑鼠或手指，接住掉下來的星星。接住炸彈會扣生命，接住愛心可以補血喔！",
+    "contexts": [
+      "games/catch-stars.html:text"
+    ]
+  },
+  {
+    "key": "💗 愛心 +25 分，生命 +1（最多 5 顆）。",
+    "contexts": [
+      "games/catch-stars.html:text"
+    ]
+  },
+  {
+    "key": "💡 限時 45 秒，生命歸零或時間到就結束。分數會自動存在這台裝置上。",
+    "contexts": [
+      "games/catch-stars.html:text"
+    ]
+  },
+  {
+    "key": "💣 炸彈會扣 1 顆生命，接到的瞬間連擊會歸零。",
+    "contexts": [
+      "games/catch-stars.html:text"
+    ]
+  },
+  {
+    "key": "星星接接樂 · Phoebe 小星球",
+    "contexts": [
+      "games/catch-stars.html:title"
+    ]
+  },
+  {
+    "key": "你合出了 2048，太厲害了！可以繼續挑戰 4096、8192，也可以重新開始。",
+    "contexts": [
+      "games/js/2048.js:js"
+    ]
+  },
+  {
+    "key": "再挑戰一次吧！",
+    "contexts": [
+      "games/js/2048.js:js"
+    ]
+  },
+  {
+    "key": "再玩一次",
+    "contexts": [
+      "games/js/2048.js:js",
+      "games/js/breakout.js:js",
+      "games/js/catch-stars.js:js",
+      "games/js/jumper.js:js",
+      "games/js/memory.js:js",
+      "games/js/puzzle.js:js",
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "分",
+    "contexts": [
+      "games/js/2048.js:js",
+      "games/js/breakout.js:js",
+      "games/js/catch-stars.js:js",
+      "games/js/jumper.js:js",
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "分，走了",
+    "contexts": [
+      "games/js/2048.js:js"
+    ]
+  },
+  {
+    "key": "步。最高分是",
+    "contexts": [
+      "games/js/2048.js:js"
+    ]
+  },
+  {
+    "key": "這盤得到",
+    "contexts": [
+      "games/js/2048.js:js"
+    ]
+  },
+  {
+    "key": "遊戲結束",
+    "contexts": [
+      "games/js/2048.js:js",
+      "games/js/breakout.js:js"
+    ]
+  },
+  {
+    "key": "達標！2048 誕生！",
+    "contexts": [
+      "games/js/2048.js:js"
+    ]
+  },
+  {
+    "key": "，是新紀錄！🎉",
+    "contexts": [
+      "games/js/2048.js:js",
+      "games/js/catch-stars.js:js"
+    ]
+  },
+  {
+    "key": "。再試一次一定可以更高！",
+    "contexts": [
+      "games/js/breakout.js:js"
+    ]
+  },
+  {
+    "key": "分，最高分是",
+    "contexts": [
+      "games/js/breakout.js:js",
+      "games/js/jumper.js:js",
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "新紀錄！太厲害了！",
+    "contexts": [
+      "games/js/breakout.js:js"
+    ]
+  },
+  {
+    "key": "條命！",
+    "contexts": [
+      "games/js/breakout.js:js"
+    ]
+  },
+  {
+    "key": "第",
+    "contexts": [
+      "games/js/breakout.js:js",
+      "games/js/memory.js:js",
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "這局得到",
+    "contexts": [
+      "games/js/breakout.js:js",
+      "games/js/catch-stars.js:js",
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "還有",
+    "contexts": [
+      "games/js/breakout.js:js"
+    ]
+  },
+  {
+    "key": "關！+",
+    "contexts": [
+      "games/js/breakout.js:js"
+    ]
+  },
+  {
+    "key": "點擊畫面或按空白鍵發球 ↑",
+    "contexts": [
+      "games/js/breakout.js:js"
+    ]
+  },
+  {
+    "key": "，刷新紀錄啦！🎉",
+    "contexts": [
+      "games/js/breakout.js:js",
+      "games/js/jumper.js:js"
+    ]
+  },
+  {
+    "key": "。最高分是",
+    "contexts": [
+      "games/js/catch-stars.js:js"
+    ]
+  },
+  {
+    "key": "分。",
+    "contexts": [
+      "games/js/catch-stars.js:js",
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "哎呀，被炸到了！",
+    "contexts": [
+      "games/js/catch-stars.js:js",
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "時間到！",
+    "contexts": [
+      "games/js/catch-stars.js:js",
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "。再試一次一定可以更遠！",
+    "contexts": [
+      "games/js/jumper.js:js"
+    ]
+  },
+  {
+    "key": "哎呀，撞到了！",
+    "contexts": [
+      "games/js/jumper.js:js"
+    ]
+  },
+  {
+    "key": "新紀錄！跑得真遠！",
+    "contexts": [
+      "games/js/jumper.js:js"
+    ]
+  },
+  {
+    "key": "這局跑了",
+    "contexts": [
+      "games/js/jumper.js:js"
+    ]
+  },
+  {
+    "key": "全部配對成功！🎉",
+    "contexts": [
+      "games/js/memory.js:js"
+    ]
+  },
+  {
+    "key": "張卡片，已翻開，圖案",
+    "contexts": [
+      "games/js/memory.js:js"
+    ]
+  },
+  {
+    "key": "張卡片，已配對，圖案",
+    "contexts": [
+      "games/js/memory.js:js"
+    ]
+  },
+  {
+    "key": "張卡片，未翻開",
+    "contexts": [
+      "games/js/memory.js:js"
+    ]
+  },
+  {
+    "key": "時間",
+    "contexts": [
+      "games/js/memory.js:js",
+      "games/js/puzzle.js:js",
+      "games/memory.html:text",
+      "games/puzzle.html:text",
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "步。",
+    "contexts": [
+      "games/js/memory.js:js",
+      "games/js/puzzle.js:js"
+    ]
+  },
+  {
+    "key": "，最少步數紀錄是",
+    "contexts": [
+      "games/js/memory.js:js",
+      "games/js/puzzle.js:js"
+    ]
+  },
+  {
+    "key": "，這是最少步數的新紀錄！",
+    "contexts": [
+      "games/js/memory.js:js",
+      "games/js/puzzle.js:js"
+    ]
+  },
+  {
+    "key": "塊",
+    "contexts": [
+      "games/js/puzzle.js:js"
+    ]
+  },
+  {
+    "key": "拼圖第",
+    "contexts": [
+      "games/js/puzzle.js:js"
+    ]
+  },
+  {
+    "key": "拼好了！🎉",
+    "contexts": [
+      "games/js/puzzle.js:js"
+    ]
+  },
+  {
+    "key": "收起原圖",
+    "contexts": [
+      "games/js/puzzle.js:js"
+    ]
+  },
+  {
+    "key": "看原圖",
+    "contexts": [
+      "games/js/puzzle.js:js",
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "空白格，旁邊的拼圖塊可以滑進來",
+    "contexts": [
+      "games/js/puzzle.js:js"
+    ]
+  },
+  {
+    "key": "個洞，",
+    "contexts": [
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "個洞，空的",
+    "contexts": [
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "倍率 ×",
+    "contexts": [
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "分，是新紀錄！🎉",
+    "contexts": [
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "地鼠",
+    "contexts": [
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "炸彈",
+    "contexts": [
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "金色地鼠",
+    "contexts": [
+      "games/js/whack.js:js"
+    ]
+  },
+  {
+    "key": "小菲比跳跳遊戲畫面，使用空白鍵、點擊或觸控跳躍",
+    "contexts": [
+      "games/jumper.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "MINI GAME · 跑酷",
+    "contexts": [
+      "games/jumper.html:text"
+    ]
+  },
+  {
+    "key": "Phoebe 會自動往前跑。按空白鍵、點擊或輕觸畫面跳躍，躲開路上的仙人掌、炸彈和壞壞星星，看看你能跑多遠！",
+    "contexts": [
+      "games/jumper.html:text"
+    ]
+  },
+  {
+    "key": "按空白鍵、↑ 鍵、點擊或觸控畫面都能跳躍。",
+    "contexts": [
+      "games/jumper.html:text"
+    ]
+  },
+  {
+    "key": "撞到仙人掌、炸彈或壞壞星星就會結束，跑得越遠分數越高。",
+    "contexts": [
+      "games/jumper.html:text"
+    ]
+  },
+  {
+    "key": "跑越久速度越快，切換到別的頁籤時會自動暫停，回來不會突然撞死。",
+    "contexts": [
+      "games/jumper.html:text"
+    ]
+  },
+  {
+    "key": "輕點是小跳，按住不放會跳得更高，可以跳過比較高的障礙物。",
+    "contexts": [
+      "games/jumper.html:text"
+    ]
+  },
+  {
+    "key": "💡 分數會自動存在這台裝置上，最高分會一直保留。準備好了就按「開始遊戲」！",
+    "contexts": [
+      "games/jumper.html:text"
+    ]
+  },
+  {
+    "key": "小菲比跳跳 · Phoebe 小星球",
+    "contexts": [
+      "games/jumper.html:title"
+    ]
+  },
+  {
+    "key": "記憶翻牌盤面，共 16 張卡片，8 對圖案",
+    "contexts": [
+      "games/memory.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "16 步",
+    "contexts": [
+      "games/memory.html:text"
+    ]
+  },
+  {
+    "key": "MINI GAME · 記憶",
+    "contexts": [
+      "games/memory.html:text"
+    ]
+  },
+  {
+    "key": "兩張圖案相同就會配對成功並留在場上。",
+    "contexts": [
+      "games/memory.html:text"
+    ]
+  },
+  {
+    "key": "圖案不同會在 0.65 秒後翻回，每翻開一張算一步。",
+    "contexts": [
+      "games/memory.html:text"
+    ]
+  },
+  {
+    "key": "把 8 對全部配對完成就過關，步數越少越好。",
+    "contexts": [
+      "games/memory.html:text"
+    ]
+  },
+  {
+    "key": "最少步數",
+    "contexts": [
+      "games/memory.html:text",
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "翻開兩張卡片，圖案一樣就配對成功。把 8 對可愛圖案全部找出來吧！",
+    "contexts": [
+      "games/memory.html:text"
+    ]
+  },
+  {
+    "key": "配對",
+    "contexts": [
+      "games/memory.html:text"
+    ]
+  },
+  {
+    "key": "點一下卡片翻開，一次翻兩張。",
+    "contexts": [
+      "games/memory.html:text"
+    ]
+  },
+  {
+    "key": "💡 第一次翻牌開始計時，最少步數會自動存在這台裝置上。",
+    "contexts": [
+      "games/memory.html:text"
+    ]
+  },
+  {
+    "key": "記憶翻翻牌 · Phoebe 小星球",
+    "contexts": [
+      "games/memory.html:title"
+    ]
+  },
+  {
+    "key": "菲比的原圖，正方形照片",
+    "contexts": [
+      "games/puzzle.html:attr:alt"
+    ]
+  },
+  {
+    "key": "3 乘 3 菲比拼圖盤面，共 8 塊拼圖與 1 個空格",
+    "contexts": [
+      "games/puzzle.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "0 步",
+    "contexts": [
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "MINI GAME · 益智",
+    "contexts": [
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "「看原圖」可以偷看一下完整的照片。",
+    "contexts": [
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "也可以用方向鍵：按鍵方向就是方塊移動的方向。",
+    "contexts": [
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "原圖",
+    "contexts": [
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "拼圖由完成狀態隨機打亂 120 步，保證一定拼得回來。",
+    "contexts": [
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "重新打亂",
+    "contexts": [
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "點一下空格旁邊的拼圖塊，它就會滑進空格。",
+    "contexts": [
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "點擊空格旁邊的拼圖塊，把菲比的照片拼回原樣。3×3 共 8 塊，用方向鍵也可以玩喔！",
+    "contexts": [
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "💡 第一次移動開始計時，最少步數會自動存在這台裝置上。",
+    "contexts": [
+      "games/puzzle.html:text"
+    ]
+  },
+  {
+    "key": "菲比拼圖 · Phoebe 小星球",
+    "contexts": [
+      "games/puzzle.html:title"
+    ]
+  },
+  {
+    "key": "剩餘時間",
+    "contexts": [
+      "games/whack.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "打地鼠盤面，共 9 個洞",
+    "contexts": [
+      "games/whack.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "0 分",
+    "contexts": [
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "30 秒內敲打冒出來的地鼠！連續命中會提升倍率，小心不要敲到炸彈。",
+    "contexts": [
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "倍率 ×2",
+    "contexts": [
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "用滑鼠點擊，或用手機點一下冒出來的地鼠。",
+    "contexts": [
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "🌟 金色地鼠 +30 分，出現的機率比較低。",
+    "contexts": [
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "🐹 一般地鼠 +10 分，連續命中倍率最高 ×3。",
+    "contexts": [
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "💡 限時 30 秒、共 3 條命。生命歸零或時間到就結束，最高分會自動存在這台裝置上。",
+    "contexts": [
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "💣 炸彈不能敲，敲到會扣 1 條命並中斷連擊。",
+    "contexts": [
+      "games/whack.html:text"
+    ]
+  },
+  {
+    "key": "打地鼠 · Phoebe 小星球",
+    "contexts": [
+      "games/whack.html:title"
+    ]
+  },
+  {
+    "key": "Phoebe 的全身立繪：金色長髮、紫色大眼睛，穿著白色與天空藍的水手風洋裝，戴著白色帽子。",
+    "contexts": [
+      "index.html:attr:alt"
+    ]
+  },
+  {
+    "key": "個性標籤",
+    "contexts": [
+      "index.html:attr:aria-label"
+    ]
+  },
+  {
+    "key": "7 款小遊戲",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "Phoebe · 菲比",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "☁️ 奶油系",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "♡ 歡迎光臨菲比小星球",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "✈️ 旅行控",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "✈️ 旅行照片",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "克拉姆斯柯依 · 1883",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "全部遊戲",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "全部都是免費的小網頁遊戲，手機也能玩，還會幫你記住最高分！",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "名畫 COSPLAY",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "嗨，我是",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "在沖繩撿到一顆很像星星的貝殼，決定把它放在相簿的第一頁。",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "奶油系小可愛",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "孟克 · 1893",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "小專長",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "小屋日記",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "小遊戲開張！",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "愛旅行、愛扮世界名畫、也愛玩小遊戲的",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "把打亂的 Phoebe 照片拼回原樣，滑動方塊就能移動。",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "把星夜的漩渦畫在背景上花了三個小時，但拍出來的成品好喜歡。",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "把相同數字方塊合併，一路合到 2048 吧！",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "擺姿勢拍照",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "旅行相簿",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "最新加入的名畫 cosplay，一起來看看菲比變成了誰。",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "最近的照片",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "每天都要元氣滿滿",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "海邊的風好舒服",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "玩小遊戲",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "移動小籃子接住掉下來的星星，小心別接到炸彈！",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "第一次挑戰名畫 cosplay",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "維梅爾 · 1658",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "翻翻相簿、玩玩小遊戲，或者看看菲比的小故事。",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "翻開兩張一樣的圖案，用最少的步數把它們全部配對！",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "花了整個週末把遊戲搬進小屋，希望大家玩得開心，也歡迎挑戰我的分數。",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "草莓蛋糕、星星",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "要不要一起留下新的回憶？",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "角色檔案",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "認識菲比",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "走進古典畫廊",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "這裡收藏我的照片和好多好多小遊戲，歡迎一起來玩！",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "逛逛相簿",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "達文西 · 1500",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "部分照片為網站示範插圖，之後會陸續換成真實照片。",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "金色長髮、紫色眼睛，白色水手服配上一點天空藍。 平常最喜歡帶著相機到處跑，看到漂亮的風景就想停下來拍一張； 最近迷上把自己 cosplay 成世界名畫，成果都放在相簿裡。 玩遊戲的時候會非常認真，輸了會鼓起腮幫子。",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "隨手記下的小事情，靈感來的時候就會多一篇。",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "🍰 甜點雷達",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "🎮 7 款小遊戲",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "🎮 遊戲小天才",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "📷 拍照 100 分",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "🖼️ 名畫 cosplay",
+    "contexts": [
+      "index.html:text"
+    ]
+  },
+  {
+    "key": "Phoebe 小星球 · 菲比的相簿與遊戲小屋",
+    "contexts": [
+      "index.html:title"
+    ]
+  }
+]

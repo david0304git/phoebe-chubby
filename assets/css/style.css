@@ -3640,3 +3640,200 @@ span.chip:hover {
   letter-spacing: 0;
   line-height: 1.2;
 }
+
+/* =========================================================
+   23. 全站語言切換與多語字體
+   ========================================================= */
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.lang-switch__icon {
+  font-size: 0.9rem;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  max-width: 118px;
+  padding: 6px 26px 6px 10px;
+  border: 2.5px solid var(--ink);
+  border-radius: var(--radius-pill);
+  background-color: var(--white);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%234a3a32' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 9px 6px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1.2;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(74, 58, 50, 0.28);
+}
+
+.lang-select:hover {
+  background-color: #fffdf7;
+}
+
+.lang-select:focus-visible {
+  outline: 3px solid var(--sky);
+  outline-offset: 2px;
+}
+
+.page--gallery .lang-select {
+  background-color: #f7efdf;
+  border-color: rgba(201, 165, 93, 0.85);
+  color: #243b45;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.28);
+}
+
+.page--gallery .lang-switch__icon {
+  filter: saturate(0.7);
+}
+
+/* 英文：系統無襯線字體；標題保留 Baloo */
+html[data-lang="en"] {
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Arial, sans-serif;
+  --font-display: "Baloo 2", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* 簡體中文 */
+html[data-lang="zh-Hans"] {
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Noto Sans SC", sans-serif;
+  --font-display: "Baloo 2", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+}
+
+html[data-lang="zh-Hans"] .page--gallery {
+  --font-serif: "Songti SC", "Noto Serif SC", "SimSun", serif;
+  --font-serif-display: "Cormorant Garamond", "Songti SC", "Noto Serif SC",
+    serif;
+}
+
+/* 日文 */
+html[data-lang="ja"] {
+  --font-body: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Meiryo",
+    sans-serif;
+  --font-display: "Baloo 2", "Hiragino Sans", "Yu Gothic", "Noto Sans JP",
+    sans-serif;
+}
+
+html[data-lang="ja"] .page--gallery {
+  --font-serif: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  --font-serif-display: "Cormorant Garamond", "Hiragino Mincho ProN",
+    "Yu Mincho", serif;
+}
+
+/* 韓文 */
+html[data-lang="ko"] {
+  --font-body: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+    sans-serif;
+  --font-display: "Baloo 2", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", sans-serif;
+}
+
+html[data-lang="ko"] .page--gallery {
+  --font-serif: "AppleMyungjo", "Noto Serif KR", "Batang", serif;
+  --font-serif-display: "Cormorant Garamond", "AppleMyungjo", "Noto Serif KR",
+    serif;
+}
+
+@media (max-width: 760px) {
+  .lang-switch {
+    margin-left: 8px;
+    gap: 0;
+  }
+
+  .lang-switch__icon {
+    display: none;
+  }
+
+  .lang-select {
+    max-width: 96px;
+    padding: 5px 22px 5px 8px;
+    border-width: 2px;
+    font-size: 0.7rem;
+    background-position: right 6px center;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-inner {
+    gap: 10px;
+  }
+
+  .lang-select {
+    max-width: 88px;
+    padding-right: 20px;
+    font-size: 0.68rem;
+  }
+
+  .nav-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand__avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand__text strong {
+    font-size: 1.15rem;
+  }
+
+  .brand__text small {
+    letter-spacing: 0.18em;
+  }
+}
+
+/* 英文、日文、韓文標題較長：平板寬度也提早收成漢堡選單，避免頁首擠爆 */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: grid;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    z-index: 70;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    margin-left: 0;
+    padding: 12px;
+    background: var(--white);
+    border: 3px solid var(--ink);
+    border-radius: 22px;
+    box-shadow: var(--shadow-sticker);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+    animation: pop 0.22s ease;
+  }
+
+  .site-nav a {
+    padding: 11px 16px;
+    text-align: center;
+  }
+
+  .site-nav a.nav-cta {
+    margin-left: 0;
+  }
+}
