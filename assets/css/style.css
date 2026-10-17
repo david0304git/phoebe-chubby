@@ -3017,3 +3017,31 @@ span.chip:hover {
     max-height: 62vh;
   }
 }
+
+
+/* 首頁「最近的照片」用一般 grid（直式卡片等高，不需要瀑布流） */
+.gallery-grid--preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 30px 26px;
+  column-count: auto;
+  column-width: auto;
+}
+
+.gallery-grid--preview .photo {
+  margin: 0;
+  break-inside: auto;
+}
+
+@media (max-width: 760px) {
+  .gallery-grid--preview {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 26px 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .gallery-grid--preview {
+    grid-template-columns: 1fr;
+  }
+}
