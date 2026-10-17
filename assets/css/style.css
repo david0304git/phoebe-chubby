@@ -3629,3 +3629,14 @@ span.chip:hover {
     font-size: 0.9rem;
   }
 }
+
+/* 名畫作品：銅牌上不再重複 COSPLAY，改用小花飾 */
+.page--gallery #paintings .photo__body::before {
+  content: "✦";
+  color: var(--gilt-deep);
+  font-family: var(--font-serif);
+  font-size: 0.55rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.2;
+}

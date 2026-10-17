@@ -108,12 +108,14 @@ phoebe-chubby/
 
 ### 目前已加入的名畫 cosplay
 
-| 檔案（網站用） | 原始檔 | 作品 |
-| --- | --- | --- |
-| `photos/cosplay/napoleon-alps.jpg` | `photos/cosplay/01.png` | 大衛《跨越阿爾卑斯山的拿破崙》 |
-| `photos/cosplay/mona-lisa.jpg` | `photos/cosplay/03.PNG` | 達文西《蒙娜麗莎》 |
-| `photos/cosplay/girl-with-pearl-earring.jpg` | `photos/cosplay/02.png` | 維梅爾《戴珍珠耳環的少女》 |
-| `photos/cosplay/van-gogh-hat.jpg` | `photos/cosplay/04.png` | 梵谷《草帽自畫像》 |
+| 檔案（網站用） | 原始檔 | 作品 | 網站標題 |
+| --- | --- | --- | --- |
+| `photos/cosplay/napoleon-alps.jpg` | `photos/cosplay/01.png` | 大衛《跨越阿爾卑斯山的拿破崙》 | 拿破菲比 |
+| `photos/cosplay/mona-lisa.jpg` | `photos/cosplay/03.PNG` | 達文西《蒙娜麗莎》 | 蒙娜菲比 |
+| `photos/cosplay/girl-with-pearl-earring.jpg` | `photos/cosplay/02.png` | 維梅爾《戴珍珠耳環的少女》 | 戴珍珠耳環的菲比 |
+| `photos/cosplay/van-gogh-hat.jpg` | `photos/cosplay/04.png` | 梵谷《草帽自畫像》 | 菲比的草帽 |
+
+作品標題採用菲比化名稱（例如「蒙娜菲比」）；下方小字保留原畫家與原畫名，方便辨識。
 
 - 網站用的大圖已壓成 1400×1867、quality 85 的 JPEG；相簿卡片另外使用 `photos/cosplay/thumbs/` 裡的 600×800 縮圖。
 - 原始高解析 PNG（`01.png`～`04.png`，共約 28 MB）留在 `photos/cosplay/` 當母檔，並已寫進 `.gitignore`，不會被推上 GitHub。
