@@ -147,6 +147,15 @@
       buddyToggle.setAttribute("aria-expanded", "false");
       buddyToggle.focus();
     });
+
+    /* 手機首屏先收起，避免蓋住 hero 的主要按鈕；往下滑再出現 */
+    if (window.matchMedia("(max-width: 760px)").matches) {
+      var syncBuddy = function () {
+        buddy.classList.toggle("is-away", window.scrollY < 420);
+      };
+      syncBuddy();
+      window.addEventListener("scroll", syncBuddy, { passive: true });
+    }
   }
 
   /* ---------- 5. 年份 ---------- */

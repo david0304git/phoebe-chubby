@@ -2357,3 +2357,14 @@ span.chip:hover {
 .game-card--wish .game-card__thumb span {
   opacity: 0.85;
 }
+
+/* 手機上先收起小幫手，避免蓋住首屏的主要按鈕 */
+.buddy {
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.buddy.is-away {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+}
