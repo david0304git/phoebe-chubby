@@ -3045,3 +3045,220 @@ span.chip:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- 22.9 兩個展區 ---------- */
+.museum-meta {
+  margin: -6px 0 22px;
+  color: var(--museum-muted);
+  font-family: var(--font-serif);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+}
+
+.museum-meta strong {
+  color: var(--gilt-light);
+  font-family: var(--font-serif-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.museum-index {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: min(100%, 900px);
+  margin: 0 auto clamp(46px, 6vw, 74px);
+}
+
+.museum-index__link {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  background: rgba(14, 23, 18, 0.32);
+  border: 1px solid rgba(201, 165, 93, 0.38);
+  color: var(--museum-cream);
+  text-decoration: none;
+  transition: border-color 0.25s ease, background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.museum-index__link:hover {
+  background: rgba(201, 165, 93, 0.12);
+  border-color: var(--gilt);
+  transform: translateY(-2px);
+}
+
+.museum-index__link:focus-visible {
+  outline: 2px solid var(--gilt-light);
+  outline-offset: 3px;
+}
+
+.museum-index__num {
+  min-width: 58px;
+  padding-right: 16px;
+  border-right: 1px solid rgba(201, 165, 93, 0.25);
+  color: var(--gilt);
+  font-family: var(--font-serif-display);
+  font-size: 1.9rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.museum-index__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.museum-index__body strong {
+  color: var(--museum-cream);
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+}
+
+.museum-index__body em {
+  color: var(--museum-muted);
+  font-family: var(--font-serif);
+  font-size: 0.7rem;
+  font-style: normal;
+  letter-spacing: 0.1em;
+}
+
+.museum-index__body em span {
+  color: var(--gilt-light);
+  font-family: var(--font-serif-display);
+}
+
+.museum-index__arrow {
+  margin-left: auto;
+  color: var(--gilt);
+  font-size: 1rem;
+  opacity: 0.75;
+}
+
+.museum-section__head {
+  max-width: 760px;
+  margin: 0 auto clamp(28px, 4vw, 44px);
+  text-align: center;
+}
+
+.museum-section__kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 10px;
+  color: var(--gilt);
+  font-family: var(--font-serif-display);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.museum-section__kicker::before,
+.museum-section__kicker::after {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: rgba(201, 165, 93, 0.55);
+}
+
+.museum-section h2 {
+  margin: 0 0 12px;
+  color: var(--museum-cream);
+  font-family: var(--font-serif);
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.45;
+}
+
+.museum-section h2 span {
+  color: var(--gilt-light);
+}
+
+.museum-section__desc {
+  margin: 0;
+  color: var(--museum-muted);
+  font-family: var(--font-serif);
+  font-size: 0.84rem;
+  letter-spacing: 0.04em;
+  line-height: 2;
+}
+
+.museum-section__desc span {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 1px 10px;
+  border: 1px solid rgba(201, 165, 93, 0.35);
+  color: var(--gilt);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  vertical-align: middle;
+}
+
+.museum-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: clamp(44px, 6vw, 74px) 0;
+  color: var(--gilt);
+}
+
+.museum-divider span {
+  width: min(210px, 26vw);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 165, 93, 0.55));
+}
+
+.museum-divider span:last-child {
+  background: linear-gradient(90deg, rgba(201, 165, 93, 0.55), transparent);
+}
+
+.museum-divider i {
+  font-style: normal;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 760px) {
+  .museum-index {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 38px;
+  }
+
+  .museum-index__link {
+    padding: 14px 16px;
+    gap: 14px;
+  }
+
+  .museum-index__num {
+    min-width: 44px;
+    padding-right: 12px;
+    font-size: 1.5rem;
+  }
+
+  .museum-index__body strong {
+    font-size: 0.96rem;
+  }
+
+  .museum-section__kicker {
+    letter-spacing: 0.2em;
+  }
+
+  .museum-section__desc {
+    line-height: 1.9;
+  }
+
+  .museum-section__desc span {
+    margin-left: 6px;
+  }
+}

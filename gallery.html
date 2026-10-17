@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>古典畫廊 · Phoebe 小星球</title>
-  <meta name="description" content="Phoebe 的古典畫廊：旅行風景、世界名畫 cosplay 與日常片段，以金色畫框掛在深綠色展牆上。">
+  <meta name="description" content="Phoebe 的古典畫廊，分為「跟著菲比賞名畫」與「跟著菲比去旅行」兩個展區：世界名畫 cosplay、旅行風景與旅途日常。">
   <meta name="theme-color" content="#2c3d35">
   <meta property="og:title" content="菲比的古典畫廊 · Phoebe 小星球">
-  <meta property="og:description" content="旅行、名畫 cosplay、還有日常的小小收藏，一起走進這座古典畫廊。">
+  <meta property="og:description" content="兩個展區：跟著菲比賞名畫、跟著菲比去旅行。一起走進這座古典畫廊。">
   <meta property="og:image" content="assets/img/og-cover.jpg">
   <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="assets/img/favicon.png" sizes="64x64" type="image/png">
@@ -56,26 +56,61 @@
           旅行風景、名畫 cosplay 與日常片段，<br>
           靜靜掛在這面深綠色的牆上。
         </p>
+        <p class="museum-meta">館藏 <strong id="museum-total">19</strong> 件 · 兩個展區</p>
         <div class="museum-flourish" aria-hidden="true"><span></span><i>✦</i><span></span></div>
       </div>
     </header>
 
-    <section class="museum-room" aria-label="作品牆">
+    <section class="museum-room" aria-label="畫廊展區">
       <div class="wrap">
-        <div class="museum-toolbar">
-          <div class="filter-bar filter-bar--museum" id="gallery-filters" role="group" aria-label="作品分類"></div>
-          <p class="filter-count" id="gallery-count" aria-live="polite">全部作品・19 件</p>
-        </div>
+        <nav class="museum-index" aria-label="展區導覽">
+          <a class="museum-index__link" href="#paintings">
+            <span class="museum-index__num" aria-hidden="true">I</span>
+            <span class="museum-index__body">
+              <strong>跟著菲比賞名畫</strong>
+              <em>名畫 cosplay · <span id="paintings-count">9</span> 件</em>
+            </span>
+            <span class="museum-index__arrow" aria-hidden="true">↓</span>
+          </a>
+          <a class="museum-index__link" href="#travel">
+            <span class="museum-index__num" aria-hidden="true">II</span>
+            <span class="museum-index__body">
+              <strong>跟著菲比去旅行</strong>
+              <em>旅行風景與旅途日常 · <span id="travel-count">10</span> 件</em>
+            </span>
+            <span class="museum-index__arrow" aria-hidden="true">↓</span>
+          </a>
+        </nav>
 
-        <div class="gallery-grid" id="gallery-grid"></div>
+        <section class="museum-section" id="paintings" aria-labelledby="paintings-title">
+          <header class="museum-section__head">
+            <p class="museum-section__kicker">Exhibition I · Cosplay</p>
+            <h2 id="paintings-title"><span>跟著菲比</span>賞名畫</h2>
+            <p class="museum-section__desc">
+              從文藝復興到印象派，菲比把自己畫進世界名畫裡。
+              <span id="paintings-total">9 件</span>
+            </p>
+          </header>
+          <div class="gallery-grid" id="gallery-paintings"></div>
+        </section>
 
-        <div class="gallery-empty" id="gallery-empty" hidden>
-          這一區暫時沒有作品，館長正在準備中。
-        </div>
+        <div class="museum-divider" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+
+        <section class="museum-section" id="travel" aria-labelledby="travel-title">
+          <header class="museum-section__head">
+            <p class="museum-section__kicker">Exhibition II · Travel</p>
+            <h2 id="travel-title"><span>跟著菲比</span>去旅行</h2>
+            <p class="museum-section__desc">
+              從東京的櫻花到阿爾卑斯的初雪，還有旅途中的小日常。
+              <span id="travel-total">10 件</span>
+            </p>
+          </header>
+          <div class="gallery-grid" id="gallery-travel"></div>
+        </section>
 
         <p class="gallery-note">
-          <strong>館藏說明：</strong>本畫廊收錄網站示範插圖與名畫 cosplay 系列；新作會陸續掛上這面牆。
-          作品點一下即可靠近欣賞。
+          <strong>館藏說明：</strong>第一展區集結名畫 cosplay，第二展區收藏旅行風景與旅途日常。
+          作品點一下即可靠近欣賞，燈箱內可以用左右鍵切換。
         </p>
       </div>
     </section>

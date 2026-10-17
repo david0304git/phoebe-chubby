@@ -1,6 +1,7 @@
 /* =========================================================
-   Phoebe 小星球 — 相簿頁
-   由 assets/js/gallery-data.js 的資料產生卡片、篩選與燈箱
+   Phoebe 小星球 — 古典畫廊
+   兩個展區：跟著菲比賞名畫（cosplay）、跟著菲比去旅行（旅行＋日常）
+   由 assets/js/gallery-data.js 的資料產生作品與燈箱
    ========================================================= */
 (function () {
   "use strict";
@@ -8,10 +9,8 @@
   var data = window.PHOEBE_GALLERY;
   if (!data || !Array.isArray(data.items)) return;
 
-  var grid = document.getElementById("gallery-grid");
-  var filterBar = document.getElementById("gallery-filters");
-  var countEl = document.getElementById("gallery-count");
-  var emptyEl = document.getElementById("gallery-empty");
+  var paintingsGrid = document.getElementById("gallery-paintings");
+  var travelGrid = document.getElementById("gallery-travel");
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightbox-img");
   var lightboxTitle = document.getElementById("lightbox-title");
@@ -21,12 +20,7 @@
   var prevBtn = document.getElementById("lightbox-prev");
   var nextBtn = document.getElementById("lightbox-next");
 
-  var categories = data.categories || [
-    { id: "all", label: "全部", emoji: "✦" },
-    { id: "travel", label: "旅行", emoji: "✈️" },
-    { id: "cosplay", label: "名畫 cosplay", emoji: "🖼️" },
-    { id: "daily", label: "日常", emoji: "☁️" }
-  ];
+  if (!paintingsGrid || !travelGrid || !lightbox) return;
 
   var FALLBACK_IMAGE =
     "data:image/svg+xml;charset=utf-8," +
@@ -37,79 +31,27 @@
         "</linearGradient></defs>" +
         '<rect width="1200" height="900" fill="url(#g)"/>' +
         '<text x="600" y="470" text-anchor="middle" font-family="PingFang TC, Noto Sans TC, sans-serif" ' +
-        'font-size="44" font-weight="700" fill="#7a665a">照片準備中 ♡</text></svg>'
+        'font-size="44" font-weight="700" fill="#7a665a">作品準備中 ♡</text></svg>'
     );
 
-  var activeFilter = "all";
-  var currentItems = data.items.slice();
+  /* 第一展區：名畫 cosplay；第二展區：旅行＋旅途日常 */
+  var paintings = data.items.filter(function (item) {
+    return item.category === "cosplay";
+  });
+  var travelItems = data.items.filter(function (item) {
+    return item.category !== "cosplay";
+  });
+  var currentItems = paintings.concat(travelItems);
+
   var activeIndex = -1;
   var lastFocused = null;
 
-  var categoryLabel = {};
-  categories.forEach(function (cat) {
-    categoryLabel[cat.id] = cat.label;
-  });
-
-  /* ---------- 篩選按鈕 ---------- */
-  function countFor(id) {
-    if (id === "all") return data.items.length;
-    return data.items.filter(function (item) {
-      return item.category === id;
-    }).length;
+  function setText(id, text) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = text;
   }
 
-  function buildFilters() {
-    categories.forEach(function (cat, index) {
-      var button = document.createElement("button");
-      button.type = "button";
-      button.className = "chip";
-      button.dataset.filter = cat.id;
-      button.setAttribute("aria-pressed", index === 0 ? "true" : "false");
-
-      var emoji = document.createElement("span");
-      emoji.setAttribute("aria-hidden", "true");
-      emoji.textContent = cat.emoji || "";
-
-      button.appendChild(emoji);
-      button.appendChild(document.createTextNode(" " + cat.label + " "));
-
-      var count = document.createElement("span");
-      count.className = "chip__count";
-      count.textContent = String(countFor(cat.id));
-      button.appendChild(count);
-
-      button.addEventListener("click", function () {
-        setFilter(cat.id);
-      });
-
-      filterBar.appendChild(button);
-    });
-  }
-
-  function setFilter(id) {
-    activeFilter = id;
-    Array.prototype.forEach.call(filterBar.querySelectorAll(".chip"), function (chip) {
-      chip.setAttribute("aria-pressed", chip.dataset.filter === id ? "true" : "false");
-    });
-
-    currentItems = data.items.filter(function (item) {
-      return id === "all" || item.category === id;
-    });
-
-    renderGrid();
-    updateCount();
-  }
-
-  function updateCount() {
-    var label = activeFilter === "all" ? "全部作品" : categoryLabel[activeFilter] || "作品";
-    countEl.textContent = label + "・" + currentItems.length + " 件";
-    if (emptyEl) {
-      if (currentItems.length === 0) emptyEl.removeAttribute("hidden");
-      else emptyEl.setAttribute("hidden", "");
-    }
-  }
-
-  /* ---------- 卡片 ---------- */
+  /* ---------- 作品卡 ---------- */
   function buildCard(item, index) {
     var card = document.createElement("article");
     card.className = "photo";
@@ -157,7 +99,7 @@
       image.remove();
       var fallback = document.createElement("span");
       fallback.className = "photo__missing";
-      fallback.textContent = "照片準備中 ♡";
+      fallback.textContent = "作品準備中 ♡";
       media.appendChild(fallback);
     });
 
@@ -195,12 +137,20 @@
     return card;
   }
 
-  function renderGrid() {
+  function renderSection(items, grid) {
     grid.innerHTML = "";
-    if (!currentItems.length) return;
+
+    if (!items.length) {
+      var empty = document.createElement("p");
+      empty.className = "gallery-empty";
+      empty.textContent = "這一區暫時沒有作品，館長正在準備中。";
+      grid.appendChild(empty);
+      return;
+    }
 
     var fragment = document.createDocumentFragment();
-    currentItems.forEach(function (item, index) {
+    items.forEach(function (item) {
+      var index = currentItems.indexOf(item);
       fragment.appendChild(buildCard(item, index));
     });
     grid.appendChild(fragment);
@@ -331,7 +281,12 @@
   });
 
   /* ---------- 初始化 ---------- */
-  if (filterBar) buildFilters();
-  renderGrid();
-  updateCount();
+  setText("paintings-count", String(paintings.length));
+  setText("travel-count", String(travelItems.length));
+  setText("paintings-total", paintings.length + " 件");
+  setText("travel-total", travelItems.length + " 件");
+  setText("museum-total", String(data.items.length));
+
+  renderSection(paintings, paintingsGrid);
+  renderSection(travelItems, travelGrid);
 })();
