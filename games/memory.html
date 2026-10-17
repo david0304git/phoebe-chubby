@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>記憶翻翻牌 · Phoebe 小星球</title>
+  <meta name="description" content="翻開兩張一樣的圖案，把 8 對可愛卡片全部配對成功！Phoebe 小星球的免費網頁小遊戲。">
+  <meta name="theme-color" content="#fff8e7">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/games.css">
+  <style>
+    /* 記憶翻翻牌專屬樣式（頁內 scoped，不動共用 CSS） */
+    .memory-stage {
+      padding: clamp(12px, 2.4vw, 24px);
+    }
+
+    .memory-stage .result-score {
+      color: var(--ink);
+    }
+
+    @media (max-width: 420px) {
+      .memory-stage {
+        padding: 8px;
+      }
+
+      .memory-stage .game-overlay {
+        padding: 10px;
+      }
+
+      .memory-stage .game-overlay__card {
+        padding: 15px 16px;
+        border-radius: 20px;
+      }
+
+      .memory-stage .game-overlay__card h2 {
+        font-size: 1.25rem;
+      }
+
+      .memory-stage .game-overlay__card p {
+        font-size: 0.78rem;
+        line-height: 1.55;
+        margin-bottom: 10px;
+      }
+
+      .memory-stage .game-overlay__card .result-score {
+        font-size: 1.9rem;
+        margin-bottom: 2px;
+      }
+
+      .memory-stage .result-actions {
+        margin-top: 10px;
+      }
+
+      .memory-stage .result-actions .btn {
+        padding: 8px 16px;
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page page--game">
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html" aria-label="Phoebe 小星球 首頁">
+        <span class="brand__avatar"><img src="../assets/img/phoebe/avatar.png" alt="" width="52" height="52"></span>
+        <span class="brand__text">
+          <strong>Phoebe</strong>
+          <small>菲比小星球</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主要導覽">
+        <a href="../index.html">首頁</a>
+        <a href="../gallery.html">相簿</a>
+        <a href="../games.html" aria-current="page">遊戲專區</a>
+        <a class="nav-cta" href="../about.html">關於菲比</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="game-page">
+    <div class="wrap">
+      <a class="back-link" href="../games.html"><span aria-hidden="true">←</span> 回遊戲專區</a>
+
+      <section class="game-shell" aria-labelledby="game-title">
+        <div class="game-head">
+          <div>
+            <p class="section-kicker">MINI GAME · 記憶</p>
+            <h1 id="game-title">記憶翻翻牌</h1>
+          </div>
+          <div class="game-hud">
+            <div class="stat"><span>步數</span><strong id="moves">0</strong></div>
+            <div class="stat stat--highlight"><span>最少步數</span><strong id="best">—</strong></div>
+            <div class="stat"><span>配對</span><strong id="pairs">0/8</strong></div>
+            <div class="stat"><span>時間</span><strong id="time">00:00</strong></div>
+            <button id="restart" class="btn btn--ghost btn--sm" type="button">重新開始</button>
+          </div>
+        </div>
+
+        <div class="game-stage game-stage--board memory-stage" id="stage">
+          <div class="game-board game-board--4" id="board" role="group" aria-label="記憶翻牌盤面，共 16 張卡片，8 對圖案"></div>
+          <div class="game-overlay" id="overlay" role="dialog" aria-labelledby="overlay-title" aria-describedby="overlay-text">
+            <div class="game-overlay__card">
+              <p class="result-label">MEMORY MATCH</p>
+              <h2 id="overlay-title">記憶翻翻牌</h2>
+              <p class="result-score" id="result-score" hidden>16 步</p>
+              <p id="overlay-text">翻開兩張卡片，圖案一樣就配對成功。把 8 對可愛圖案全部找出來吧！</p>
+              <div class="result-actions">
+                <button class="btn btn--primary" id="start" type="button">開始遊戲</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-help">
+          <h2>怎麼玩</h2>
+          <ul>
+            <li>點一下卡片翻開，一次翻兩張。</li>
+            <li>兩張圖案相同就會配對成功並留在場上。</li>
+            <li>圖案不同會在 0.65 秒後翻回，每翻開一張算一步。</li>
+            <li>把 8 對全部配對完成就過關，步數越少越好。</li>
+          </ul>
+          <p class="tip">💡 第一次翻牌開始計時，最少步數會自動存在這台裝置上。</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer site-footer--slim">
+    <div class="wrap footer-bottom">
+      <p>© <span data-year>2026</span> Phoebe 小星球 · 非官方粉絲網站</p>
+      <p><a href="../games.html">← 更多小遊戲</a></p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+  <script src="js/memory.js" defer></script>
+</body>
+</html>

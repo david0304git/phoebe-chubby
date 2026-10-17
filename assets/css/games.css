@@ -1,0 +1,635 @@
+/* =========================================================
+   Phoebe 小星球 — 小遊戲共用樣式
+   依賴 assets/css/style.css 的變數與基礎元件
+   ========================================================= */
+
+/* ---------- 遊戲舞台 ---------- */
+.game-stage {
+  aspect-ratio: 16 / 10;
+  min-height: 280px;
+  width: 100%;
+}
+
+.game-stage--board {
+  aspect-ratio: auto;
+  min-height: 400px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      circle at 20% 15%,
+      rgba(255, 255, 255, 0.85),
+      transparent 55%
+    ),
+    linear-gradient(160deg, var(--sky-soft), var(--lav-soft));
+}
+
+.game-stage--board.is-busy {
+  cursor: progress;
+}
+
+.game-board {
+  display: grid;
+  gap: clamp(6px, 1.2vw, 12px);
+  width: min(100%, 520px);
+  margin-inline: auto;
+}
+
+.game-board--3 {
+  grid-template-columns: repeat(3, 1fr);
+  width: min(100%, 460px);
+}
+
+.game-board--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.game-board--5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.game-board--6 {
+  grid-template-columns: repeat(6, 1fr);
+  width: min(100%, 480px);
+}
+
+/* ---------- 共用格子按鈕 ---------- */
+.cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 2.5px solid var(--ink);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0 3px 0 rgba(74, 58, 50, 0.16);
+  font-weight: 900;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.14s ease, background-color 0.18s ease,
+    box-shadow 0.14s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.cell:hover {
+  transform: translateY(-2px);
+}
+
+.cell:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(74, 58, 50, 0.16);
+}
+
+.cell[disabled] {
+  cursor: default;
+}
+
+/* ---------- 記憶翻牌 ---------- */
+.memo {
+  perspective: 900px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.memo:hover {
+  transform: none;
+}
+
+.memo__inner {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.38s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.memo.is-flipped .memo__inner,
+.memo.is-matched .memo__inner {
+  transform: rotateY(180deg);
+}
+
+.memo__face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 2.5px solid var(--ink);
+  border-radius: 16px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: var(--white);
+  box-shadow: 0 3px 0 rgba(74, 58, 50, 0.16);
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+}
+
+.memo__face--back {
+  background: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.5) 0 8px,
+      transparent 8px 16px
+    ),
+    var(--sky);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  letter-spacing: 0.05em;
+}
+
+.memo:nth-child(3n) .memo__face--back {
+  background-color: var(--pink);
+}
+
+.memo:nth-child(3n + 2) .memo__face--back {
+  background-color: var(--butter);
+}
+
+.memo__face--front {
+  transform: rotateY(180deg);
+  background: #fffdf6;
+}
+
+.memo.is-matched .memo__face--front {
+  background: var(--pink-soft);
+  box-shadow: inset 0 0 0 3px rgba(249, 188, 205, 0.65),
+    0 3px 0 rgba(74, 58, 50, 0.16);
+}
+
+/* ---------- 打地鼠 ---------- */
+.hole {
+  position: relative;
+  aspect-ratio: 1;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hole::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 8%;
+  height: 30%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(74, 58, 50, 0.35),
+    rgba(74, 58, 50, 0.1) 65%,
+    transparent 70%
+  );
+  z-index: 0;
+}
+
+.hole__mound {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 16%;
+  height: 26%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #c9e7f5, #8fd0ea);
+  border: 2.5px solid var(--ink);
+  z-index: 1;
+}
+
+.hole__mole {
+  position: absolute;
+  left: 50%;
+  bottom: 22%;
+  width: 58%;
+  aspect-ratio: 1;
+  transform: translate(-50%, 110%) scale(0.6);
+  transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  border-radius: 50%;
+  border: 2.5px solid var(--ink);
+  background: var(--butter);
+  box-shadow: 0 4px 0 rgba(74, 58, 50, 0.2);
+  user-select: none;
+}
+
+.hole.is-up .hole__mole {
+  transform: translate(-50%, 0) scale(1);
+}
+
+.hole.is-bonk .hole__mole {
+  transform: translate(-50%, 12%) scale(0.86, 0.7);
+  background: var(--pink);
+}
+
+.hole.is-gold .hole__mole {
+  background: linear-gradient(150deg, #ffeaa8, #f8c85c);
+}
+
+.hole.is-bomb .hole__mole {
+  background: #d9d3ef;
+}
+
+/* ---------- 拼圖 ---------- */
+.puzzle-wrap {
+  width: min(100%, 420px);
+  margin-inline: auto;
+}
+
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 7px;
+  background: var(--ink);
+  border-radius: 20px;
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow-sticker);
+}
+
+.puzzle-tile {
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 6px;
+  padding: 0;
+  background-color: var(--cream);
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.13s ease, filter 0.13s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.puzzle-tile:hover {
+  filter: brightness(1.05);
+}
+
+.puzzle-tile:active {
+  transform: scale(0.96);
+}
+
+.puzzle-tile.is-blank {
+  background-color: #4a3a32;
+  background-image: none !important;
+  cursor: default;
+}
+
+.puzzle-tile.is-movable::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 3px rgba(248, 227, 163, 0.9);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.puzzle-tile.is-movable:hover::after {
+  opacity: 1;
+}
+
+.puzzle-preview {
+  width: 92px;
+  border: 2.5px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 0 3px 0 rgba(74, 58, 50, 0.15);
+  background: var(--cream);
+}
+
+/* ---------- 2048 ---------- */
+.num-wrap {
+  width: min(100%, 440px);
+  margin-inline: auto;
+  padding: clamp(8px, 2vw, 14px);
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  border-radius: 24px;
+  box-shadow: var(--shadow-sticker);
+}
+
+.num-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(6px, 1.4vw, 10px);
+  position: relative;
+}
+
+.num-cell {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255, 253, 248, 0.6);
+  border: 2px solid rgba(74, 58, 50, 0.18);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1rem, 3.4vw, 1.7rem);
+  color: var(--ink);
+  transition: transform 0.12s ease;
+  user-select: none;
+}
+
+.num-cell[data-value="2"] {
+  background: #fffdf8;
+}
+.num-cell[data-value="4"] {
+  background: #fff4d8;
+}
+.num-cell[data-value="8"] {
+  background: #ffe3a8;
+}
+.num-cell[data-value="16"] {
+  background: #ffd18a;
+}
+.num-cell[data-value="32"] {
+  background: #f9bccd;
+}
+.num-cell[data-value="64"] {
+  background: #f79fb9;
+}
+.num-cell[data-value="128"] {
+  background: #b9a7e8;
+  color: #fff;
+}
+.num-cell[data-value="256"] {
+  background: #a18ce0;
+  color: #fff;
+}
+.num-cell[data-value="512"] {
+  background: #8fd0ea;
+  color: #243a4a;
+}
+.num-cell[data-value="1024"] {
+  background: #4fa6cd;
+  color: #fff;
+}
+.num-cell[data-value="2048"] {
+  background: var(--ink);
+  color: var(--butter);
+}
+.num-cell.is-new {
+  animation: num-pop 0.18s ease;
+}
+.num-cell.is-merged {
+  animation: num-merge 0.2s ease;
+}
+
+@keyframes num-pop {
+  from {
+    transform: scale(0.5);
+    opacity: 0.4;
+  }
+}
+
+@keyframes num-merge {
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+/* ---------- 泡泡 / 連線 ---------- */
+.bubble-cell {
+  position: relative;
+  aspect-ratio: 1;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bubble-cell::before {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  border: 2.5px solid var(--ink);
+  box-shadow: inset -6px -8px 0 rgba(74, 58, 50, 0.12),
+    inset 6px 8px 0 rgba(255, 255, 255, 0.55);
+  transition: transform 0.12s ease;
+}
+
+.bubble-cell[data-color="pink"]::before {
+  background: var(--pink);
+}
+.bubble-cell[data-color="sky"]::before {
+  background: var(--sky);
+}
+.bubble-cell[data-color="butter"]::before {
+  background: var(--butter);
+}
+.bubble-cell[data-color="lav"]::before {
+  background: var(--lav);
+}
+.bubble-cell[data-color="mint"]::before {
+  background: #bde9d3;
+}
+
+.bubble-cell:active::before {
+  transform: scale(0.9);
+}
+
+.bubble-cell.is-popping::before {
+  animation: bubble-pop 0.22s ease forwards;
+}
+
+@keyframes bubble-pop {
+  to {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
+
+/* ---------- 遊戲內小元件 ---------- */
+.game-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.game-toolbar .btn {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  border-width: 2.5px;
+  box-shadow: 0 3px 0 var(--ink);
+}
+
+.game-status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--ink-2);
+}
+
+.game-status strong {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.game-toast {
+  position: absolute;
+  left: 50%;
+  top: 18px;
+  transform: translate(-50%, -20px);
+  z-index: 8;
+  padding: 7px 20px;
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  border: 2.5px solid var(--ink);
+  box-shadow: 0 3px 0 rgba(74, 58, 50, 0.18);
+  font-size: 0.82rem;
+  font-weight: 800;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.game-toast.is-show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.floating-score {
+  position: absolute;
+  z-index: 7;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-shadow: 0 2px 0 var(--white), 0 0 6px var(--white);
+  pointer-events: none;
+  animation: float-up 0.8s ease forwards;
+}
+
+@keyframes float-up {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -46px);
+  }
+}
+
+/* 遊戲結束畫面 */
+.game-overlay__card .result-score {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin: 2px 0 4px;
+}
+
+.game-overlay__card .result-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--ink-2);
+  font-weight: 800;
+}
+
+.game-overlay__card .result-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.game-overlay__card .result-actions .btn {
+  padding: 9px 20px;
+  font-size: 0.9rem;
+}
+
+/* 手機：遊戲舞台高一點 */
+@media (max-width: 760px) {
+  .game-stage {
+    aspect-ratio: 4 / 3.4;
+    min-height: 300px;
+  }
+
+  .game-stage--board {
+    aspect-ratio: auto;
+    min-height: 360px;
+    padding: 10px;
+  }
+
+  .game-head h1 {
+    font-size: 1.6rem;
+  }
+
+  .game-shell {
+    border-radius: 24px;
+  }
+
+  .game-help ul {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 380px) {
+  .num-cell {
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .game-board {
+    gap: 5px;
+  }
+}
+
+/* ---------- 遊戲頁補充 ---------- */
+.game-stage--play {
+  touch-action: none;
+}
+
+.game-stage--play canvas {
+  cursor: crosshair;
+}
+
+.game-stage--play canvas:focus-visible {
+  outline: 3px solid var(--butter-deep);
+  outline-offset: -6px;
+}
+
+.site-footer--slim {
+  margin-top: 20px;
+  padding-block: 22px;
+  background: transparent;
+  border-top: 2px dashed rgba(74, 58, 50, 0.2);
+}
+
+.site-footer--slim .footer-bottom {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.site-footer--slim a {
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: underline wavy rgba(143, 208, 234, 0.7);
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .game-stage--play {
+    aspect-ratio: 16 / 11;
+  }
+}
+
+/* 打地鼠：沒冒頭的地鼠要藏在洞裡，不要露出來 */
+.hole {
+  overflow: hidden;
+}

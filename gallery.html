@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>相簿 · Phoebe 小星球</title>
+  <meta name="description" content="Phoebe 的旅行照片、世界名畫 cosplay 與日常生活相簿。">
+  <meta name="theme-color" content="#fff8e7">
+  <meta property="og:title" content="菲比的相簿 · Phoebe 小星球">
+  <meta property="og:description" content="旅行、名畫 cosplay、還有日常的小小收藏。">
+  <meta property="og:image" content="assets/img/og-cover.jpg">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/img/favicon.png" sizes="64x64" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page page--gallery">
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Phoebe 小星球 首頁">
+        <span class="brand__avatar"><img src="assets/img/phoebe/avatar.png" alt="" width="52" height="52"></span>
+        <span class="brand__text">
+          <strong>Phoebe</strong>
+          <small>菲比小星球</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主要導覽">
+        <a href="index.html">首頁</a>
+        <a href="gallery.html" aria-current="page">相簿</a>
+        <a href="games.html">遊戲專區</a>
+        <a class="nav-cta" href="about.html">關於菲比</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-hero wrap">
+      <p class="section-kicker">PHOTO ALBUM</p>
+      <h1>菲比的相簿</h1>
+      <p>旅行途中的風景、世界名畫的 cosplay、還有平常日子裡的小碎片。<br>點一下照片，可以放大慢慢看。</p>
+      <span class="page-hero__sparkles" aria-hidden="true">✦<span>✦</span></span>
+    </header>
+
+    <section class="section section--tight" aria-label="照片列表">
+      <div class="wrap">
+        <div class="filter-bar" id="gallery-filters" role="group" aria-label="照片分類">
+          <span class="filter-count" id="gallery-count">全部照片・15 張</span>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid"></div>
+
+        <div class="gallery-empty" id="gallery-empty" hidden>
+          這個分類還沒有照片，等菲比拍回來就會補上啦 ♡
+        </div>
+
+        <p class="gallery-note">
+          <strong>小小說明：</strong>相簿目前放的是網站內建的示範插圖，之後會慢慢換成真實照片。
+          如果你手邊有照片想放進來，方法寫在專案的 README 裡。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/phoebe/avatar.png" alt="" width="56" height="56" loading="lazy">
+          <div>
+            <strong>Phoebe 小星球</strong>
+            <p>旅行、名畫 cosplay、還有好多小遊戲。<br>非官方粉絲網站，用愛心製作。</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>逛逛小屋</h4>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="games.html">遊戲專區</a></li>
+            <li><a href="about.html">關於菲比</a></li>
+          </ul>
+        </div>
+        <div class="footer-note">
+          <h4>小提醒</h4>
+          <p>照片與角色版權屬原作者所有，僅作粉絲分享使用。</p>
+          <p>本站示範插圖由網站內建程式繪製。</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Phoebe 小星球 · 非官方粉絲網站</p>
+        <p>Made with <span class="heart" aria-hidden="true">♡</span> and lots of stars ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="照片放大檢視" aria-hidden="true">
+    <figure class="lightbox__figure">
+      <img id="lightbox-img" alt="">
+      <figcaption class="lightbox__caption">
+        <strong id="lightbox-title"></strong>
+        <span id="lightbox-meta"></span>
+      </figcaption>
+      <p class="lightbox__counter" id="lightbox-counter"></p>
+      <button class="lightbox__close" id="lightbox-close" type="button" aria-label="關閉">✕</button>
+      <button class="lightbox__nav lightbox__prev" id="lightbox-prev" type="button" aria-label="上一張">‹</button>
+      <button class="lightbox__nav lightbox__next" id="lightbox-next" type="button" aria-label="下一張">›</button>
+    </figure>
+  </div>
+
+  <div class="buddy" data-buddy>
+    <div class="buddy__bubble" role="status" hidden></div>
+    <button class="buddy__toggle" type="button" aria-label="和菲比說說話" aria-expanded="false">
+      <img src="assets/img/phoebe/avatar.png" alt="" width="64" height="64" loading="lazy">
+    </button>
+  </div>
+
+  <script src="assets/js/gallery-data.js"></script>
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

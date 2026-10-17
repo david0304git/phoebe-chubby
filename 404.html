@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 · 迷路的菲比 · Phoebe 小星球</title>
+  <meta name="robots" content="noindex">
+  <style>
+    :root {
+      --paper: #fffbf2;
+      --ink: #4a3a32;
+      --ink-2: #7a665a;
+      --butter: #f8e3a3;
+      --sky: #8fd0ea;
+      --pink: #f9bccd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: "PingFang TC", "PingFang SC", "Hiragino Sans GB", "Noto Sans TC",
+        "Microsoft JhengHei", system-ui, sans-serif;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image: radial-gradient(rgba(74, 58, 50, 0.08) 1.2px, transparent 1.2px);
+      background-size: 24px 24px;
+      text-align: center;
+    }
+    .card {
+      max-width: 560px;
+      padding: 42px 34px 38px;
+      background: #fffdf8;
+      border: 3px solid var(--ink);
+      border-radius: 36px;
+      box-shadow: 8px 10px 0 rgba(74, 58, 50, 0.14);
+      position: relative;
+    }
+    .star {
+      font-size: 1.4rem;
+      color: #efc95b;
+      letter-spacing: 0.4em;
+      margin-bottom: 4px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(4.6rem, 18vw, 7rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-shadow: 5px 6px 0 var(--butter);
+    }
+    h2 {
+      margin: 18px 0 8px;
+      font-size: 1.3rem;
+    }
+    p {
+      margin: 0 auto 22px;
+      max-width: 22em;
+      color: var(--ink-2);
+      line-height: 1.9;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 11px 24px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--ink);
+      background: #fff;
+      box-shadow: 0 4px 0 var(--ink);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    a:hover {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 var(--ink);
+    }
+    a.primary { background: var(--sky); }
+    .note {
+      margin: 24px 0 0;
+      font-size: 0.74rem;
+      color: var(--ink-2);
+    }
+    .deco {
+      position: absolute;
+      font-size: 1.3rem;
+      color: var(--pink);
+    }
+    .deco--1 { top: 18px; left: 24px; transform: rotate(-14deg); }
+    .deco--2 { top: 26px; right: 28px; transform: rotate(12deg); color: var(--sky); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <span class="deco deco--1" aria-hidden="true">♡</span>
+    <span class="deco deco--2" aria-hidden="true">✦</span>
+    <div class="star" aria-hidden="true">✦ ✦ ✦</div>
+    <h1>404</h1>
+    <h2>菲比在這顆星球上迷路了</h2>
+    <p>找不到你要的頁面，可能是連結打錯了，或這頁還在旅行中還沒回來。</p>
+    <div class="buttons">
+      <a class="primary" href="./" id="home-link">回小星球首頁</a>
+      <a href="javascript:history.back()">回到上一頁</a>
+    </div>
+    <p class="note">Phoebe 小星球 · 非官方粉絲網站</p>
+  </main>
+  <script>
+    // GitHub Pages 專案網站會把 404 服務在任意深度，
+    // 用路徑第一段推算專案根目錄，回首頁才不會 404。
+    (function () {
+      var segments = location.pathname.split("/").filter(Boolean);
+      if (segments.length) {
+        document.getElementById("home-link").setAttribute("href", "/" + segments[0] + "/");
+      }
+    })();
+  </script>
+</body>
+</html>

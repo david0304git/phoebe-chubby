@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>遊戲專區 · Phoebe 小星球</title>
+  <meta name="description" content="7 款可愛的免費網頁小遊戲：星星接接樂、記憶翻翻牌、打地鼠、菲比拼圖、小菲比跳跳、2048、星星打磚塊。">
+  <meta name="theme-color" content="#fff8e7">
+  <meta property="og:title" content="遊戲專區 · Phoebe 小星球">
+  <meta property="og:description" content="7 款免費小遊戲，手機也能玩，還會幫你記住最高分！">
+  <meta property="og:image" content="assets/img/og-cover.jpg">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/img/favicon.png" sizes="64x64" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page page--games">
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Phoebe 小星球 首頁">
+        <span class="brand__avatar"><img src="assets/img/phoebe/avatar.png" alt="" width="52" height="52"></span>
+        <span class="brand__text">
+          <strong>Phoebe</strong>
+          <small>菲比小星球</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主要導覽">
+        <a href="index.html">首頁</a>
+        <a href="gallery.html">相簿</a>
+        <a href="games.html" aria-current="page">遊戲專區</a>
+        <a class="nav-cta" href="about.html">關於菲比</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-hero wrap">
+      <p class="section-kicker">MINI GAMES</p>
+      <h1>遊戲專區</h1>
+      <p>全部都是免費的小網頁遊戲，手機也能玩。<br>最高分會自動記在這台裝置上，來挑戰菲比的紀錄吧！</p>
+      <span class="page-hero__sparkles" aria-hidden="true">✦<span>✦</span></span>
+    </header>
+
+    <section class="section section--tight" aria-label="小遊戲列表">
+      <div class="wrap">
+        <div class="filter-bar" aria-hidden="true">
+          <span class="chip">🎮 7 款遊戲</span>
+          <span class="chip">📱 手機可玩</span>
+          <span class="chip">🏆 自動記分</span>
+        </div>
+
+        <div class="game-grid">
+          <article class="game-card" data-reveal>
+            <div class="game-card__thumb game-card__thumb--stars" aria-hidden="true"><span>✦</span></div>
+            <h2 class="game-card__title">星星接接樂</h2>
+            <p class="game-card__desc">移動小籃子接住掉下來的星星，小心別接到炸彈！限時 45 秒。</p>
+            <div class="game-card__meta">
+              <span class="game-card__tag">反應</span>
+              <span class="best-score" data-best="catch-stars">還沒玩過</span>
+            </div>
+            <div class="game-card__actions">
+              <a class="btn btn--primary btn--sm" href="games/catch-stars.html">開始玩</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-reveal data-reveal-delay="60">
+            <div class="game-card__thumb game-card__thumb--memory" aria-hidden="true"><span>🃏</span></div>
+            <h2 class="game-card__title">記憶翻翻牌</h2>
+            <p class="game-card__desc">翻開兩張一樣的圖案，用最少的步數把所有卡片配對完成。</p>
+            <div class="game-card__meta">
+              <span class="game-card__tag">記憶</span>
+              <span class="best-score" data-best="memory" data-best-format="moves">還沒玩過</span>
+            </div>
+            <div class="game-card__actions">
+              <a class="btn btn--primary btn--sm" href="games/memory.html">開始玩</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-reveal data-reveal-delay="120">
+            <div class="game-card__thumb game-card__thumb--whack" aria-hidden="true"><span>🔨</span></div>
+            <h2 class="game-card__title">打地鼠</h2>
+            <p class="game-card__desc">30 秒內敲中冒出頭的地鼠，小心炸彈地鼠會扣生命！</p>
+            <div class="game-card__meta">
+              <span class="game-card__tag">反應</span>
+              <span class="best-score" data-best="whack">還沒玩過</span>
+            </div>
+            <div class="game-card__actions">
+              <a class="btn btn--primary btn--sm" href="games/whack.html">開始玩</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-reveal data-reveal-delay="180">
+            <div class="game-card__thumb game-card__thumb--puzzle" aria-hidden="true"><span>🧩</span></div>
+            <h2 class="game-card__title">菲比拼圖</h2>
+            <p class="game-card__desc">把打亂的 Phoebe 照片拼回原樣，滑動方塊就能移動，越少步數越厲害。</p>
+            <div class="game-card__meta">
+              <span class="game-card__tag">益智</span>
+              <span class="best-score" data-best="puzzle" data-best-format="moves">還沒玩過</span>
+            </div>
+            <div class="game-card__actions">
+              <a class="btn btn--primary btn--sm" href="games/puzzle.html">開始玩</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-reveal>
+            <div class="game-card__thumb game-card__thumb--jumper" aria-hidden="true"><span>🐇</span></div>
+            <h2 class="game-card__title">小菲比跳跳 <span class="badge-new">NEW</span></h2>
+            <p class="game-card__desc">Phoebe 自動向前跑，按一下跳過障礙物，看你能跑多遠。</p>
+            <div class="game-card__meta">
+              <span class="game-card__tag">動作</span>
+              <span class="best-score" data-best="jumper">還沒玩過</span>
+            </div>
+            <div class="game-card__actions">
+              <a class="btn btn--primary btn--sm" href="games/jumper.html">開始玩</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-reveal data-reveal-delay="60">
+            <div class="game-card__thumb game-card__thumb--numbers" aria-hidden="true"><span>2048</span></div>
+            <h2 class="game-card__title">數字合合樂</h2>
+            <p class="game-card__desc">把相同數字的方塊合併，一路合到 2048 吧！支援滑動與方向鍵。</p>
+            <div class="game-card__meta">
+              <span class="game-card__tag">益智</span>
+              <span class="best-score" data-best="2048">還沒玩過</span>
+            </div>
+            <div class="game-card__actions">
+              <a class="btn btn--primary btn--sm" href="games/2048.html">開始玩</a>
+            </div>
+          </article>
+
+          <article class="game-card" data-reveal data-reveal-delay="120">
+            <div class="game-card__thumb game-card__thumb--blocks" aria-hidden="true"><span>🧱</span></div>
+            <h2 class="game-card__title">星星打磚塊 <span class="badge-new">NEW</span></h2>
+            <p class="game-card__desc">用緞帶板子接住星星球，把粉彩磚塊通通打下來，一關接著一關。</p>
+            <div class="game-card__meta">
+              <span class="game-card__tag">動作</span>
+              <span class="best-score" data-best="breakout">還沒玩過</span>
+            </div>
+            <div class="game-card__actions">
+              <a class="btn btn--primary btn--sm" href="games/breakout.html">開始玩</a>
+            </div>
+          </article>
+
+          <article class="game-card game-card--wish" data-reveal data-reveal-delay="180">
+            <div class="game-card__thumb game-card__thumb--wish" aria-hidden="true"><span>💭</span></div>
+            <h2 class="game-card__title">下一款遊戲製作中</h2>
+            <p class="game-card__desc">想玩什麼呢？菲比正在想下一款小遊戲，歡迎在心裡偷偷許願 ♡</p>
+            <div class="game-card__meta">
+              <span class="game-card__tag">許願池</span>
+              <span class="best-score">coming soon…</span>
+            </div>
+            <div class="game-card__actions">
+              <a class="btn btn--ghost btn--sm" href="about.html">看看菲比</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="gallery-note">
+          <strong>小提醒：</strong>分數只會存在你自己的瀏覽器裡（localStorage），換一台裝置或清除瀏覽資料就會歸零，不會上傳到任何地方。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/phoebe/avatar.png" alt="" width="56" height="56" loading="lazy">
+          <div>
+            <strong>Phoebe 小星球</strong>
+            <p>旅行、名畫 cosplay、還有好多小遊戲。<br>非官方粉絲網站，用愛心製作。</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>逛逛小屋</h4>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="gallery.html">相簿</a></li>
+            <li><a href="about.html">關於菲比</a></li>
+          </ul>
+        </div>
+        <div class="footer-note">
+          <h4>小提醒</h4>
+          <p>所有遊戲都在瀏覽器裡執行，不需要註冊或下載。</p>
+          <p>照片與角色版權屬原作者所有。</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Phoebe 小星球 · 非官方粉絲網站</p>
+        <p>Made with <span class="heart" aria-hidden="true">♡</span> and lots of stars ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="buddy" data-buddy>
+    <div class="buddy__bubble" role="status" hidden></div>
+    <button class="buddy__toggle" type="button" aria-label="和菲比說說話" aria-expanded="false">
+      <img src="assets/img/phoebe/avatar.png" alt="" width="64" height="64" loading="lazy">
+    </button>
+  </div>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

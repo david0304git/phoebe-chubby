@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小菲比跳跳 · Phoebe 小星球</title>
+  <meta name="description" content="Phoebe 自動向前跑，點擊或按空白鍵跳過障礙物，看看你能跑多遠！Phoebe 小星球的免費網頁小遊戲。">
+  <meta name="theme-color" content="#fff8e7">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/games.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page page--game">
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html" aria-label="Phoebe 小星球 首頁">
+        <span class="brand__avatar"><img src="../assets/img/phoebe/avatar.png" alt="" width="52" height="52"></span>
+        <span class="brand__text">
+          <strong>Phoebe</strong>
+          <small>菲比小星球</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主要導覽">
+        <a href="../index.html">首頁</a>
+        <a href="../gallery.html">相簿</a>
+        <a href="../games.html" aria-current="page">遊戲專區</a>
+        <a class="nav-cta" href="../about.html">關於菲比</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="game-page">
+    <div class="wrap">
+      <a class="back-link" href="../games.html"><span aria-hidden="true">←</span> 回遊戲專區</a>
+
+      <section class="game-shell" aria-labelledby="game-title">
+        <div class="game-head">
+          <div>
+            <p class="section-kicker">MINI GAME · 跑酷</p>
+            <h1 id="game-title">小菲比跳跳</h1>
+          </div>
+          <div class="game-hud">
+            <div class="stat"><span>分數</span><strong id="score">0</strong></div>
+            <div class="stat stat--highlight"><span>最高</span><strong id="best">0</strong></div>
+            <button id="restart" class="btn btn--ghost btn--sm" type="button">重新開始</button>
+          </div>
+        </div>
+
+        <div class="game-stage game-stage--play" id="stage">
+          <canvas id="game" width="900" height="562" tabindex="0" aria-label="小菲比跳跳遊戲畫面，使用空白鍵、點擊或觸控跳躍"></canvas>
+          <div class="game-overlay" id="overlay">
+            <div class="game-overlay__card">
+              <p class="result-label">PHOEBE RUNNER</p>
+              <h2 id="overlay-title">小菲比跳跳</h2>
+              <p id="overlay-text">Phoebe 會自動往前跑。按空白鍵、點擊或輕觸畫面跳躍，躲開路上的仙人掌、炸彈和壞壞星星，看看你能跑多遠！</p>
+              <div class="result-actions">
+                <button class="btn btn--primary" id="start" type="button">開始遊戲</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-help">
+          <h2>怎麼玩</h2>
+          <ul>
+            <li>按空白鍵、↑ 鍵、點擊或觸控畫面都能跳躍。</li>
+            <li>輕點是小跳，按住不放會跳得更高，可以跳過比較高的障礙物。</li>
+            <li>撞到仙人掌、炸彈或壞壞星星就會結束，跑得越遠分數越高。</li>
+            <li>跑越久速度越快，切換到別的頁籤時會自動暫停，回來不會突然撞死。</li>
+          </ul>
+          <p class="tip">💡 分數會自動存在這台裝置上，最高分會一直保留。準備好了就按「開始遊戲」！</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer site-footer--slim">
+    <div class="wrap footer-bottom">
+      <p>© <span data-year>2026</span> Phoebe 小星球 · 非官方粉絲網站</p>
+      <p><a href="../games.html">← 更多小遊戲</a></p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+  <script src="js/jumper.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>星星接接樂 · Phoebe 小星球</title>
+  <meta name="description" content="接住掉下來的星星、避開炸彈，看看你能拿到幾分！Phoebe 小星球的免費網頁小遊戲。">
+  <meta name="theme-color" content="#fff8e7">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/games.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page page--game">
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html" aria-label="Phoebe 小星球 首頁">
+        <span class="brand__avatar"><img src="../assets/img/phoebe/avatar.png" alt="" width="52" height="52"></span>
+        <span class="brand__text">
+          <strong>Phoebe</strong>
+          <small>菲比小星球</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主要導覽">
+        <a href="../index.html">首頁</a>
+        <a href="../gallery.html">相簿</a>
+        <a href="../games.html" aria-current="page">遊戲專區</a>
+        <a class="nav-cta" href="../about.html">關於菲比</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="game-page">
+    <div class="wrap">
+      <a class="back-link" href="../games.html"><span aria-hidden="true">←</span> 回遊戲專區</a>
+
+      <section class="game-shell" aria-labelledby="game-title">
+        <div class="game-head">
+          <div>
+            <p class="section-kicker">MINI GAME · 反應</p>
+            <h1 id="game-title">星星接接樂</h1>
+          </div>
+          <div class="game-hud">
+            <div class="stat"><span>分數</span><strong id="score">0</strong></div>
+            <div class="stat stat--highlight"><span>最高</span><strong id="best">0</strong></div>
+            <div class="stat"><span>生命</span><strong id="lives">♥♥♥</strong></div>
+            <button id="restart" class="btn btn--ghost btn--sm" type="button">重新開始</button>
+          </div>
+        </div>
+
+        <div class="game-stage game-stage--play" id="stage">
+          <canvas id="game" width="900" height="562" tabindex="0" aria-label="星星接接樂遊戲畫面，使用滑鼠、手指或左右方向鍵移動籃子"></canvas>
+          <div class="game-overlay" id="overlay">
+            <div class="game-overlay__card">
+              <p class="result-label">CATCH THE STARS</p>
+              <h2 id="overlay-title">接住所有星星吧！</h2>
+              <p id="overlay-text">移動滑鼠或手指，接住掉下來的星星。接住炸彈會扣生命，接住愛心可以補血喔！</p>
+              <div class="result-actions">
+                <button class="btn btn--primary" id="start" type="button">開始遊戲</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-help">
+          <h2>怎麼玩</h2>
+          <ul>
+            <li>滑鼠移動、手指拖曳，或按 ← → 鍵移動籃子。</li>
+            <li>⭐ 星星 +10 分起，連續接住會加成，最高 ×3。</li>
+            <li>💗 愛心 +25 分，生命 +1（最多 5 顆）。</li>
+            <li>💣 炸彈會扣 1 顆生命，接到的瞬間連擊會歸零。</li>
+          </ul>
+          <p class="tip">💡 限時 45 秒，生命歸零或時間到就結束。分數會自動存在這台裝置上。</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer site-footer--slim">
+    <div class="wrap footer-bottom">
+      <p>© <span data-year>2026</span> Phoebe 小星球 · 非官方粉絲網站</p>
+      <p><a href="../games.html">← 更多小遊戲</a></p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+  <script src="js/catch-stars.js" defer></script>
+</body>
+</html>

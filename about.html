@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>關於菲比 · Phoebe 小星球</title>
+  <meta name="description" content="關於 Phoebe（菲比）的小檔案、小故事，以及這個粉絲網站的製作方式。">
+  <meta name="theme-color" content="#fff8e7">
+  <meta property="og:title" content="關於菲比 · Phoebe 小星球">
+  <meta property="og:description" content="菲比的小檔案、小故事，還有這個網站的小秘密。">
+  <meta property="og:image" content="assets/img/og-cover.jpg">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/img/favicon.png" sizes="64x64" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page page--about">
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Phoebe 小星球 首頁">
+        <span class="brand__avatar"><img src="assets/img/phoebe/avatar.png" alt="" width="52" height="52"></span>
+        <span class="brand__text">
+          <strong>Phoebe</strong>
+          <small>菲比小星球</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主要導覽">
+        <a href="index.html">首頁</a>
+        <a href="gallery.html">相簿</a>
+        <a href="games.html">遊戲專區</a>
+        <a class="nav-cta" href="about.html" aria-current="page">關於菲比</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-hero wrap">
+      <p class="section-kicker">ABOUT PHOEBE</p>
+      <h1>關於菲比</h1>
+      <p>金色長髮、紫色眼睛，喜歡旅行、名畫和甜點。<br>這裡寫著她的小檔案、小故事，還有這座小星球的製作方式。</p>
+      <span class="page-hero__sparkles" aria-hidden="true">✦<span>✦</span></span>
+    </header>
+
+    <section class="section section--tight" aria-label="關於菲比的介紹">
+      <div class="wrap about-grid">
+        <article class="about-card" data-reveal>
+          <h2><span class="emoji" aria-hidden="true">📋</span>角色小檔案</h2>
+          <ul class="spec-list">
+            <li><span>名字</span><strong>Phoebe（菲比）</strong></li>
+            <li><span>暱稱</span><strong>奶油小可愛</strong></li>
+            <li><span>生日</span><strong>3 月 14 日</strong></li>
+            <li><span>身高</span><strong>158 cm</strong></li>
+            <li><span>最喜歡</span><strong>草莓蛋糕、星星、旅行</strong></li>
+            <li><span>擅長</span><strong>擺姿勢拍照、名畫模仿</strong></li>
+            <li><span>口頭禪</span><strong>「今天也要閃閃發光！」</strong></li>
+          </ul>
+        </article>
+
+        <article class="about-card" data-reveal data-reveal-delay="80">
+          <h2><span class="emoji" aria-hidden="true">📖</span>我的小故事</h2>
+          <ul class="timeline">
+            <li>
+              <time>2024 · 相遇</time>
+              <strong>第一次相遇</strong>
+              <p>在某個下雨的午后，第一次看到菲比的插畫，就這樣記住了那雙紫色的眼睛。</p>
+            </li>
+            <li>
+              <time>2025 · 出發</time>
+              <strong>開始到處旅行</strong>
+              <p>帶著相機跑了東京、巴黎、沖繩，也慢慢學會在鏡頭前擺出最可愛的姿勢。</p>
+            </li>
+            <li>
+              <time>2026 · 開張</time>
+              <strong>小星球開張</strong>
+              <p>把照片和遊戲搬進這個小屋，希望每個來訪的人都能笑著離開。</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="about-card" data-reveal>
+          <h2><span class="emoji" aria-hidden="true">✨</span>網站的小秘密</h2>
+          <p>
+            這是一個純靜態的可愛小網站，沒有資料庫、沒有登入，也不需要下載任何東西。
+            打開瀏覽器就能看照片、玩遊戲。
+          </p>
+          <ul class="spec-list">
+            <li><span>相簿</span><strong>由 JavaScript 產生卡片，點開可以放大</strong></li>
+            <li><span>遊戲</span><strong>全部在前端執行，離線也能玩</strong></li>
+            <li><span>最高分</span><strong>存在你的瀏覽器裡，不會上傳</strong></li>
+            <li><span>照片</span><strong>目前是網站內建的示範插圖</strong></li>
+          </ul>
+        </article>
+
+        <article class="about-card" data-reveal data-reveal-delay="80">
+          <h2><span class="emoji" aria-hidden="true">💌</span>給來訪的你</h2>
+          <p>
+            謝謝你點開這個小小的網站。<br>
+            不管是翻翻相簿、玩一場小遊戲，還是只是剛好路過，
+            都希望你能在這裡找到一點點開心的感覺。
+          </p>
+          <p>
+            如果你想留下什麼，可以去找找菲比的小幫手（右下角那個圓圓的頭像），
+            她會偷偷跟你說一些小事。
+          </p>
+          <p style="text-align: right; font-family: var(--font-display); margin-top: 18px;">
+            — Phoebe ♡
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="cta-panel" data-reveal>
+          <div class="cta-panel__avatar">
+            <img src="assets/img/phoebe/avatar.png" alt="Phoebe 的頭像" width="256" height="256" loading="lazy">
+          </div>
+          <div class="cta-panel__body">
+            <h2>準備好一起逛逛了嗎？</h2>
+            <p>相簿裡有旅行和名畫 cosplay，遊戲專區有 7 款小遊戲在等你。</p>
+            <a class="btn btn--accent" href="gallery.html">前進相簿 <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <p class="gallery-note">
+          <strong>版權說明：</strong>本站為非官方粉絲網站，角色與相關作品版權屬原作者所有，無商業用途。
+          網站內建的示範插圖由專案的產圖腳本繪製，僅用於版面示範。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/phoebe/avatar.png" alt="" width="56" height="56" loading="lazy">
+          <div>
+            <strong>Phoebe 小星球</strong>
+            <p>旅行、名畫 cosplay、還有好多小遊戲。<br>非官方粉絲網站，用愛心製作。</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>逛逛小屋</h4>
+          <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="gallery.html">相簿</a></li>
+            <li><a href="games.html">遊戲專區</a></li>
+          </ul>
+        </div>
+        <div class="footer-note">
+          <h4>小提醒</h4>
+          <p>照片與角色版權屬原作者所有，僅作粉絲分享使用。</p>
+          <p>喜歡的話，歡迎分享給朋友 ♡</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Phoebe 小星球 · 非官方粉絲網站</p>
+        <p>Made with <span class="heart" aria-hidden="true">♡</span> and lots of stars ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="buddy" data-buddy>
+    <div class="buddy__bubble" role="status" hidden></div>
+    <button class="buddy__toggle" type="button" aria-label="和菲比說說話" aria-expanded="false">
+      <img src="assets/img/phoebe/avatar.png" alt="" width="64" height="64" loading="lazy">
+    </button>
+  </div>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

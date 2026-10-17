@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>菲比拼圖 · Phoebe 小星球</title>
+  <meta name="description" content="移動 8 塊拼圖，把菲比的可愛照片拼回原樣！3×3 滑動拼圖，支援鍵盤與觸控。Phoebe 小星球的免費網頁小遊戲。">
+  <meta name="theme-color" content="#fff8e7">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/games.css">
+  <style>
+    /* 菲比拼圖專屬樣式（頁內 scoped，不動共用 CSS） */
+    .puzzle-stage {
+      padding: clamp(12px, 2.4vw, 22px);
+    }
+
+    .puzzle-stage .result-score {
+      color: var(--ink);
+    }
+
+    .puzzle-preview-card {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 4;
+      margin: 0;
+      padding: 6px 6px 3px;
+      background: var(--white);
+      border: 2.5px solid var(--ink);
+      border-radius: 14px;
+      box-shadow: 0 3px 0 rgba(74, 58, 50, 0.16);
+      pointer-events: none;
+    }
+
+    .puzzle-preview-card[hidden] {
+      display: none;
+    }
+
+    .puzzle-preview-card .puzzle-preview {
+      width: 96px;
+      border-radius: 8px;
+    }
+
+    .puzzle-preview-card figcaption {
+      margin-top: 2px;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--ink-2);
+      text-align: center;
+    }
+
+    .puzzle-tile.is-pop {
+      animation: puzzle-pop 0.22s ease;
+    }
+
+    @keyframes puzzle-pop {
+      50% {
+        transform: scale(0.92);
+      }
+    }
+
+    /* 手機版把原圖小卡放到盤面下方，避免蓋住拼圖塊 */
+    @media (max-width: 760px) {
+      .puzzle-preview-card {
+        position: static;
+        margin: 10px auto 0;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .puzzle-stage {
+        padding: 8px;
+      }
+
+      .puzzle-preview-card {
+        padding: 4px 4px 2px;
+        border-radius: 11px;
+      }
+
+      .puzzle-preview-card .puzzle-preview {
+        width: 74px;
+      }
+
+      .puzzle-preview-card figcaption {
+        font-size: 0.55rem;
+      }
+
+      .puzzle-stage .game-overlay {
+        padding: 10px;
+      }
+
+      .puzzle-stage .game-overlay__card {
+        padding: 15px 16px;
+        border-radius: 20px;
+      }
+
+      .puzzle-stage .game-overlay__card h2 {
+        font-size: 1.25rem;
+      }
+
+      .puzzle-stage .game-overlay__card p {
+        font-size: 0.78rem;
+        line-height: 1.55;
+        margin-bottom: 10px;
+      }
+
+      .puzzle-stage .game-overlay__card .result-score {
+        font-size: 1.9rem;
+        margin-bottom: 2px;
+      }
+
+      .puzzle-stage .result-actions {
+        margin-top: 10px;
+      }
+
+      .puzzle-stage .result-actions .btn {
+        padding: 8px 16px;
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page page--game">
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html" aria-label="Phoebe 小星球 首頁">
+        <span class="brand__avatar"><img src="../assets/img/phoebe/avatar.png" alt="" width="52" height="52"></span>
+        <span class="brand__text">
+          <strong>Phoebe</strong>
+          <small>菲比小星球</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主要導覽">
+        <a href="../index.html">首頁</a>
+        <a href="../gallery.html">相簿</a>
+        <a href="../games.html" aria-current="page">遊戲專區</a>
+        <a class="nav-cta" href="../about.html">關於菲比</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="game-page">
+    <div class="wrap">
+      <a class="back-link" href="../games.html"><span aria-hidden="true">←</span> 回遊戲專區</a>
+
+      <section class="game-shell" aria-labelledby="game-title">
+        <div class="game-head">
+          <div>
+            <p class="section-kicker">MINI GAME · 益智</p>
+            <h1 id="game-title">菲比拼圖</h1>
+          </div>
+          <div class="game-hud">
+            <div class="stat"><span>步數</span><strong id="moves">0</strong></div>
+            <div class="stat stat--highlight"><span>最少步數</span><strong id="best">—</strong></div>
+            <div class="stat"><span>時間</span><strong id="time">00:00</strong></div>
+            <button id="restart" class="btn btn--ghost btn--sm" type="button">重新開始</button>
+          </div>
+        </div>
+
+        <div class="game-stage game-stage--board puzzle-stage" id="stage">
+          <div class="puzzle-wrap">
+            <div class="puzzle-grid" id="puzzle" role="group" aria-label="3 乘 3 菲比拼圖盤面，共 8 塊拼圖與 1 個空格"></div>
+          </div>
+          <figure class="puzzle-preview-card" id="preview" hidden>
+            <img class="puzzle-preview" src="../assets/img/phoebe/phoebe-square.jpg" alt="菲比的原圖，正方形照片" width="1100" height="1100">
+            <figcaption>原圖</figcaption>
+          </figure>
+          <div class="game-overlay" id="overlay" role="dialog" aria-labelledby="overlay-title" aria-describedby="overlay-text">
+            <div class="game-overlay__card">
+              <p class="result-label">PHOEBE PUZZLE</p>
+              <h2 id="overlay-title">菲比拼圖</h2>
+              <p class="result-score" id="result-score" hidden>0 步</p>
+              <p id="overlay-text">點擊空格旁邊的拼圖塊，把菲比的照片拼回原樣。3×3 共 8 塊，用方向鍵也可以玩喔！</p>
+              <div class="result-actions">
+                <button class="btn btn--primary" id="start" type="button">開始遊戲</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-toolbar">
+          <button class="btn btn--ghost btn--sm" id="shuffle" type="button">重新打亂</button>
+          <button class="btn btn--ghost btn--sm" id="preview-toggle" type="button" aria-pressed="false">看原圖</button>
+        </div>
+
+        <div class="game-help">
+          <h2>怎麼玩</h2>
+          <ul>
+            <li>點一下空格旁邊的拼圖塊，它就會滑進空格。</li>
+            <li>也可以用方向鍵：按鍵方向就是方塊移動的方向。</li>
+            <li>拼圖由完成狀態隨機打亂 120 步，保證一定拼得回來。</li>
+            <li>「看原圖」可以偷看一下完整的照片。</li>
+          </ul>
+          <p class="tip">💡 第一次移動開始計時，最少步數會自動存在這台裝置上。</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer site-footer--slim">
+    <div class="wrap footer-bottom">
+      <p>© <span data-year>2026</span> Phoebe 小星球 · 非官方粉絲網站</p>
+      <p><a href="../games.html">← 更多小遊戲</a></p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+  <script src="js/puzzle.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+Phoebe 示範相簿插圖 — build report
+canvas: 1200x900  SS=2  quality=88 (fallback 85)
+
+file                                KB   char%  bbox(left,top,right,bottom)
+travel-tokyo.jpg                 141.0    68.0  (285,126,771,738)
+travel-paris.jpg                 129.8    66.0  (184,162,656,756)
+travel-fuji.jpg                  132.1    71.0  (538,117,1046,756)
+travel-okinawa.jpg               164.1    64.0  (167,198,625,774)
+travel-taipei.jpg                141.6    70.0  (397,135,899,765)
+travel-alps.jpg                  132.8    62.0  (342,216,786,774)
+cosplay-starry-night.jpg         203.4    70.0  (229,144,731,774)
+cosplay-scream.jpg               181.4    71.0  (502,122,1010,761)
+cosplay-mona-lisa.jpg            147.7    68.0  (357,148,843,760)
+cosplay-sunflowers.jpg           171.8    66.0  (148,189,620,783)
+cosplay-pearl.jpg                156.2    70.0  (505,126,1007,756)
+daily-cafe.jpg                   146.1    62.0  (186,225,630,783)
+daily-books.jpg                  184.3    64.0  (287,189,745,765)
+daily-rain.jpg                   133.8    63.0  (639,207,1089,774)
+daily-birthday.jpg               143.1    68.0  (237,171,723,783)
+
+problems:
+(none)

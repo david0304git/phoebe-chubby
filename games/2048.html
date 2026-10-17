@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>數字合合樂 · Phoebe 小星球</title>
+  <meta name="description" content="把相同數字的方塊合併成兩倍，一路挑戰 2048！Phoebe 小星球的免費網頁小遊戲。">
+  <meta name="theme-color" content="#fff8e7">
+  <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/games.css">
+  <style>
+    /* ---------- 2048 頁面專屬樣式（n2048- 前綴，不改共用 CSS） ---------- */
+    .n2048-stage .num-board {
+      touch-action: none;
+    }
+
+    /* 超過 2048 的方塊也給一套粉彩配色 */
+    .n2048-stage .num-cell[data-value="4096"] {
+      background: var(--pink-deep);
+      color: #fff;
+    }
+
+    .n2048-stage .num-cell[data-value="8192"] {
+      background: var(--lav-deep);
+      color: #fff;
+    }
+
+    .n2048-stage .num-cell[data-value="16384"],
+    .n2048-stage .num-cell[data-value="32768"],
+    .n2048-stage .num-cell[data-value="65536"] {
+      background: var(--ink);
+      color: var(--butter);
+    }
+
+    /* 方向按鈕：給不習慣滑動的人也能玩 */
+    .n2048-pad {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(56px, 64px));
+      grid-template-rows: repeat(2, 56px);
+      gap: 10px;
+      justify-content: center;
+      margin-top: 18px;
+      touch-action: manipulation;
+    }
+
+    .n2048-pad__btn {
+      display: grid;
+      place-items: center;
+      padding: 0;
+      border: 2.5px solid var(--ink);
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: 0 3px 0 var(--ink);
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform 0.12s ease, background-color 0.16s ease,
+        box-shadow 0.12s ease;
+    }
+
+    .n2048-pad__btn:hover {
+      background: var(--butter);
+    }
+
+    .n2048-pad__btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 var(--ink);
+    }
+
+    .n2048-pad__btn[data-dir="up"] {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .n2048-pad__btn[data-dir="left"] {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .n2048-pad__btn[data-dir="down"] {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .n2048-pad__btn[data-dir="right"] {
+      grid-column: 3;
+      grid-row: 2;
+    }
+
+    /* 「繼續玩」平常隱藏（.btn 的 display 會蓋掉 hidden，所以補這條） */
+    .n2048-continue[hidden] {
+      display: none;
+    }
+  </style>
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="page page--game">
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="bg-deco" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html" aria-label="Phoebe 小星球 首頁">
+        <span class="brand__avatar"><img src="../assets/img/phoebe/avatar.png" alt="" width="52" height="52"></span>
+        <span class="brand__text">
+          <strong>Phoebe</strong>
+          <small>菲比小星球</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主要導覽">
+        <a href="../index.html">首頁</a>
+        <a href="../gallery.html">相簿</a>
+        <a href="../games.html" aria-current="page">遊戲專區</a>
+        <a class="nav-cta" href="../about.html">關於菲比</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="game-page">
+    <div class="wrap">
+      <a class="back-link" href="../games.html"><span aria-hidden="true">←</span> 回遊戲專區</a>
+
+      <section class="game-shell" aria-labelledby="game-title">
+        <div class="game-head">
+          <div>
+            <p class="section-kicker">MINI GAME · 數字</p>
+            <h1 id="game-title">數字合合樂</h1>
+          </div>
+          <div class="game-hud">
+            <div class="stat"><span>分數</span><strong id="score">0</strong></div>
+            <div class="stat stat--highlight"><span>最高</span><strong id="best">0</strong></div>
+            <div class="stat"><span>步數</span><strong id="moves">0</strong></div>
+            <button id="restart" class="btn btn--ghost btn--sm" type="button">重新開始</button>
+          </div>
+        </div>
+
+        <div class="game-stage game-stage--board n2048-stage" id="stage">
+          <div class="num-wrap">
+            <div class="num-board" id="board" aria-label="2048 數字盤面，使用方向鍵、方向按鈕或在盤面上滑動">
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+              <div class="num-cell"></div>
+            </div>
+          </div>
+          <div class="game-overlay" id="overlay">
+            <div class="game-overlay__card">
+              <p class="result-label">NUMBER MERGE</p>
+              <h2 id="overlay-title">數字合合樂</h2>
+              <p id="overlay-text">用方向鍵、方向按鈕或在盤面上滑動，把相同數字的方塊合併成兩倍。合出 2048 就達標，看看你能不能更大！</p>
+              <div class="result-actions">
+                <button class="btn btn--primary" id="start" type="button">開始遊戲</button>
+                <button class="btn btn--ghost n2048-continue" id="continue" type="button" hidden>繼續玩</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="n2048-pad" role="group" aria-label="方向按鈕">
+          <button class="n2048-pad__btn" type="button" data-dir="up" aria-label="往上移動">↑</button>
+          <button class="n2048-pad__btn" type="button" data-dir="left" aria-label="往左移動">←</button>
+          <button class="n2048-pad__btn" type="button" data-dir="down" aria-label="往下移動">↓</button>
+          <button class="n2048-pad__btn" type="button" data-dir="right" aria-label="往右移動">→</button>
+        </div>
+
+        <div class="game-help">
+          <h2>怎麼玩</h2>
+          <ul>
+            <li>方向鍵、畫面上的方向按鈕，或直接在盤面上滑動都可以操作。</li>
+            <li>相同數字的方塊碰在一起就會合併成兩倍，每塊每步只會合併一次。</li>
+            <li>合併時得到的分數就是新方塊的數值，例如 8 + 8 合併得 16 分。</li>
+            <li>合出 2048 就算達標，可以繼續挑戰 4096、8192。</li>
+          </ul>
+          <p class="tip">💡 盤面沒有空位、也不能再合併時就結束了。最高分會自動存在這台裝置上。</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer site-footer--slim">
+    <div class="wrap footer-bottom">
+      <p>© <span data-year>2026</span> Phoebe 小星球 · 非官方粉絲網站</p>
+      <p><a href="../games.html">← 更多小遊戲</a></p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+  <script src="js/2048.js" defer></script>
+</body>
+</html>
