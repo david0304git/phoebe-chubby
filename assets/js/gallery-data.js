@@ -73,6 +73,56 @@ window.PHOEBE_GALLERY = {
       alt: "Phoebe 在阿爾卑斯雪山與雪松之間"
     },
     {
+      src: "photos/cosplay/unknown-woman.jpg",
+      thumb: "photos/cosplay/thumbs/unknown-woman.jpg",
+      portrait: true,
+      title: "無名菲比",
+      meta: "克拉姆斯柯依《無名女郎》· 1883",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 扮成《無名女郎》，坐在雪地馬車上"
+    },
+    {
+      src: "photos/cosplay/letter-writer.jpg",
+      thumb: "photos/cosplay/thumbs/letter-writer.jpg",
+      portrait: true,
+      title: "寫信的菲比",
+      meta: "古典書信肖像 · 19 世紀",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 在古典書房裡提筆寫信"
+    },
+    {
+      src: "photos/cosplay/painter-phoebe.jpg",
+      thumb: "photos/cosplay/thumbs/painter-phoebe.jpg",
+      portrait: true,
+      title: "畫家菲比",
+      meta: "維傑·勒布倫《戴草帽的自畫像》風格 · 1782",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 戴著草帽、手持畫筆，扮成古典畫家"
+    },
+    {
+      src: "photos/cosplay/milkmaid.jpg",
+      thumb: "photos/cosplay/thumbs/milkmaid.jpg",
+      portrait: true,
+      title: "倒牛奶的菲比",
+      meta: "維梅爾《倒牛奶的女僕》· 1658",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 扮成倒牛奶的女僕，在廚房裡倒牛奶"
+    },
+    {
+      src: "photos/cosplay/salvator-mundi.jpg",
+      thumb: "photos/cosplay/thumbs/salvator-mundi.jpg",
+      portrait: true,
+      title: "救世主菲比",
+      meta: "達文西《救世主》· 1500",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 扮成救世主，手持水晶球"
+    },
+    {
       src: "photos/cosplay/napoleon-alps.jpg",
       thumb: "photos/cosplay/thumbs/napoleon-alps.jpg",
       portrait: true,

@@ -10,7 +10,7 @@
 ## 這個網站有什麼
 
 - **首頁**：角色主視覺、角色檔案、精選相簿、遊戲專區、小屋日記。
-- **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 9 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（旅行＋旅途日常 10 件，淺色旅行手帳＋拍立得＋紙膠帶）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
+- **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 14 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（旅行＋旅途日常 10 件，淺色旅行手帳＋拍立得＋紙膠帶）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
 - **遊戲專區**：7 款小遊戲，手機可玩，最高分自動存在瀏覽器裡。
 - **關於菲比**：角色小檔案、小故事、網站製作方式、版權說明。
 - **404 頁**：迷路時也有可愛的畫面。
@@ -114,11 +114,18 @@ phoebe-chubby/
 | `photos/cosplay/mona-lisa.jpg` | `photos/cosplay/03.PNG` | 達文西《蒙娜麗莎》 | 蒙娜菲比 |
 | `photos/cosplay/girl-with-pearl-earring.jpg` | `photos/cosplay/02.png` | 維梅爾《戴珍珠耳環的少女》 | 戴珍珠耳環的菲比 |
 | `photos/cosplay/van-gogh-hat.jpg` | `photos/cosplay/04.png` | 梵谷《草帽自畫像》 | 菲比的草帽 |
+| `photos/cosplay/unknown-woman.jpg` | `photos/cosplay/05.png` | 克拉姆斯柯依《無名女郎》 | 無名菲比 |
+| `photos/cosplay/letter-writer.jpg` | `photos/cosplay/06.png` | 古典書信肖像 · 19 世紀 | 寫信的菲比 |
+| `photos/cosplay/painter-phoebe.jpg` | `photos/cosplay/07.png` | 維傑·勒布倫《戴草帽的自畫像》風格 | 畫家菲比 |
+| `photos/cosplay/milkmaid.jpg` | `photos/cosplay/08.png` | 維梅爾《倒牛奶的女僕》 | 倒牛奶的菲比 |
+| `photos/cosplay/salvator-mundi.jpg` | `photos/cosplay/10.png` | 達文西《救世主》 | 救世主菲比 |
+
+> 05–10 中目前收到 05、06、07、08、10 五張；`09.png` 尚未加入，補上後可以再放進第一展區。
 
 作品標題採用菲比化名稱（例如「蒙娜菲比」）；下方小字保留原畫家與原畫名，方便辨識。
 
 - 網站用的大圖已壓成 1400×1867、quality 85 的 JPEG；相簿卡片另外使用 `photos/cosplay/thumbs/` 裡的 600×800 縮圖。
-- 原始高解析 PNG（`01.png`～`04.png`，共約 28 MB）留在 `photos/cosplay/` 當母檔，並已寫進 `.gitignore`，不會被推上 GitHub。
+- 原始高解析 PNG（`01.png`～`10.png`，共約 54 MB）留在 `photos/cosplay/` 當母檔，並已寫進 `.gitignore`，不會被推上 GitHub。
 - 資料設定在 `assets/js/gallery-data.js`；新作品放在 cosplay 分類最前面，卡片的 `portrait: true` 會用 3:4 直式比例，`thumb` 指定縮圖。
 - 分區規則：`cosplay` 進第一展區「跟著菲比賞名畫」；`travel` 與 `daily` 進第二展區「跟著菲比去旅行」。
 
