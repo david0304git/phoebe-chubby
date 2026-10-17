@@ -200,8 +200,17 @@ phoebe-chubby/
 
 ## 部署到 GitHub Pages
 
+> 這個資料夾**已經初始化成 git repo**（分支 `main`，含初始 commit）。你可以直接建立遠端並 push，不用再 `git init`。
+
 1. 在 GitHub 建立一個新的 repository（例如 `phoebe-chubby`），**不要**勾選初始化 README。
 2. 在專案資料夾執行：
+
+```bash
+git remote add origin https://github.com/<你的帳號>/phoebe-chubby.git
+git push -u origin main
+```
+
+如果你想要從頭開始，也可以照傳統流程：
 
 ```bash
 git init
