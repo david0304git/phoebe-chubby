@@ -105,7 +105,30 @@
       <div class="wrap profile-grid">
         <div class="profile-photo" data-reveal>
           <span class="photo__tape" aria-hidden="true"></span>
-          <img src="assets/img/phoebe/phoebe-front.jpg" alt="Phoebe 的全身立繪：金色長髮、紫色大眼睛，穿著白色與天空藍的水手風洋裝，戴著白色帽子。" width="945" height="1151">
+          <svg class="profile-puppet" viewBox="0 0 883 1102" role="img" aria-labelledby="profile-puppet-title" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title id="profile-puppet-title">Phoebe 的全身立繪：金色長髮、紫色大眼睛，穿著白色與天空藍的水手風洋裝，戴著白色帽子。</title>
+            <g class="profile-puppet__body">
+              <image href="assets/img/phoebe/profile-body.png" xlink:href="assets/img/phoebe/profile-body.png" x="0" y="0" width="883" height="1102" preserveAspectRatio="xMidYMid meet"/>
+            </g>
+            <g class="profile-puppet__head">
+              <image href="assets/img/phoebe/profile-head.png" xlink:href="assets/img/phoebe/profile-head.png" x="0" y="0" width="883" height="1102" preserveAspectRatio="xMidYMid meet"/>
+              <g class="profile-puppet__blink" aria-hidden="true">
+                <defs>
+                  <filter id="profile-lid-soft" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="0.8"/>
+                  </filter>
+                </defs>
+                <ellipse cx="306" cy="520" rx="88" ry="96" fill="#fce9da" filter="url(#profile-lid-soft)"/>
+                <ellipse cx="575" cy="522" rx="100" ry="96" fill="#fce9da" filter="url(#profile-lid-soft)"/>
+                <path class="profile-lash" d="M250 524 Q310 500 370 524"/>
+                <path class="profile-lash" d="M520 526 Q580 502 640 526"/>
+                <path class="profile-lash profile-lash--side" d="M370 524 q12 1 18 6"/>
+                <path class="profile-lash profile-lash--side" d="M250 524 q-12 1 -18 6"/>
+                <path class="profile-lash profile-lash--side" d="M640 526 q12 1 18 6"/>
+                <path class="profile-lash profile-lash--side" d="M520 526 q-12 1 -18 6"/>
+              </g>
+            </g>
+          </svg>
         </div>
         <div class="profile-body" data-reveal data-reveal-delay="120">
           <p class="section-kicker">PROFILE</p>

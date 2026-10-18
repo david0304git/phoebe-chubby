@@ -9,7 +9,7 @@
 
 ## 這個網站有什麼
 
-- **首頁**：角色主視覺（圓形頭像，純圖片）、角色檔案、精選相簿、遊戲專區、小屋日記。
+- **首頁**：角色主視覺（圓形頭像，純圖片）、角色檔案（兩層 SVG 動態立繪：頭與上半髮微擺、眨眼、呼吸）、精選相簿、遊戲專區、小屋日記。
 - **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 12 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（五國 × 四張：日本、法國、中國、澳洲、挪威各 4 張，共 20 張；淺色旅行手帳＋五國各自配色）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
 - **遊戲專區**：7 款小遊戲，手機可玩，最高分自動存在瀏覽器裡。
 - **關於菲比**：角色小檔案、小故事、網站製作方式、版權說明。
@@ -148,7 +148,9 @@ phoebe-chubby/
 
 | 檔案 | 用途 |
 | --- | --- |
-| `assets/img/phoebe/phoebe-front.jpg` | 首頁角色檔案、關於頁用的原圖（白底） |
+| `assets/img/phoebe/phoebe-front.jpg` | 舊版全身靜態立繪（備份，角色檔案已改用分層圖） |
+| `assets/img/phoebe/profile-head.png` | 角色檔案：頭＋上半髮圖層（透明） |
+| `assets/img/phoebe/profile-body.png` | 角色檔案：身體＋下半髮圖層（透明） |
 | `assets/img/phoebe/phoebe-avatar.jpg` | 首頁右上圓形頭像（純圖片、不眨眼） |
 | `assets/img/phoebe/phoebe.png` | 角色去背 PNG（遊戲 jumper 等使用） |
 | `assets/img/phoebe/phoebe-square.jpg` | 菲比拼圖用的方形圖（1100×1100） |
@@ -159,6 +161,8 @@ phoebe-chubby/
 去背可以用任何你習慣的工具（Photoshop、remove.bg、Pillow…），輸出透明 PNG 覆蓋 `phoebe.png` 即可。
 
 > 首頁右上角現在是 `phoebe-avatar.jpg` 的圓形頭像，純圖片、沒有眨眼或角色動畫；圓框由 `.hero__disc` 的 `overflow: hidden` 與 `.hero__phoebe` 的 `border-radius: 50%` 裁切。
+
+> 角色檔案是 inline SVG：`profile-body.png` 放底層，`profile-head.png` 放上層；兩張都以同一張 `phoebe.png` 為基準、在 y≈600–650 做羽化重疊。CSS 會讓頭與上半髮微擺、身體呼吸、眼睛眨眼。若換角色圖，兩張分層與眼皮座標都要重新對位。
 
 ---
 
