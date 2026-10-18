@@ -119,6 +119,7 @@
   var spriteReady = false;
   var spriteRatio = 122 / 204;
   var SPRITE_FRAMES = 6;
+  var SPRITE_FRAME_MS = 160;
   var spriteFrameW = 0;
   var spriteFrameH = 0;
 
@@ -662,8 +663,10 @@
     var width = height * spriteRatio;
     var frame = 0;
 
-    if (state.mode === "playing" || state.mode === "over") {
-      frame = player.onGround ? Math.floor(state.distance / 16) % SPRITE_FRAMES : 3;
+    if (state.mode === "playing") {
+      frame = player.onGround
+        ? Math.floor(window.performance.now() / SPRITE_FRAME_MS) % SPRITE_FRAMES
+        : 3;
     }
 
     ctx.save();
