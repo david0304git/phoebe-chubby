@@ -250,11 +250,11 @@
     slot.el.classList.add("is-up");
     slot.el.classList.toggle("is-gold", type === "gold");
     slot.el.classList.toggle("is-bomb", type === "bomb");
-    slot.mole.textContent = type === "gold" ? "🌟" : type === "bomb" ? "💣" : "🐹";
+    slot.mole.textContent = type === "gold" ? "💫" : type === "bomb" ? "💣" : "🌟";
     slot.el.setAttribute(
       "aria-label",
       "第 " + (slot.index + 1) + " 個洞，" +
-        (type === "gold" ? "金色地鼠" : type === "bomb" ? "炸彈" : "地鼠")
+        (type === "gold" ? "金色奶油星" : type === "bomb" ? "酸梅炸彈" : "搗蛋星")
     );
 
     slot.hideTimer = later(function () {

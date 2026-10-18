@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>星星打磚塊 · Phoebe 小星球</title>
+  <title>名畫保衛戰 · Phoebe 小星球</title>
   <meta name="description" content="用緞帶板子接住星星球，打掉粉彩愛心磚塊，挑戰最高分！Phoebe 小星球的免費網頁小遊戲。">
   <meta name="theme-color" content="#fff8e7">
   <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/games.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261018-games">
+  <link rel="stylesheet" href="../assets/css/games.css?v=20261018-games">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body class="page page--game">
@@ -44,14 +44,21 @@
     <div class="wrap">
       <a class="back-link" href="../games.html"><span aria-hidden="true">←</span> 回遊戲專區</a>
 
+      <div class="game-guide">
+        <img src="../assets/img/phoebe/avatar.png" alt="" width="56" height="56">
+        <p>菲比啾比：「這些都是我從奶油星海帶回來的收藏，陪我玩一局吧！」</p>
+      </div>
+
+
+
       <section class="game-shell" aria-labelledby="game-title">
         <div class="game-head">
           <div>
             <p class="section-kicker">MINI GAME · 反應</p>
-            <h1 id="game-title">星星打磚塊</h1>
+            <h1 id="game-title">名畫保衛戰</h1>
           </div>
           <div class="game-hud">
-            <div class="stat"><span>分數</span><strong id="score">0</strong></div>
+            <div class="stat"><span>奶油星屑</span><strong id="score">0</strong></div>
             <div class="stat stat--highlight"><span>最高</span><strong id="best">0</strong></div>
             <div class="stat"><span>生命</span><strong id="lives">♥♥♥</strong></div>
             <button id="restart" class="btn btn--ghost btn--sm" type="button">重新開始</button>
@@ -59,12 +66,12 @@
         </div>
 
         <div class="game-stage game-stage--play" id="stage">
-          <canvas id="game" width="900" height="562" tabindex="0" aria-label="星星打磚塊遊戲畫面，使用滑鼠、手指或左右方向鍵移動板子，點擊或空白鍵發球"></canvas>
+          <canvas id="game" width="900" height="562" tabindex="0" aria-label="名畫保衛戰遊戲畫面，使用滑鼠、手指或左右方向鍵移動藍絲帶板子，點擊或空白鍵發球"></canvas>
           <div class="game-overlay" id="overlay">
             <div class="game-overlay__card">
-              <p class="result-label">STAR BREAKER</p>
-              <h2 id="overlay-title">星星打磚塊</h2>
-              <p id="overlay-text">移動緞帶板子接住星星球，把粉彩愛心磚塊一顆顆打下來。點擊畫面或按空白鍵發球，三條命用完就結束囉！</p>
+              <p class="result-label">PAINTING DEFENSE</p>
+              <h2 id="overlay-title">名畫保衛戰</h2>
+              <p id="overlay-text">移動藍絲帶板子接住奶油星星球，把名畫磚框一顆顆打下來。點擊畫面或按空白鍵發球，三條命用完就結束囉！</p>
               <div class="result-actions">
                 <button class="btn btn--primary" id="start" type="button">開始遊戲</button>
               </div>
@@ -75,12 +82,12 @@
         <div class="game-help">
           <h2>怎麼玩</h2>
           <ul>
-            <li>滑鼠移動、手指拖曳，或按 ← → 鍵移動緞帶板子。</li>
+            <li>滑鼠移動、手指拖曳，或按 ← → 鍵移動藍絲帶板子。</li>
             <li>點擊畫面或按空白鍵發球，球碰到板子會依落點改變角度。</li>
-            <li>💗 每打掉一顆愛心磚 +10 分，清空全部磚塊就進入下一關。</li>
+            <li>💗 每打掉一個名畫磚框 +10 分，清空全部磚框就進入下一關。</li>
             <li>過關有獎金，球速也會變快；球掉出畫面底部就扣 1 條命。</li>
           </ul>
-          <p class="tip">💡 共 3 條命，生命歸零遊戲就結束。分數會自動存在這台裝置上。</p>
+          <p class="tip">💡 共 3 條命，生命歸零遊戲就結束。奶油星屑會自動存在這台裝置上。</p>
         </div>
       </section>
     </div>
@@ -93,8 +100,8 @@
     </div>
   </footer>
 
-  <script src="../assets/js/site.js" defer></script>
-  <script src="js/breakout.js" defer></script>
-  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/site.js?v=20261018-games" defer></script>
+  <script src="js/breakout.js?v=20261018-games" defer></script>
+  <script src="../assets/js/i18n.js?v=20261018-games" defer></script>
 </body>
 </html>

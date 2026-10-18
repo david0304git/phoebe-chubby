@@ -649,6 +649,11 @@
     ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
     ctx.fill();
 
+    /* 名畫磚框：內框與小星 */
+    ctx.strokeStyle = "rgba(74, 58, 50, 0.38)";
+    ctx.lineWidth = 1.8;
+    ctx.strokeRect(brick.x + 9, brick.y + 7, brick.w - 18, brick.h - 14);
+
     /* 中間的小愛心 */
     ctx.save();
     ctx.translate(brick.x + brick.w / 2, brick.y + brick.h / 2 + 2);
@@ -683,7 +688,7 @@
 
     /* 緞帶板身 */
     roundRect(x - w / 2, y, w, h, h / 2);
-    ctx.fillStyle = PINK;
+    ctx.fillStyle = SKY;
     ctx.fill();
     ctx.strokeStyle = INK;
     ctx.lineWidth = 3;

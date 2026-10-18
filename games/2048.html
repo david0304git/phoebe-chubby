@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>數字合合樂 · Phoebe 小星球</title>
+  <title>奶油星合成 · Phoebe 小星球</title>
   <meta name="description" content="把相同數字的方塊合併成兩倍，一路挑戰 2048！Phoebe 小星球的免費網頁小遊戲。">
   <meta name="theme-color" content="#fff8e7">
   <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/games.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261018-games">
+  <link rel="stylesheet" href="../assets/css/games.css?v=20261018-games">
   <style>
     /* ---------- 2048 頁面專屬樣式（n2048- 前綴，不改共用 CSS） ---------- */
     .n2048-stage .num-board {
@@ -131,14 +131,21 @@
     <div class="wrap">
       <a class="back-link" href="../games.html"><span aria-hidden="true">←</span> 回遊戲專區</a>
 
+      <div class="game-guide">
+        <img src="../assets/img/phoebe/avatar.png" alt="" width="56" height="56">
+        <p>菲比啾比：「這些都是我從奶油星海帶回來的收藏，陪我玩一局吧！」</p>
+      </div>
+
+
+
       <section class="game-shell" aria-labelledby="game-title">
         <div class="game-head">
           <div>
             <p class="section-kicker">MINI GAME · 數字</p>
-            <h1 id="game-title">數字合合樂</h1>
+            <h1 id="game-title">奶油星合成</h1>
           </div>
           <div class="game-hud">
-            <div class="stat"><span>分數</span><strong id="score">0</strong></div>
+            <div class="stat"><span>奶油星屑</span><strong id="score">0</strong></div>
             <div class="stat stat--highlight"><span>最高</span><strong id="best">0</strong></div>
             <div class="stat"><span>步數</span><strong id="moves">0</strong></div>
             <button id="restart" class="btn btn--ghost btn--sm" type="button">重新開始</button>
@@ -147,7 +154,7 @@
 
         <div class="game-stage game-stage--board n2048-stage" id="stage">
           <div class="num-wrap">
-            <div class="num-board" id="board" aria-label="2048 數字盤面，使用方向鍵、方向按鈕或在盤面上滑動">
+            <div class="num-board" id="board" aria-label="奶油星合成盤面，使用方向鍵、方向按鈕或在盤面上滑動">
               <div class="num-cell"></div>
               <div class="num-cell"></div>
               <div class="num-cell"></div>
@@ -168,9 +175,9 @@
           </div>
           <div class="game-overlay" id="overlay">
             <div class="game-overlay__card">
-              <p class="result-label">NUMBER MERGE</p>
-              <h2 id="overlay-title">數字合合樂</h2>
-              <p id="overlay-text">用方向鍵、方向按鈕或在盤面上滑動，把相同數字的方塊合併成兩倍。合出 2048 就達標，看看你能不能更大！</p>
+              <p class="result-label">CREAM STAR MERGE</p>
+              <h2 id="overlay-title">奶油星合成</h2>
+              <p id="overlay-text">用方向鍵、方向按鈕或在盤面上滑動，把相同收藏圖示合併成兩倍。合出 2048（菲比啾比的愛心）就達標，看看你能不能更大！</p>
               <div class="result-actions">
                 <button class="btn btn--primary" id="start" type="button">開始遊戲</button>
                 <button class="btn btn--ghost n2048-continue" id="continue" type="button" hidden>繼續玩</button>
@@ -190,10 +197,23 @@
           <h2>怎麼玩</h2>
           <ul>
             <li>方向鍵、畫面上的方向按鈕，或直接在盤面上滑動都可以操作。</li>
-            <li>相同數字的方塊碰在一起就會合併成兩倍，每塊每步只會合併一次。</li>
+            <li>相同收藏圖示的方塊碰在一起就會合併成兩倍，每塊每步只會合併一次。</li>
             <li>合併時得到的分數就是新方塊的數值，例如 8 + 8 合併得 16 分。</li>
-            <li>合出 2048 就算達標，可以繼續挑戰 4096、8192。</li>
+            <li>合出 2048（💖 菲比啾比）就算達標，可以繼續挑戰 4096、8192。</li>
           </ul>
+          <div class="n2048-legend" aria-label="奶油星海收藏圖鑑">
+            <span aria-hidden="true">✦</span><i>→</i>
+            <span aria-hidden="true">⭐</span><i>→</i>
+            <span aria-hidden="true">🎀</span><i>→</i>
+            <span aria-hidden="true">📷</span><i>→</i>
+            <span aria-hidden="true">🍰</span><i>→</i>
+            <span aria-hidden="true">🖼️</span><i>→</i>
+            <span aria-hidden="true">🌙</span><i>→</i>
+            <span aria-hidden="true">🪐</span><i>→</i>
+            <span aria-hidden="true">🌈</span><i>→</i>
+            <span aria-hidden="true">👑</span><i>→</i>
+            <span aria-hidden="true">💖</span>
+          </div>
           <p class="tip">💡 盤面沒有空位、也不能再合併時就結束了。最高分會自動存在這台裝置上。</p>
         </div>
       </section>
@@ -207,8 +227,8 @@
     </div>
   </footer>
 
-  <script src="../assets/js/site.js" defer></script>
-  <script src="js/2048.js" defer></script>
-  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/site.js?v=20261018-games" defer></script>
+  <script src="js/2048.js?v=20261018-games" defer></script>
+  <script src="../assets/js/i18n.js?v=20261018-games" defer></script>
 </body>
 </html>

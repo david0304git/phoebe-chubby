@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>打地鼠 · Phoebe 小星球</title>
+  <title>敲敲搗蛋星 · Phoebe 小星球</title>
   <meta name="description" content="30 秒內敲打冒出來的地鼠，連擊加成最高 ×3，小心炸彈！Phoebe 小星球的免費網頁小遊戲。">
   <meta name="theme-color" content="#fff8e7">
   <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/games.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261018-games">
+  <link rel="stylesheet" href="../assets/css/games.css?v=20261018-games">
   <style>
     /* 打地鼠專屬樣式（頁內 scoped，不動共用 CSS） */
     .whack-stage {
@@ -184,14 +184,21 @@
     <div class="wrap">
       <a class="back-link" href="../games.html"><span aria-hidden="true">←</span> 回遊戲專區</a>
 
+      <div class="game-guide">
+        <img src="../assets/img/phoebe/avatar.png" alt="" width="56" height="56">
+        <p>菲比啾比：「這些都是我從奶油星海帶回來的收藏，陪我玩一局吧！」</p>
+      </div>
+
+
+
       <section class="game-shell" aria-labelledby="game-title">
         <div class="game-head">
           <div>
             <p class="section-kicker">MINI GAME · 反應</p>
-            <h1 id="game-title">打地鼠</h1>
+            <h1 id="game-title">敲敲搗蛋星</h1>
           </div>
           <div class="game-hud">
-            <div class="stat"><span>分數</span><strong id="score">0</strong></div>
+            <div class="stat"><span>奶油星屑</span><strong id="score">0</strong></div>
             <div class="stat stat--highlight"><span>最高</span><strong id="best">—</strong></div>
             <div class="stat"><span>生命</span><strong id="lives">♥♥♥</strong></div>
             <div class="stat"><span>時間</span><strong id="time">30s</strong></div>
@@ -206,13 +213,13 @@
             </div>
             <p class="whack-combo" id="combo" hidden>倍率 ×2</p>
           </div>
-          <div class="game-board game-board--3" id="board" role="group" aria-label="打地鼠盤面，共 9 個洞"></div>
+          <div class="game-board game-board--3" id="board" role="group" aria-label="敲敲搗蛋星盤面，共 9 個奶油罐"></div>
           <div class="game-overlay" id="overlay" role="dialog" aria-labelledby="overlay-title" aria-describedby="overlay-text">
             <div class="game-overlay__card">
-              <p class="result-label">PHOEBE WHACK</p>
-              <h2 id="overlay-title">打地鼠</h2>
+              <p class="result-label">MISCHIEF STAR WHACK</p>
+              <h2 id="overlay-title">敲敲搗蛋星</h2>
               <p class="result-score" id="result-score" hidden>0 分</p>
-              <p id="overlay-text">30 秒內敲打冒出來的地鼠！連續命中會提升倍率，小心不要敲到炸彈。</p>
+              <p id="overlay-text">30 秒內敲中冒出來的搗蛋星！連續命中會提升倍率，小心不要敲到酸梅炸彈。</p>
               <div class="result-actions">
                 <button class="btn btn--primary" id="start" type="button">開始遊戲</button>
               </div>
@@ -223,12 +230,12 @@
         <div class="game-help">
           <h2>怎麼玩</h2>
           <ul>
-            <li>用滑鼠點擊，或用手機點一下冒出來的地鼠。</li>
-            <li>🐹 一般地鼠 +10 分，連續命中倍率最高 ×3。</li>
-            <li>🌟 金色地鼠 +30 分，出現的機率比較低。</li>
-            <li>💣 炸彈不能敲，敲到會扣 1 條命並中斷連擊。</li>
+            <li>用滑鼠點擊，或用手機點一下冒出來的搗蛋星。</li>
+            <li>🌟 搗蛋星 +10 分，連續命中倍率最高 ×3。</li>
+            <li>💫 金色奶油星 +30 分，出現的機率比較低。</li>
+            <li>💣 酸梅炸彈不能敲，敲到會扣 1 條命並中斷連擊。</li>
           </ul>
-          <p class="tip">💡 限時 30 秒、共 3 條命。生命歸零或時間到就結束，最高分會自動存在這台裝置上。</p>
+          <p class="tip">💡 限時 30 秒、共 3 條命。生命歸零或時間到就結束，最高奶油星屑會自動存在這台裝置上。</p>
         </div>
       </section>
     </div>
@@ -241,8 +248,8 @@
     </div>
   </footer>
 
-  <script src="../assets/js/site.js" defer></script>
-  <script src="js/whack.js" defer></script>
-  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/site.js?v=20261018-games" defer></script>
+  <script src="js/whack.js?v=20261018-games" defer></script>
+  <script src="../assets/js/i18n.js?v=20261018-games" defer></script>
 </body>
 </html>

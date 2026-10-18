@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>菲比拼圖 · Phoebe 小星球</title>
+  <title>菲比的相簿拼圖 · Phoebe 小星球</title>
   <meta name="description" content="移動 8 塊拼圖，把菲比的可愛照片拼回原樣！3×3 滑動拼圖，支援鍵盤與觸控。Phoebe 小星球的免費網頁小遊戲。">
   <meta name="theme-color" content="#fff8e7">
   <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/games.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261018-games">
+  <link rel="stylesheet" href="../assets/css/games.css?v=20261018-games">
   <style>
     /* 菲比拼圖專屬樣式（頁內 scoped，不動共用 CSS） */
     .puzzle-stage {
@@ -156,11 +156,18 @@
     <div class="wrap">
       <a class="back-link" href="../games.html"><span aria-hidden="true">←</span> 回遊戲專區</a>
 
+      <div class="game-guide">
+        <img src="../assets/img/phoebe/avatar.png" alt="" width="56" height="56">
+        <p>菲比啾比：「這些都是我從奶油星海帶回來的收藏，陪我玩一局吧！」</p>
+      </div>
+
+
+
       <section class="game-shell" aria-labelledby="game-title">
         <div class="game-head">
           <div>
             <p class="section-kicker">MINI GAME · 益智</p>
-            <h1 id="game-title">菲比拼圖</h1>
+            <h1 id="game-title">菲比的相簿拼圖</h1>
           </div>
           <div class="game-hud">
             <div class="stat"><span>步數</span><strong id="moves">0</strong></div>
@@ -172,18 +179,18 @@
 
         <div class="game-stage game-stage--board puzzle-stage" id="stage">
           <div class="puzzle-wrap">
-            <div class="puzzle-grid" id="puzzle" role="group" aria-label="3 乘 3 菲比拼圖盤面，共 8 塊拼圖與 1 個空格"></div>
+            <div class="puzzle-grid" id="puzzle" role="group" aria-label="3 乘 3 菲比的相簿拼圖盤面，共 8 塊拼圖與 1 個空格"></div>
           </div>
           <figure class="puzzle-preview-card" id="preview" hidden>
-            <img class="puzzle-preview" src="../assets/img/phoebe/phoebe-square.jpg" alt="菲比的原圖，正方形照片" width="1100" height="1100">
+            <img class="puzzle-preview" src="../assets/img/phoebe/phoebe-square.jpg" alt="菲比啾比的原圖，正方形照片" width="1100" height="1100">
             <figcaption>原圖</figcaption>
           </figure>
           <div class="game-overlay" id="overlay" role="dialog" aria-labelledby="overlay-title" aria-describedby="overlay-text">
             <div class="game-overlay__card">
               <p class="result-label">PHOEBE PUZZLE</p>
-              <h2 id="overlay-title">菲比拼圖</h2>
+              <h2 id="overlay-title">菲比的相簿拼圖</h2>
               <p class="result-score" id="result-score" hidden>0 步</p>
-              <p id="overlay-text">點擊空格旁邊的拼圖塊，把菲比的照片拼回原樣。3×3 共 8 塊，用方向鍵也可以玩喔！</p>
+              <p id="overlay-text">點擊空格旁邊的拼圖塊，把菲比啾比的照片拼回原樣。3×3 共 8 塊，用方向鍵也可以玩喔！</p>
               <div class="result-actions">
                 <button class="btn btn--primary" id="start" type="button">開始遊戲</button>
               </div>
@@ -217,8 +224,8 @@
     </div>
   </footer>
 
-  <script src="../assets/js/site.js" defer></script>
-  <script src="js/puzzle.js" defer></script>
-  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/site.js?v=20261018-games" defer></script>
+  <script src="js/puzzle.js?v=20261018-games" defer></script>
+  <script src="../assets/js/i18n.js?v=20261018-games" defer></script>
 </body>
 </html>

@@ -10,7 +10,16 @@
   var CARD_COUNT = PAIR_COUNT * 2;
   var FLIP_BACK_MS = 650;
   var MATCH_LOCK_MS = 280;
-  var SYMBOLS = ["⭐", "🌸", "🍰", "🎀", "🐚", "☁️", "💗", "✦"];
+  var SYMBOLS = [
+    { icon: "🎀", label: "藍絲帶" },
+    { icon: "📷", label: "相機" },
+    { icon: "🍰", label: "草莓蛋糕" },
+    { icon: "⭐", label: "奶油星星" },
+    { icon: "💜", label: "紫色眼睛" },
+    { icon: "🖼️", label: "名畫" },
+    { icon: "🧢", label: "旅行帽" },
+    { icon: "🎮", label: "小遊戲" }
+  ];
 
   var boardEl = document.getElementById("board");
   if (!boardEl) return;
@@ -110,12 +119,12 @@
     return shuffle(deck);
   }
 
-  function createCard(index, symbol) {
+  function createCard(index, item) {
     var card = document.createElement("button");
     card.type = "button";
     card.className = "cell memo";
     card.setAttribute("data-index", String(index));
-    card.setAttribute("data-symbol", symbol);
+    card.setAttribute("data-symbol", item.label);
     card.setAttribute("aria-label", cardLabel(card, "back"));
 
     var inner = document.createElement("span");
@@ -124,12 +133,12 @@
     var back = document.createElement("span");
     back.className = "memo__face memo__face--back";
     back.setAttribute("aria-hidden", "true");
-    back.textContent = "✦";
+    back.textContent = "♡";
 
     var front = document.createElement("span");
     front.className = "memo__face memo__face--front";
     front.setAttribute("aria-hidden", "true");
-    front.textContent = symbol;
+    front.textContent = item.icon;
 
     inner.appendChild(back);
     inner.appendChild(front);

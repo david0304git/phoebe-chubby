@@ -670,59 +670,76 @@
   }
 
   function drawCactus(ob) {
+    /* 行李箱：菲比旅行時要跳過的障礙物 */
     var x = ob.x;
     var base = GROUND_Y;
-    var bodyW = 26;
-    var bodyH = ob.h;
+    var w = 44;
+    var bodyH = ob.h * 0.78;
     ctx.save();
     ctx.translate(x, base);
+
+    /* 影子 */
+    ctx.fillStyle = "rgba(74, 58, 50, 0.2)";
+    ctx.beginPath();
+    ctx.ellipse(0, 2, w * 0.56, 8, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    /* 提把 */
+    ctx.strokeStyle = INK;
+    ctx.lineWidth = 5;
+    ctx.lineCap = "round";
+    ctx.beginPath();
+    ctx.moveTo(-12, -bodyH - 4);
+    ctx.lineTo(-12, -bodyH - 15);
+    ctx.quadraticCurveTo(0, -bodyH - 27, 12, -bodyH - 15);
+    ctx.lineTo(12, -bodyH - 4);
+    ctx.stroke();
+
+    /* 箱身 */
+    roundRect(-w / 2, -bodyH, w, bodyH, 9);
+    ctx.fillStyle = "#f2c47c";
+    ctx.fill();
     ctx.strokeStyle = INK;
     ctx.lineWidth = 3;
-    ctx.lineJoin = "round";
-
-    /* 手臂 */
-    ctx.fillStyle = "#94d6b0";
-    ctx.beginPath();
-    roundRect(-bodyW / 2 - 14, -bodyH + 18, 16, 30, 8);
-    ctx.fill();
-    ctx.stroke();
-    ctx.beginPath();
-    roundRect(bodyW / 2 - 2, -bodyH + 30, 16, 26, 8);
-    ctx.fill();
     ctx.stroke();
 
-    /* 身體 */
-    ctx.fillStyle = "#a9e2bf";
-    roundRect(-bodyW / 2, -bodyH, bodyW, bodyH + 6, 13);
-    ctx.fill();
+    /* 綁帶 */
+    ctx.strokeStyle = "rgba(74, 58, 50, 0.35)";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(-8, -bodyH + 3);
+    ctx.lineTo(-8, -3);
+    ctx.moveTo(8, -bodyH + 3);
+    ctx.lineTo(8, -3);
     ctx.stroke();
 
-    /* 直條紋 */
-    ctx.strokeStyle = "rgba(74, 58, 50, 0.22)";
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.moveTo(-6, -bodyH + 10);
-    ctx.lineTo(-6, -8);
-    ctx.moveTo(6, -bodyH + 16);
-    ctx.lineTo(6, -6);
+    /* 奶油星貼紙 */
+    ctx.save();
+    ctx.translate(0, -bodyH * 0.52);
+    starPath(11);
+    ctx.fillStyle = BUTTER;
+    ctx.fill();
+    ctx.strokeStyle = INK;
+    ctx.lineWidth = 2.2;
     ctx.stroke();
+    ctx.restore();
 
     /* 可愛臉 */
     ctx.fillStyle = INK;
     ctx.beginPath();
-    ctx.arc(-7, -bodyH * 0.62, 2.6, 0, Math.PI * 2);
-    ctx.arc(7, -bodyH * 0.62, 2.6, 0, Math.PI * 2);
+    ctx.arc(-13, -bodyH * 0.25, 2.5, 0, Math.PI * 2);
+    ctx.arc(13, -bodyH * 0.25, 2.5, 0, Math.PI * 2);
     ctx.fill();
     ctx.strokeStyle = INK;
-    ctx.lineWidth = 2.2;
+    ctx.lineWidth = 2;
     ctx.lineCap = "round";
     ctx.beginPath();
-    ctx.arc(0, -bodyH * 0.56, 5, 0.3, Math.PI - 0.3);
+    ctx.arc(0, -bodyH * 0.18, 4.5, 0.25, Math.PI - 0.25);
     ctx.stroke();
     ctx.fillStyle = "rgba(249, 188, 205, 0.8)";
     ctx.beginPath();
-    ctx.arc(-12, -bodyH * 0.58, 3.4, 0, Math.PI * 2);
-    ctx.arc(12, -bodyH * 0.58, 3.4, 0, Math.PI * 2);
+    ctx.arc(-19, -bodyH * 0.2, 3.2, 0, Math.PI * 2);
+    ctx.arc(19, -bodyH * 0.2, 3.2, 0, Math.PI * 2);
     ctx.fill();
 
     ctx.restore();

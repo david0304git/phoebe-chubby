@@ -430,7 +430,7 @@
       return;
     }
     var script = document.createElement("script");
-    script.src = base + "i18n/" + code + ".js";
+    script.src = base + "i18n/" + code + ".js?v=20261018-games";
     script.async = false;
     script.onload = function () {
       dict = registry[code] || null;

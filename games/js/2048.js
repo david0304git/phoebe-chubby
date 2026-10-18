@@ -26,6 +26,21 @@
   var cells = Array.prototype.slice.call(boardEl.querySelectorAll(".num-cell"));
   if (cells.length !== SIZE * SIZE) return;
 
+  /* 奶油星海的收藏圖鑑：數值 → 圖示與名稱 */
+  var TILE_ITEMS = {
+    2: { icon: "✦", label: "奶油星屑" },
+    4: { icon: "⭐", label: "奶油星星" },
+    8: { icon: "🎀", label: "藍絲帶" },
+    16: { icon: "📷", label: "相機" },
+    32: { icon: "🍰", label: "草莓蛋糕" },
+    64: { icon: "🖼️", label: "名畫" },
+    128: { icon: "🌙", label: "月亮" },
+    256: { icon: "🪐", label: "小星球" },
+    512: { icon: "🌈", label: "奶油星海" },
+    1024: { icon: "👑", label: "星海公主" },
+    2048: { icon: "💖", label: "菲比啾比" }
+  };
+
   /* ---------- 小工具 ---------- */
   function readBest() {
     try {
@@ -97,9 +112,12 @@
     for (i = 0; i < cells.length; i += 1) {
       cells[i].classList.remove("is-new", "is-merged");
       var value = board[i];
-      cells[i].textContent = value ? String(value) : "";
+      var item = value ? TILE_ITEMS[value] : null;
+      cells[i].textContent = item ? item.icon : value ? String(value) : "";
       if (value) cells[i].setAttribute("data-value", String(value));
       else cells[i].removeAttribute("data-value");
+      if (item) cells[i].setAttribute("aria-label", item.label + "，數值 " + value);
+      else cells[i].removeAttribute("aria-label");
     }
 
     if (!animation) return;
@@ -258,9 +276,9 @@
     state.mode = "won";
     state.pendingGameOver = !hasMoves();
 
-    overlayTitle.textContent = "達標！2048 誕生！";
+    overlayTitle.textContent = "達標！菲比啾比誕生！";
     overlayText.textContent =
-      "你合出了 2048，太厲害了！可以繼續挑戰 4096、8192，也可以重新開始。";
+      "你合出了 2048 的菲比啾比，太厲害了！可以繼續挑戰 4096、8192，也可以重新開始。";
     startBtn.textContent = "重新開始";
     continueBtn.hidden = false;
     overlay.hidden = false;
