@@ -10,7 +10,7 @@
 ## 這個網站有什麼
 
 - **首頁**：角色主視覺、角色檔案、精選相簿、遊戲專區、小屋日記。
-- **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 12 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（旅行＋旅途日常 10 件，淺色旅行手帳＋拍立得＋紙膠帶）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
+- **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 12 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（五國 × 四張：日本 4 張已加入，法國、中國、澳洲、挪威各四個準備中位置；淺色旅行手帳＋五國各自配色）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
 - **遊戲專區**：7 款小遊戲，手機可玩，最高分自動存在瀏覽器裡。
 - **關於菲比**：角色小檔案、小故事、網站製作方式、版權說明。
 - **語言切換**：繁體中文、简体中文、English、日本語、한국어；頁首可切換，選擇會存在瀏覽器，套用到全站與遊戲頁。
@@ -92,97 +92,50 @@ phoebe-chubby/
 │       ├── 2048.js
 │       └── breakout.js
 ├── photos/                   # 你的真實照片
-│   ├── travel/               # 旅行照
+│   ├── travel/               # japan-01..04.jpg（原 PNG 已忽略）＋ 其他四國素材
 │   ├── cosplay/              # 12 件名畫 cosplay（網站用 JPEG）＋ thumbs/ 縮圖
-│   └── daily/                # 日常照
+│   └── daily/                # 預留（目前沒有日常作品）
 └── tools/
     ├── make_placeholders.py  # 產生 15 張示範插圖（可重跑）
     ├── contact_sheet.jpg     # 15 張示範插圖的檢查表
     ├── build_report.txt      # 產圖報告（尺寸、角色位置）
-    ├── i18n-source.json      # 全站翻譯來源字串（405 條）
+    ├── i18n-source.json      # 全站翻譯來源字串（437 條）
     └── browser-check.mjs     # 開發用：headless Chrome 截圖與錯誤檢查
 ```
 
 ---
 
-## 換成自己的照片
+## 相簿結構與換照片
 
-相簿目前有 **12 件名畫 cosplay 照片**、**6 張旅行示範插圖**與 **4 張日常示範插圖**；第一展區只顯示 12 件照片，另外 5 張舊的名畫示範插圖（星夜、吶喊、蒙娜麗莎插畫、向日葵、珍珠插畫）已從古典區移出，但檔案仍保留在 `assets/img/gallery/`。
-要繼續換成自己的照片，有兩種做法，選一種就好。
+### 第二展區：五國 × 四張
 
-### 目前已加入的名畫 cosplay
+| 國家 | 目前照片 | 檔案 |
+| --- | --- | --- |
+| 日本 | 4 / 4 | `photos/travel/japan-01.jpg`～`japan-04.jpg` |
+| 法國 | 0 / 4（準備中） | `photos/travel/france-01.jpg`～`france-04.jpg` |
+| 中國 | 0 / 4（準備中） | `photos/travel/china-01.jpg`～`china-04.jpg` |
+| 澳洲 | 0 / 4（準備中） | `photos/travel/australia-01.jpg`～`australia-04.jpg` |
+| 挪威 | 0 / 4（準備中） | `photos/travel/norway-01.jpg`～`norway-04.jpg` |
 
-| 檔案（網站用） | 原始檔 | 作品 | 網站標題 |
-| --- | --- | --- | --- |
-| `photos/cosplay/napoleon-alps.jpg` | `photos/cosplay/01.png` | 大衛《跨越阿爾卑斯山的拿破崙》 | 拿破菲比 |
-| `photos/cosplay/mona-lisa.jpg` | `photos/cosplay/03.PNG` | 達文西《蒙娜麗莎》 | 蒙娜菲比 |
-| `photos/cosplay/girl-with-pearl-earring.jpg` | `photos/cosplay/02.png` | 維梅爾《戴珍珠耳環的少女》 | 戴珍珠耳環的菲比 |
-| `photos/cosplay/van-gogh-hat.jpg` | `photos/cosplay/04.png` | 梵谷《草帽自畫像》 | 菲比的草帽 |
-| `photos/cosplay/unknown-woman.jpg` | `photos/cosplay/05.png` | 克拉姆斯柯依《無名女郎》 | 無名菲比 |
-| `photos/cosplay/letter-writer.jpg` | `photos/cosplay/06.png` | 古典書信肖像 · 19 世紀 | 寫信的菲比 |
-| `photos/cosplay/painter-phoebe.jpg` | `photos/cosplay/07.png` | 約書亞·雷諾茲《自畫像》· 約 1747–1749 | 畫家菲比 |
-| `photos/cosplay/milkmaid.jpg` | `photos/cosplay/08.png` | 維梅爾《倒牛奶的女僕》 | 倒牛奶的菲比 |
-| `photos/cosplay/scream.jpg` | `photos/cosplay/09.png` | 孟克《吶喊》 | 吶喊菲比 |
-| `photos/cosplay/salvator-mundi.jpg` | `photos/cosplay/10.png` | 達文西《救世主》 | 救世主菲比 |
-| `photos/cosplay/lady-with-ermine.jpg` | `photos/cosplay/11.png` | 達文西《抱銀貂的女子》 | 白貂菲比 |
-| `photos/cosplay/cubist-phoebe.jpg` | `photos/cosplay/12.png` | 畢卡索《戴帽的女子》· 1937 | 立體派菲比 |
-
-> 05–12 八張都已加入第一展區；五張舊的示範插圖（星夜、吶喊、蒙娜麗莎插畫、向日葵、珍珠插畫）已從古典區移出，不再顯示。
-
-作品標題採用菲比化名稱（例如「蒙娜菲比」）；下方小字保留原畫家與原畫名，方便辨識。
-
-- 網站用的大圖已壓成 1400×1867、quality 85 的 JPEG；相簿卡片另外使用 `photos/cosplay/thumbs/` 裡的 600×800 縮圖。
-- 原始高解析 PNG（`01.png`～`12.png`，共約 78 MB）留在 `photos/cosplay/` 當母檔，並已寫進 `.gitignore`，不會被推上 GitHub。
-- 資料設定在 `assets/js/gallery-data.js`；新作品放在 cosplay 分類最前面，卡片的 `portrait: true` 會用 3:4 直式比例，`thumb` 指定縮圖。
-- 翻譯字串在 `assets/js/i18n/<語言>.js`，以繁體中文原文為 key；要改文案時，同步更新語言檔即可。
-- 分區規則：`cosplay` 進第一展區「跟著菲比賞名畫」；`travel` 與 `daily` 進第二展區「跟著菲比去旅行」。
-
-### 方法一：直接覆蓋檔案（最快）
-
-把你的照片轉成 **4:3、1200×900（或更大）的 JPEG**，用同檔名覆蓋 `assets/img/gallery/` 裡的檔案：
-
-| 檔案 | 主題 |
-| --- | --- |
-| `travel-tokyo.jpg` | 旅行：櫻花季東京 |
-| `travel-paris.jpg` | 旅行：巴黎 |
-| `travel-fuji.jpg` | 旅行：富士山 |
-| `travel-okinawa.jpg` | 旅行：沖繩海邊 |
-| `travel-taipei.jpg` | 旅行：台北夜晚 |
-| `travel-alps.jpg` | 旅行：阿爾卑斯雪景 |
-| `cosplay-starry-night.jpg` | 名畫 cosplay：星夜（已從古典區移出，僅保留檔案） |
-| `cosplay-scream.jpg` | 名畫 cosplay：吶喊（已從古典區移出，僅保留檔案） |
-| `cosplay-mona-lisa.jpg` | 名畫 cosplay：蒙娜麗莎（已從古典區移出，僅保留檔案） |
-| `cosplay-sunflowers.jpg` | 名畫 cosplay：向日葵（已從古典區移出，僅保留檔案） |
-| `cosplay-pearl.jpg` | 名畫 cosplay：戴珍珠耳環的少女（已從古典區移出，僅保留檔案） |
-| `daily-cafe.jpg` | 日常：咖啡廳 |
-| `daily-books.jpg` | 日常：書櫃 |
-| `daily-rain.jpg` | 日常：雨天窗邊 |
-| `daily-birthday.jpg` | 日常：生日派對 |
-
-覆蓋後重新整理頁面就好，不需要改任何程式。
-
-### 方法二：放進 `photos/` 並編輯資料檔（推薦，比較好管理）
-
-1. 把照片放進 `photos/travel/`、`photos/cosplay/` 或 `photos/daily/`。
-2. 打開 `assets/js/gallery-data.js`，在 `items` 陣列裡加一筆：
+- 每張照片用 **1:1、1200×1200** 的 JPEG；原始 PNG 放 `photos/travel/` 會被 `.gitignore` 忽略。
+- 把四張圖放進 `photos/travel/` 後，打開 `assets/js/gallery-data.js`，在 `countries` 裡找到對應國家，把照片塞進 `photos` 陣列：
 
 ```js
 {
-  src: "photos/travel/my-trip.jpg",   // 相對於網站根目錄
-  thumb: "photos/travel/thumbs/my-trip.jpg", // 選填：卡片縮圖
-  title: "京都的楓葉",                  // 照片標題
-  meta: "京都 · 清水寺 · 秋天",          // 標題下面的小字
-  category: "travel",                 // travel / cosplay / daily
-  demo: false,                        // 自己的照片設 false
-  alt: "Phoebe 在京都清水寺前的楓葉樹下", // 給螢幕閱讀器與 SEO
-  portrait: false,                    // 直式照片設 true（卡片用 3:4）
-  position: "center 40%"              // 選填：裁切時要對準的位置
-},
+  src: "photos/travel/france-01.jpg",
+  title: "巴黎・塞納河",
+  meta: "巴黎 · 塞納河畔 · 秋天",
+  category: "travel",
+  alt: "Phoebe 在巴黎塞納河畔"
+}
 ```
 
-3. 存檔後重新整理。`category: "cosplay"` 會進「跟著菲比賞名畫」，`travel` 或 `daily` 會進「跟著菲比去旅行」；燈箱、鍵盤左右切換都會自動生效。
+- 四張都填滿後，該國那一列會自動從「照片準備中」變成照片卡；不滿四張時，剩下的位置仍會顯示準備中。
+- 新標題、地點與 alt 需要補進 `assets/js/i18n/*.js` 與 `tools/i18n-source.json`，否則切換語言時會留在中文。
 
-清單最上方有一個 `showDemoBadges` 開關：全部換成真實照片後設成 `false`，就不會顯示「示範圖」小標（預設已經是 `false`）。
+### 第一展區：名畫 cosplay
+
+`assets/js/gallery-data.js` 的 `items` 陣列只放 `category: "cosplay"` 的作品；照片放 `photos/cosplay/`，卡片使用 `thumb` 縮圖、直式用 `portrait: true`。首頁「最近的照片」仍是寫在 `index.html` 的四張固定精選。
 
 ### 首頁的「最近的照片」
 
@@ -336,7 +289,7 @@ Chrome 路徑不同時，用環境變數 `CHROME_PATH` 指定。
 
 - 網站程式碼可自由修改、學習使用。
 - **角色與相關作品版權屬原作者所有**，本網站為非官方粉絲網站，僅作非商業分享；請勿將角色圖用於商業用途。
-- 相簿的示範插圖由本專案的 `tools/make_placeholders.py` 繪製，可自由替換成自己的照片。
+- 相簿目前的旅行照片由站長提供；早期的示範插圖已陸續移除，`tools/make_placeholders.py` 仍保留作為舊版產圖參考。
 
 ---
 

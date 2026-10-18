@@ -1,7 +1,7 @@
 /* =========================================================
    Phoebe 小星球 — 古典畫廊
-   兩個展區：跟著菲比賞名畫（cosplay）、跟著菲比去旅行（旅行＋日常）
-   由 assets/js/gallery-data.js 的資料產生作品與燈箱
+   兩個展區：跟著菲比賞名畫（cosplay）、跟著菲比去旅行（五國 × 四張）
+   由 assets/js/gallery-data.js 的資料產生作品、國家列與燈箱
    ========================================================= */
 (function () {
   "use strict";
@@ -34,13 +34,21 @@
         'font-size="44" font-weight="700" fill="#7a665a">作品準備中 ♡</text></svg>'
     );
 
-  /* 第一展區：名畫 cosplay；第二展區：旅行＋旅途日常 */
+  /* 第一展區：名畫 cosplay */
   var paintings = data.items.filter(function (item) {
     return item.category === "cosplay";
   });
-  var travelItems = data.items.filter(function (item) {
-    return item.category !== "cosplay";
+
+  /* 第二展區：五國旅行，每國四張；沒有照片的國家顯示四個準備中位置 */
+  var countries = Array.isArray(data.countries) ? data.countries : [];
+  var travelItems = [];
+  countries.forEach(function (country) {
+    (country.photos || []).forEach(function (photo) {
+      photo.category = "travel";
+      travelItems.push(photo);
+    });
   });
+
   var currentItems = paintings.concat(travelItems);
 
   var activeIndex = -1;
@@ -154,6 +162,140 @@
       fragment.appendChild(buildCard(item, index));
     });
     grid.appendChild(fragment);
+  }
+
+  /* ---------- 旅行國家列 ---------- */
+  function buildCountryPhoto(photo) {
+    var index = currentItems.indexOf(photo);
+    var card = document.createElement("button");
+    card.type = "button";
+    card.className = "country-photo";
+    card.setAttribute("aria-label", "放大作品：" + photo.title);
+
+    var frame = document.createElement("span");
+    frame.className = "country-photo__frame";
+
+    var image = document.createElement("img");
+    image.src = photo.src;
+    image.alt = photo.alt || photo.title;
+    image.loading = "lazy";
+    image.width = 1200;
+    image.height = 1200;
+    image.addEventListener("error", function () {
+      card.classList.add("is-missing");
+      image.remove();
+      var missing = document.createElement("span");
+      missing.className = "country-photo__missing";
+      missing.textContent = "照片準備中";
+      frame.appendChild(missing);
+    });
+    frame.appendChild(image);
+    card.appendChild(frame);
+
+    var caption = document.createElement("span");
+    caption.className = "country-photo__caption";
+    var title = document.createElement("strong");
+    title.textContent = photo.title;
+    var meta = document.createElement("small");
+    meta.textContent = photo.meta || "";
+    caption.appendChild(title);
+    caption.appendChild(meta);
+    card.appendChild(caption);
+
+    card.addEventListener("click", function () {
+      openLightbox(index);
+    });
+    return card;
+  }
+
+  function buildCountrySlot(country) {
+    var slot = document.createElement("div");
+    slot.className = "country-slot";
+    var icon = document.createElement("span");
+    icon.className = "country-slot__icon";
+    icon.setAttribute("aria-hidden", "true");
+    icon.textContent = country.icon || "✦";
+    var text = document.createElement("span");
+    text.className = "country-slot__text";
+    text.textContent = "照片準備中";
+    var hint = document.createElement("span");
+    hint.className = "country-slot__hint";
+    hint.textContent = "4 photos";
+    slot.appendChild(icon);
+    slot.appendChild(text);
+    slot.appendChild(hint);
+    return slot;
+  }
+
+  function buildCountryRow(country, number) {
+    var row = document.createElement("section");
+    row.className = "country-row country-row--" + country.code;
+    row.dataset.country = country.code;
+
+    var head = document.createElement("header");
+    head.className = "country-head";
+
+    var flag = document.createElement("span");
+    flag.className = "country-flag";
+    flag.setAttribute("aria-hidden", "true");
+    flag.textContent = country.flag || country.code.toUpperCase();
+
+    var titleWrap = document.createElement("div");
+    titleWrap.className = "country-title";
+
+    var kicker = document.createElement("p");
+    kicker.className = "country-kicker";
+    kicker.textContent = "COUNTRY " + String(number + 1).padStart(2, "0") + " · " + String(country.en || "").toUpperCase();
+
+    var h3 = document.createElement("h3");
+    h3.id = "country-title-" + country.code;
+    h3.appendChild(document.createTextNode(country.name || ""));
+
+    var tagline = document.createElement("p");
+    tagline.className = "country-tagline";
+    tagline.textContent = country.tagline || "";
+
+    titleWrap.appendChild(kicker);
+    titleWrap.appendChild(h3);
+    titleWrap.appendChild(tagline);
+
+    var photos = country.photos || [];
+    var progress = document.createElement("span");
+    progress.className = "country-progress";
+    progress.textContent = photos.length + " / 4";
+
+    head.appendChild(flag);
+    head.appendChild(titleWrap);
+    head.appendChild(progress);
+    row.appendChild(head);
+    row.setAttribute("aria-labelledby", h3.id);
+
+    var grid = document.createElement("div");
+    grid.className = "country-photos";
+    photos.forEach(function (photo) {
+      grid.appendChild(buildCountryPhoto(photo));
+    });
+    for (var i = photos.length; i < 4; i++) {
+      grid.appendChild(buildCountrySlot(country));
+    }
+    row.appendChild(grid);
+    return row;
+  }
+
+  function renderCountries() {
+    travelGrid.innerHTML = "";
+    if (!countries.length) {
+      var empty = document.createElement("p");
+      empty.className = "gallery-empty";
+      empty.textContent = "這一區暫時沒有作品，館長正在準備中。";
+      travelGrid.appendChild(empty);
+      return;
+    }
+    var fragment = document.createDocumentFragment();
+    countries.forEach(function (country, index) {
+      fragment.appendChild(buildCountryRow(country, index));
+    });
+    travelGrid.appendChild(fragment);
   }
 
   /* ---------- 燈箱 ---------- */
@@ -286,8 +428,8 @@
   setText("travel-count", String(travelItems.length));
   setText("paintings-total", paintings.length + " 件");
   setText("travel-total", travelItems.length + " 件");
-  setText("museum-total", String(data.items.length));
+  setText("museum-total", String(paintings.length + travelItems.length));
 
   renderSection(paintings, paintingsGrid);
-  renderSection(travelItems, travelGrid);
+  renderCountries();
 })();
