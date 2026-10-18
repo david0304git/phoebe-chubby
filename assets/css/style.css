@@ -4378,3 +4378,22 @@ html[data-lang="ko"] .page--gallery {
     font-size: 0.82rem;
   }
 }
+
+/* ---------- 遊戲大廳：只保留菲比跳跳 ---------- */
+.game-grid--single {
+  grid-template-columns: minmax(0, 560px);
+  justify-content: center;
+}
+
+.game-card__thumb img {
+  position: relative;
+  z-index: 1;
+  width: min(72%, 260px);
+  height: auto;
+  filter: drop-shadow(0 6px 0 rgba(74, 58, 50, 0.12));
+  transition: transform 0.25s ease;
+}
+
+.game-card:hover .game-card__thumb img {
+  transform: scale(1.08) rotate(-3deg);
+}

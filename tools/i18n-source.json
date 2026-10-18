@@ -3497,5 +3497,35 @@
     "contexts": [
       "games/*"
     ]
+  },
+  {
+    "key": "菲比跳跳",
+    "contexts": [
+      "games/index"
+    ]
+  },
+  {
+    "key": "菲比跳跳 · Phoebe 小星球",
+    "contexts": [
+      "games/index"
+    ]
+  },
+  {
+    "key": "目前先開放「菲比跳跳」，跟著菲比啾比在奶油星海一路奔跑吧！",
+    "contexts": [
+      "games/index"
+    ]
+  },
+  {
+    "key": "🎮 1 款遊戲",
+    "contexts": [
+      "games/index"
+    ]
+  },
+  {
+    "key": "跑酷",
+    "contexts": [
+      "games/index"
+    ]
   }
 ]

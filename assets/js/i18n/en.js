@@ -543,5 +543,10 @@ window.PHOEBE_I18N["en"] = {
   "菲比的星海旅行 · Phoebe 小星球": "Phoebe's Cream Sea Journey · Phoebe's Little Planet",
   "奶油星合成 · Phoebe 小星球": "Cream Star Merge · Phoebe's Little Planet",
   "名畫保衛戰 · Phoebe 小星球": "Painting Defense · Phoebe's Little Planet",
-  "菲比的奶油星海 · Phoebe 小星球": "Phoebe's Cream Star Sea · Phoebe's Little Planet"
+  "菲比的奶油星海 · Phoebe 小星球": "Phoebe's Cream Star Sea · Phoebe's Little Planet",
+  "菲比跳跳": "Phoebe Jump",
+  "菲比跳跳 · Phoebe 小星球": "Phoebe Jump · Phoebe's Little Planet",
+  "目前先開放「菲比跳跳」，跟著菲比啾比在奶油星海一路奔跑吧！": "Only Phoebe Jump is open for now. Run through the Cream Star Sea with Phoebe Chubby!",
+  "🎮 1 款遊戲": "🎮 1 game",
+  "跑酷": "Runner"
 };

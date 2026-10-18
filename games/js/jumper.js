@@ -117,18 +117,23 @@
   /* ---------- 角色圖（載入失敗就用簡單圖形備援） ---------- */
   var phoebeImg = new Image();
   var spriteReady = false;
-  var spriteRatio = 883 / 1102;
+  var spriteRatio = 122 / 204;
+  var SPRITE_FRAMES = 6;
+  var spriteFrameW = 0;
+  var spriteFrameH = 0;
 
   phoebeImg.onload = function () {
     if (phoebeImg.naturalWidth && phoebeImg.naturalHeight) {
-      spriteRatio = phoebeImg.naturalWidth / phoebeImg.naturalHeight;
+      spriteFrameW = phoebeImg.naturalWidth / SPRITE_FRAMES;
+      spriteFrameH = phoebeImg.naturalHeight;
+      spriteRatio = spriteFrameW / spriteFrameH;
     }
     spriteReady = true;
   };
   phoebeImg.onerror = function () {
     spriteReady = false;
   };
-  phoebeImg.src = "../assets/img/phoebe/phoebe.png";
+  phoebeImg.src = "../assets/img/phoebe/phoebe-run-sheet.png?v=20261018-pjump";
 
   /* ---------- 狀態 ---------- */
   var best = readBest();
@@ -655,13 +660,28 @@
       : clamp(player.vy / 3000, -0.26, 0.26);
     var height = 152;
     var width = height * spriteRatio;
+    var frame = 0;
+
+    if (state.mode === "playing" || state.mode === "over") {
+      frame = player.onGround ? Math.floor(state.distance / 16) % SPRITE_FRAMES : 3;
+    }
 
     ctx.save();
     ctx.translate(player.x, player.y + bob);
     ctx.rotate(tilt);
 
-    if (spriteReady) {
-      ctx.drawImage(phoebeImg, -width / 2, -height, width, height);
+    if (spriteReady && spriteFrameW && spriteFrameH) {
+      ctx.drawImage(
+        phoebeImg,
+        frame * spriteFrameW,
+        0,
+        spriteFrameW,
+        spriteFrameH,
+        -width / 2,
+        -height,
+        width,
+        height
+      );
     } else {
       drawFallbackPhoebe(height);
     }
