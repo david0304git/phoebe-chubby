@@ -148,8 +148,8 @@ phoebe-chubby/
 
 | 檔案 | 用途 |
 | --- | --- |
-| `assets/img/phoebe/phoebe-front-open.jpg` | 角色檔案：張眼版（以原圖＋臉／瀏海／眼睛圖層合成） |
-| `assets/img/phoebe/phoebe-front-closed.jpg` | 角色檔案：閉眼版（閉眼圖層合成） |
+| `assets/img/phoebe/phoebe-front-open.png` | 角色檔案：張眼版（以最新分層重新合成） |
+| `assets/img/phoebe/phoebe-front-closed.png` | 角色檔案：閉眼版（以最新分層重新合成） |
 | `assets/img/phoebe/phoebe-front.jpg` | 舊版全身靜態圖（備份） |
 | `assets/img/phoebe/phoebe-avatar.jpg` | 首頁右上圓形頭像（純圖片、不眨眼） |
 | `assets/img/phoebe/phoebe.png` | 角色去背 PNG（遊戲 jumper 等使用） |
@@ -160,7 +160,7 @@ phoebe-chubby/
 換圖時建議保留同樣的檔名與大致比例，版面就不會跑掉。
 去背可以用任何你習慣的工具（Photoshop、remove.bg、Pillow…），輸出透明 PNG 覆蓋 `phoebe.png` 即可。
 
-> 角色檔案的眨眼只用兩張圖：`phoebe-front-open.jpg` 與 `phoebe-front-closed.jpg` 疊在一起，閉眼圖以 6.4 秒週期淡入；身體、頭髮、頭部完全不動，所以不會有接縫或滑動感。
+> 角色檔案的眨眼只用兩張圖：`phoebe-front-open.png` 與 `phoebe-front-closed.png` 疊在一起，閉眼圖以 6.4 秒週期淡入；身體、頭髮、頭部完全不動，所以不會有接縫或滑動感。
 
 > 首頁右上角現在是 `phoebe-avatar.jpg` 的圓形頭像，純圖片、沒有眨眼或角色動畫；圓框由 `.hero__disc` 的 `overflow: hidden` 與 `.hero__phoebe` 的 `border-radius: 50%` 裁切。
 
