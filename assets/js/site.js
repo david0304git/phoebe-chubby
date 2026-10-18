@@ -158,7 +158,33 @@
     }
   }
 
-  /* ---------- 5. 角色檔案影片：稍微放慢 ---------- */
+  /* ---------- 5. 點擊名字播放語音 ---------- */
+  var nameAudio = document.getElementById("name-audio");
+  var nameTriggers = document.querySelectorAll("[data-name-audio]");
+  if (nameAudio && nameTriggers.length) {
+    nameTriggers.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        try {
+          nameAudio.currentTime = 0;
+          var playback = nameAudio.play();
+          if (playback && typeof playback.catch === "function") {
+            playback.catch(function () {});
+          }
+        } catch (error) {
+          /* 某些瀏覽器在音訊尚未解碼時會丟錯，忽略即可 */
+        }
+
+        btn.classList.remove("is-playing");
+        void btn.offsetWidth;
+        btn.classList.add("is-playing");
+        window.setTimeout(function () {
+          btn.classList.remove("is-playing");
+        }, 520);
+      });
+    });
+  }
+
+  /* ---------- 6. 角色檔案影片：稍微放慢 ---------- */
   var profileVideo = document.querySelector(".profile-video__media");
   if (profileVideo) {
     var slowProfileVideo = function () {
@@ -170,7 +196,7 @@
     profileVideo.addEventListener("play", slowProfileVideo);
   }
 
-  /* ---------- 6. 年份 ---------- */
+  /* ---------- 7. 年份 ---------- */
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
   });

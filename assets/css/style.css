@@ -4253,3 +4253,55 @@ html[data-lang="ko"] .page--gallery {
     font-size: 0.78em;
   }
 }
+
+/* ---------- 角色名字：點擊播放語音 ---------- */
+.hero h1 .name-audio {
+  appearance: none;
+  border: 0;
+  padding-block: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+
+.sticker.name-audio {
+  appearance: none;
+  cursor: pointer;
+}
+
+.facts dd .name-audio {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.name-audio::after {
+  content: "♪";
+  display: inline-block;
+  margin-left: 0.22em;
+  font-size: 0.58em;
+  font-weight: 800;
+  color: var(--pink-deep);
+  opacity: 0;
+  transform: translateY(-0.18em) rotate(-8deg);
+  transition: opacity 0.2s ease;
+}
+
+.name-audio:hover::after,
+.name-audio:focus-visible::after,
+.name-audio.is-playing::after {
+  opacity: 0.8;
+}
+
+.name-audio:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 6px;
+}

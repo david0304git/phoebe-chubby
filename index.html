@@ -51,7 +51,7 @@
       <div class="wrap hero__inner">
         <div class="hero__copy">
           <p class="eyebrow">♡ 歡迎光臨菲比小星球</p>
-          <h1>嗨，我是 <span class="hl">菲比啾比</span></h1>
+          <h1>嗨，我是 <button class="hl name-audio" type="button" data-name-audio>菲比啾比</button></h1>
           <p class="hero__tagline">
             愛旅行、愛扮世界名畫、也愛玩小遊戲的<strong>奶油系小可愛</strong>。<br>
             這裡收藏我的照片和好多好多小遊戲，歡迎一起來玩！
@@ -70,7 +70,7 @@
         <div class="hero__art" aria-hidden="true">
           <span class="sticker sticker--hello">HELLO ♡</span>
           <span class="sticker sticker--sky">TRAVEL!</span>
-          <span class="sticker sticker--name">菲比啾比</span>
+          <button class="sticker sticker--name name-audio" type="button" data-name-audio>菲比啾比</button>
           <span class="hero__ring"></span>
           <div class="hero__disc">
             <img class="hero__phoebe" src="assets/img/phoebe/phoebe-avatar.jpg" alt="" width="1200" height="1200">
@@ -122,7 +122,7 @@
             玩遊戲的時候會非常認真，輸了會鼓起腮幫子。
           </p>
           <dl class="facts">
-            <div><dt>名字</dt><dd>菲比啾比</dd></div>
+            <div><dt>名字</dt><dd><button class="name-audio" type="button" data-name-audio>菲比啾比</button></dd></div>
             <div><dt>暱稱</dt><dd>奶油小可愛</dd></div>
             <div><dt>最喜歡</dt><dd>草莓蛋糕、星星</dd></div>
             <div><dt>小專長</dt><dd>擺姿勢拍照</dd></div>
@@ -351,6 +351,7 @@
     </button>
   </div>
 
+  <audio id="name-audio" src="assets/audio/phoebe-chubi.mp3" preload="auto" aria-hidden="true"></audio>
   <script src="assets/js/site.js" defer></script>
   <script src="assets/js/i18n.js" defer></script>
 </body>
