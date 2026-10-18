@@ -151,7 +151,7 @@ phoebe-chubby/
 | `assets/video/phoebe-loop-v3.mp4` | 角色檔案：無聲循環影片（960×960、60fps、約 2.1 秒） |
 | `assets/img/phoebe/phoebe-loop-poster-v3.jpg` | 影片載入前／減少動效時的靜態海報 |
 | `assets/img/phoebe/phoebe-front.jpg` | 舊版全身靜態圖（備份） |
-| `assets/audio/phoebe-chubi-clean.mp3` | 主頁點擊角色名字播放的語音（去背景版，1.36 秒） |
+| `assets/audio/phoebe-chubi-clean-v2.mp3` | 主頁點擊角色名字播放的語音（去背景版，1.27 秒） |
 | `assets/img/phoebe/phoebe-avatar.jpg` | 首頁右上圓形頭像（純圖片、不眨眼） |
 | `assets/img/phoebe/phoebe.png` | 角色去背 PNG（遊戲 jumper 等使用） |
 | `assets/img/phoebe/phoebe-square.jpg` | 菲比拼圖用的方形圖（1100×1100） |
@@ -161,7 +161,7 @@ phoebe-chubby/
 換圖時建議保留同樣的檔名與大致比例，版面就不會跑掉。
 去背可以用任何你習慣的工具（Photoshop、remove.bg、Pillow…），輸出透明 PNG 覆蓋 `phoebe.png` 即可。
 
-> 角色檔案現在使用無聲循環影片：`assets/video/phoebe-loop-v3.mp4` 自動播放、靜音、`loop`、`preload="auto"`，眨眼與身體／頭髮微擺都在影片裡。原影片在約 1.5 秒處有鏡頭縮放跳動，且是 VFR；已跳過前 1.8 秒，選出最接近的首尾影格（1.8 秒與 3.9 秒），用光流補幀轉成固定 60fps，最後只做 0.1 秒交叉淡接，減少循環時的停頓感。影片載入前顯示 `phoebe-loop-poster-v3.jpg`；系統開啟「減少動效」時改為只顯示海報。播放速度由 `assets/js/site.js` 設為 **0.9×**，讓眨眼與搖擺再慢一點。主頁的主標題、名字貼紙與角色檔案名字都可以點擊播放 `assets/audio/phoebe-chubi-clean.mp3`。
+> 角色檔案現在使用無聲循環影片：`assets/video/phoebe-loop-v3.mp4` 自動播放、靜音、`loop`、`preload="auto"`，眨眼與身體／頭髮微擺都在影片裡。原影片在約 1.5 秒處有鏡頭縮放跳動，且是 VFR；已跳過前 1.8 秒，選出最接近的首尾影格（1.8 秒與 3.9 秒），用光流補幀轉成固定 60fps，最後只做 0.1 秒交叉淡接，減少循環時的停頓感。影片載入前顯示 `phoebe-loop-poster-v3.jpg`；系統開啟「減少動效」時改為只顯示海報。播放速度由 `assets/js/site.js` 設為 **0.9×**，讓眨眼與搖擺再慢一點。主頁的主標題、名字貼紙與角色檔案名字都可以點擊播放 `assets/audio/phoebe-chubi-clean-v2.mp3`。
 
 > 首頁右上角現在是 `phoebe-avatar.jpg` 的圓形頭像，純圖片、沒有眨眼或角色動畫；圓框由 `.hero__disc` 的 `overflow: hidden` 與 `.hero__phoebe` 的 `border-radius: 50%` 裁切。
 
