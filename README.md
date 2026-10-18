@@ -160,7 +160,7 @@ phoebe-chubby/
 換圖時建議保留同樣的檔名與大致比例，版面就不會跑掉。
 去背可以用任何你習慣的工具（Photoshop、remove.bg、Pillow…），輸出透明 PNG 覆蓋 `phoebe.png` 即可。
 
-> 角色檔案現在使用無聲循環影片：`assets/video/phoebe-loop-v3.mp4` 自動播放、靜音、`loop`、`preload="auto"`，眨眼與身體／頭髮微擺都在影片裡。原影片在約 1.5 秒處有鏡頭縮放跳動，且是 VFR；已跳過前 1.8 秒，選出最接近的首尾影格（1.8 秒與 3.9 秒），用光流補幀轉成固定 60fps，最後只做 0.1 秒交叉淡接，減少循環時的停頓感。影片載入前顯示 `phoebe-loop-poster-v3.jpg`；系統開啟「減少動效」時改為只顯示海報。
+> 角色檔案現在使用無聲循環影片：`assets/video/phoebe-loop-v3.mp4` 自動播放、靜音、`loop`、`preload="auto"`，眨眼與身體／頭髮微擺都在影片裡。原影片在約 1.5 秒處有鏡頭縮放跳動，且是 VFR；已跳過前 1.8 秒，選出最接近的首尾影格（1.8 秒與 3.9 秒），用光流補幀轉成固定 60fps，最後只做 0.1 秒交叉淡接，減少循環時的停頓感。影片載入前顯示 `phoebe-loop-poster-v3.jpg`；系統開啟「減少動效」時改為只顯示海報。播放速度由 `assets/js/site.js` 設為 **0.9×**，讓眨眼與搖擺再慢一點。
 
 > 首頁右上角現在是 `phoebe-avatar.jpg` 的圓形頭像，純圖片、沒有眨眼或角色動畫；圓框由 `.hero__disc` 的 `overflow: hidden` 與 `.hero__phoebe` 的 `border-radius: 50%` 裁切。
 

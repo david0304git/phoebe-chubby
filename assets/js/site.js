@@ -158,7 +158,19 @@
     }
   }
 
-  /* ---------- 5. 年份 ---------- */
+  /* ---------- 5. 角色檔案影片：稍微放慢 ---------- */
+  var profileVideo = document.querySelector(".profile-video__media");
+  if (profileVideo) {
+    var slowProfileVideo = function () {
+      profileVideo.defaultPlaybackRate = 0.9;
+      profileVideo.playbackRate = 0.9;
+    };
+    slowProfileVideo();
+    profileVideo.addEventListener("loadedmetadata", slowProfileVideo);
+    profileVideo.addEventListener("play", slowProfileVideo);
+  }
+
+  /* ---------- 6. 年份 ---------- */
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
   });
