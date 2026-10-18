@@ -99,7 +99,7 @@ phoebe-chubby/
     ├── make_placeholders.py  # 產生 15 張示範插圖（可重跑）
     ├── contact_sheet.jpg     # 15 張示範插圖的檢查表
     ├── build_report.txt      # 產圖報告（尺寸、角色位置）
-    ├── i18n-source.json      # 全站翻譯來源字串（490 條）
+    ├── i18n-source.json      # 全站翻譯來源字串（491 條）
     └── browser-check.mjs     # 開發用：headless Chrome 截圖與錯誤檢查
 ```
 

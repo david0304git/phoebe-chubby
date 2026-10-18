@@ -487,7 +487,10 @@ h3 {
 .hero h1 .hl {
   position: relative;
   display: inline-block;
+  max-width: 100%;
   padding-inline: 0.08em;
+  font-size: 0.86em;
+  white-space: nowrap;
   color: var(--ink);
   background: linear-gradient(
     transparent 62%,
@@ -4242,5 +4245,11 @@ html[data-lang="ko"] .page--gallery {
 
   .profile-video__poster {
     display: block;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 .hl {
+    font-size: 0.78em;
   }
 }

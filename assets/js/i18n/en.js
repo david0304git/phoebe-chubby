@@ -489,5 +489,6 @@ window.PHOEBE_I18N["en"] = {
   "Phoebe 在挪威峽灣的懸崖邊": "Phoebe at the edge of a Norwegian fjord cliff",
   "五個國家、每個國家四張照片；日本、法國、中國、澳洲、挪威都已經抵達。": "Five countries, four photos each. Japan, France, China, Australia, and Norway have all arrived.",
   "第一展區集結名畫 cosplay；第二展區以國家為單位，每國四張照片。 日本、法國、中國、澳洲、挪威都已抵達。作品點一下即可靠近欣賞，燈箱內可用左右鍵切換。": "The first gallery gathers famous-painting cosplay; the second is organised by country, four photos each. Japan, France, China, Australia, and Norway have all arrived. Tap a photo to look closer, and use the arrow keys in the lightbox.",
-  "長城、山水與奇峰": "The Great Wall, rivers and mountains, and jagged peaks"
+  "長城、山水與奇峰": "The Great Wall, rivers and mountains, and jagged peaks",
+  "菲比啾比": "Phoebe Chubby"
 };
