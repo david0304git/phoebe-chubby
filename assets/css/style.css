@@ -4397,3 +4397,45 @@ html[data-lang="ko"] .page--gallery {
 .game-card:hover .game-card__thumb img {
   transform: scale(1.08) rotate(-3deg);
 }
+
+/* ---------- 首頁名字右下角的點擊提示 ---------- */
+.hero h1 .name-click {
+  position: absolute;
+  right: -20px;
+  bottom: -13px;
+  display: grid;
+  place-items: center;
+  width: clamp(26px, 2.1vw, 34px);
+  height: clamp(26px, 2.1vw, 34px);
+  line-height: 1;
+  background: var(--white);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  box-shadow: 2px 3px 0 rgba(74, 58, 50, 0.16);
+  transform: rotate(8deg);
+  transition: transform 0.18s ease, background-color 0.18s ease;
+  pointer-events: none;
+}
+
+.name-click svg {
+  width: 68%;
+  height: 68%;
+  overflow: visible;
+}
+
+.name-click__cursor {
+  fill: var(--ink);
+}
+
+.name-click__lines {
+  fill: none;
+  stroke: var(--pink-deep);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+}
+
+.hero h1 .name-audio:hover .name-click,
+.hero h1 .name-audio:focus-visible .name-click {
+  transform: rotate(8deg) scale(1.1);
+  background: var(--butter);
+}
