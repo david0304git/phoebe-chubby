@@ -10,7 +10,7 @@
 ## 這個網站有什麼
 
 - **首頁**：角色主視覺、角色檔案、精選相簿、遊戲專區、小屋日記。
-- **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 12 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（五國 × 四張：日本 4 張已加入，法國、中國、澳洲、挪威各四個準備中位置；淺色旅行手帳＋五國各自配色）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
+- **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 12 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（五國 × 四張：日本、法國、澳洲各 4 張已加入；中國、挪威準備中；淺色旅行手帳＋五國各自配色）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
 - **遊戲專區**：7 款小遊戲，手機可玩，最高分自動存在瀏覽器裡。
 - **關於菲比**：角色小檔案、小故事、網站製作方式、版權說明。
 - **語言切換**：繁體中文、简体中文、English、日本語、한국어；頁首可切換，選擇會存在瀏覽器，套用到全站與遊戲頁。
@@ -92,14 +92,14 @@ phoebe-chubby/
 │       ├── 2048.js
 │       └── breakout.js
 ├── photos/                   # 你的真實照片
-│   ├── travel/               # japan-01..04.jpg（原 PNG 已忽略）＋ 其他四國素材
+│   ├── travel/               # japan/french/australia-01..04.jpg（原 PNG 已忽略）＋ 中國/挪威素材
 │   ├── cosplay/              # 12 件名畫 cosplay（網站用 JPEG）＋ thumbs/ 縮圖
 │   └── daily/                # 預留（目前沒有日常作品）
 └── tools/
     ├── make_placeholders.py  # 產生 15 張示範插圖（可重跑）
     ├── contact_sheet.jpg     # 15 張示範插圖的檢查表
     ├── build_report.txt      # 產圖報告（尺寸、角色位置）
-    ├── i18n-source.json      # 全站翻譯來源字串（437 條）
+    ├── i18n-source.json      # 全站翻譯來源字串（463 條）
     └── browser-check.mjs     # 開發用：headless Chrome 截圖與錯誤檢查
 ```
 
@@ -112,9 +112,9 @@ phoebe-chubby/
 | 國家 | 目前照片 | 檔案 |
 | --- | --- | --- |
 | 日本 | 4 / 4 | `photos/travel/japan-01.jpg`～`japan-04.jpg` |
-| 法國 | 0 / 4（準備中） | `photos/travel/france-01.jpg`～`france-04.jpg` |
+| 法國 | 4 / 4 | `photos/travel/french-01.jpg`～`french-04.jpg` |
 | 中國 | 0 / 4（準備中） | `photos/travel/china-01.jpg`～`china-04.jpg` |
-| 澳洲 | 0 / 4（準備中） | `photos/travel/australia-01.jpg`～`australia-04.jpg` |
+| 澳洲 | 4 / 4 | `photos/travel/australia-01.jpg`～`australia-04.jpg` |
 | 挪威 | 0 / 4（準備中） | `photos/travel/norway-01.jpg`～`norway-04.jpg` |
 
 - 每張照片用 **1:1、1200×1200** 的 JPEG；原始 PNG 放 `photos/travel/` 會被 `.gitignore` 忽略。
@@ -122,7 +122,7 @@ phoebe-chubby/
 
 ```js
 {
-  src: "photos/travel/france-01.jpg",
+  src: "photos/travel/french-01.jpg",
   title: "巴黎・塞納河",
   meta: "巴黎 · 塞納河畔 · 秋天",
   category: "travel",

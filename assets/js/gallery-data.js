@@ -55,7 +55,40 @@ window.PHOEBE_GALLERY = {
       "flag": "🇫🇷",
       "icon": "🥐",
       "tagline": "塞納河、咖啡館與金色屋頂",
-      "photos": []
+      "photos": [
+        {
+          "src": "photos/travel/french-01.jpg",
+          "title": "巴黎・艾菲爾鐵塔",
+          "meta": "巴黎 · 艾菲爾鐵塔 · 春天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在巴黎咖啡館前，背景是艾菲爾鐵塔"
+        },
+        {
+          "src": "photos/travel/french-02.jpg",
+          "title": "巴黎・羅浮宮",
+          "meta": "巴黎 · 羅浮宮 · 夏天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在巴黎羅浮宮玻璃金字塔前"
+        },
+        {
+          "src": "photos/travel/french-03.jpg",
+          "title": "巴黎・凱旋門",
+          "meta": "巴黎 · 凱旋門 · 秋天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在巴黎凱旋門前看地圖"
+        },
+        {
+          "src": "photos/travel/french-04.jpg",
+          "title": "凡爾賽・凡爾賽宮",
+          "meta": "凡爾賽 · 凡爾賽宮 · 夏天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在凡爾賽宮的金色屋頂前"
+        }
+      ]
     },
     {
       "code": "china",
@@ -73,7 +106,40 @@ window.PHOEBE_GALLERY = {
       "flag": "🇦🇺",
       "icon": "🦘",
       "tagline": "陽光、海岸與袋鼠",
-      "photos": []
+      "photos": [
+        {
+          "src": "photos/travel/australia-01.jpg",
+          "title": "雪梨・歌劇院",
+          "meta": "雪梨 · 歌劇院 · 夏天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在雪梨歌劇院前的港灣邊"
+        },
+        {
+          "src": "photos/travel/australia-02.jpg",
+          "title": "大堡礁・藍色海洋",
+          "meta": "昆士蘭 · 大堡礁 · 夏天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在大堡礁的藍綠色海面上"
+        },
+        {
+          "src": "photos/travel/australia-03.jpg",
+          "title": "烏魯魯・日落",
+          "meta": "北領地 · 烏魯魯 · 黃昏",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在烏魯魯日落時站在四驅車上"
+        },
+        {
+          "src": "photos/travel/australia-04.jpg",
+          "title": "雪梨・港灣大橋",
+          "meta": "雪梨 · 港灣大橋 · 黃昏",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在雪梨港灣大橋前看海"
+        }
+      ]
     },
     {
       "code": "norway",
