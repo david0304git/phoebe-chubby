@@ -158,20 +158,41 @@
     }
   }
 
-  /* ---------- 5. 點擊名字播放語音 ---------- */
+  /* ---------- 5. 點擊名字播放語音＋大頭像嘴型 ---------- */
   var nameAudio = document.getElementById("name-audio");
   var nameTriggers = document.querySelectorAll("[data-name-audio]");
+  var heroDisc = document.querySelector(".hero__disc");
+  var mouthTimer = 0;
+
+  var stopTalking = function () {
+    if (!heroDisc) return;
+    window.clearTimeout(mouthTimer);
+    heroDisc.classList.remove("is-talking");
+  };
+
+  var startTalking = function () {
+    if (!heroDisc) return;
+    window.clearTimeout(mouthTimer);
+    heroDisc.classList.add("is-talking");
+    mouthTimer = window.setTimeout(stopTalking, 1800);
+  };
+
+  if (nameAudio) {
+    nameAudio.addEventListener("ended", stopTalking);
+  }
+
   if (nameAudio && nameTriggers.length) {
     nameTriggers.forEach(function (btn) {
       btn.addEventListener("click", function () {
+        startTalking();
         try {
           nameAudio.currentTime = 0;
           var playback = nameAudio.play();
           if (playback && typeof playback.catch === "function") {
-            playback.catch(function () {});
+            playback.catch(stopTalking);
           }
         } catch (error) {
-          /* 某些瀏覽器在音訊尚未解碼時會丟錯，忽略即可 */
+          stopTalking();
         }
 
         btn.classList.remove("is-playing");
