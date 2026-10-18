@@ -4203,54 +4203,44 @@ html[data-lang="ko"] .page--gallery {
   }
 }
 
-/* ---------- 角色檔案：只眨眼，身體／頭髮完全不動 ---------- */
-.profile-blink {
+/* ---------- 角色檔案：循環影片立繪 ---------- */
+.profile-video {
   position: relative;
-}
-
-.profile-blink img {
-  display: block;
-  width: 100%;
   aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 22%;
-  border-radius: 20px;
+  overflow: hidden;
   border: 2.5px solid var(--ink);
+  border-radius: 20px;
   background: var(--white);
 }
 
-.profile-blink__closed {
-  position: absolute;
-  inset: 0;
+.profile-video__media {
+  display: block;
+  width: 100%;
   height: 100%;
-  opacity: 0;
-  animation: profile-blink 6.4s ease-in-out infinite;
+  object-fit: cover;
+  object-position: center;
+  background: var(--white);
+  transform: scale(1.16);
 }
 
-@keyframes profile-blink {
-  0%,
-  8%,
-  12%,
-  90%,
-  100% {
-    opacity: 0;
-  }
-  9%,
-  11% {
-    opacity: 1;
-  }
-  91%,
-  95% {
-    opacity: 1;
-  }
-  96% {
-    opacity: 0;
-  }
+.profile-video__poster {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  background: var(--white);
+  transform: scale(1.16);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .profile-blink__closed {
-    animation: none;
-    opacity: 0;
+  .profile-video__media {
+    display: none;
+  }
+
+  .profile-video__poster {
+    display: block;
   }
 }
