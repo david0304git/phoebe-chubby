@@ -4202,3 +4202,55 @@ html[data-lang="ko"] .page--gallery {
     font-size: 0.74rem;
   }
 }
+
+/* ---------- 角色檔案：只眨眼，身體／頭髮完全不動 ---------- */
+.profile-blink {
+  position: relative;
+}
+
+.profile-blink img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 20px;
+  border: 2.5px solid var(--ink);
+  background: var(--white);
+}
+
+.profile-blink__closed {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  opacity: 0;
+  animation: profile-blink 6.4s ease-in-out infinite;
+}
+
+@keyframes profile-blink {
+  0%,
+  8%,
+  12%,
+  90%,
+  100% {
+    opacity: 0;
+  }
+  9%,
+  11% {
+    opacity: 1;
+  }
+  91%,
+  95% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-blink__closed {
+    animation: none;
+    opacity: 0;
+  }
+}
