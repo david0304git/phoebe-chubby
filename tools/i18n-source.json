@@ -3011,5 +3011,167 @@
     "contexts": [
       "gallery.html:text"
     ]
+  },
+  {
+    "key": "北京・萬里長城",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "北京 · 長城 · 秋天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在萬里長城上散步",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "桂林・灕江",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "桂林 · 灕江 · 夏天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在灕江遊船上，背景是桂林山水",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "九寨溝・五彩池",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "四川 · 九寨溝 · 秋天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在九寨溝的碧綠湖水前",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "張家界・奇峰",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "湖南 · 張家界 · 夏天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在張家界的石柱群前",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "蓋倫格峽灣",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "挪威 · 蓋倫格峽灣 · 夏天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在蓋倫格峽灣的船上",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "特羅姆瑟・極光",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "挪威 · 特羅姆瑟 · 冬天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在特羅姆瑟的極光下",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "北角・世界盡頭",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "挪威 · 北角 · 夏天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在北角地球儀旁看海",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "峽灣・懸崖",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "挪威 · 峽灣 · 夏天",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "Phoebe 在挪威峽灣的懸崖邊",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
+  },
+  {
+    "key": "五個國家、每個國家四張照片；日本、法國、中國、澳洲、挪威都已經抵達。",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "第一展區集結名畫 cosplay；第二展區以國家為單位，每國四張照片。 日本、法國、中國、澳洲、挪威都已抵達。作品點一下即可靠近欣賞，燈箱內可用左右鍵切換。",
+    "contexts": [
+      "gallery.html:text"
+    ]
+  },
+  {
+    "key": "長城、山水與奇峰",
+    "contexts": [
+      "assets/js/gallery-data.js:js"
+    ]
   }
 ]

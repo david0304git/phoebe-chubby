@@ -1,7 +1,7 @@
 /* =========================================================
    Phoebe 小星球 — 相簿資料
    - items: 名畫 cosplay
-   - countries: 旅行五國，每國四張；photos 為空時顯示「照片準備中」
+   - countries: 旅行五國，每國四張
    ========================================================= */
 window.PHOEBE_GALLERY = {
   "showDemoBadges": false,
@@ -96,8 +96,41 @@ window.PHOEBE_GALLERY = {
       "en": "China",
       "flag": "🇨🇳",
       "icon": "🏮",
-      "tagline": "古城、山河與燈籠",
-      "photos": []
+      "tagline": "長城、山水與奇峰",
+      "photos": [
+        {
+          "src": "photos/travel/china-01.jpg",
+          "title": "北京・萬里長城",
+          "meta": "北京 · 長城 · 秋天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在萬里長城上散步"
+        },
+        {
+          "src": "photos/travel/china-02.jpg",
+          "title": "桂林・灕江",
+          "meta": "桂林 · 灕江 · 夏天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在灕江遊船上，背景是桂林山水"
+        },
+        {
+          "src": "photos/travel/china-03.jpg",
+          "title": "九寨溝・五彩池",
+          "meta": "四川 · 九寨溝 · 秋天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在九寨溝的碧綠湖水前"
+        },
+        {
+          "src": "photos/travel/china-04.jpg",
+          "title": "張家界・奇峰",
+          "meta": "湖南 · 張家界 · 夏天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在張家界的石柱群前"
+        }
+      ]
     },
     {
       "code": "australia",
@@ -148,7 +181,40 @@ window.PHOEBE_GALLERY = {
       "flag": "🇳🇴",
       "icon": "❄️",
       "tagline": "峽灣、雪峰與極光",
-      "photos": []
+      "photos": [
+        {
+          "src": "photos/travel/norway-01.jpg",
+          "title": "蓋倫格峽灣",
+          "meta": "挪威 · 蓋倫格峽灣 · 夏天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在蓋倫格峽灣的船上"
+        },
+        {
+          "src": "photos/travel/norway-02.jpg",
+          "title": "特羅姆瑟・極光",
+          "meta": "挪威 · 特羅姆瑟 · 冬天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在特羅姆瑟的極光下"
+        },
+        {
+          "src": "photos/travel/norway-03.jpg",
+          "title": "北角・世界盡頭",
+          "meta": "挪威 · 北角 · 夏天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在北角地球儀旁看海"
+        },
+        {
+          "src": "photos/travel/norway-04.jpg",
+          "title": "峽灣・懸崖",
+          "meta": "挪威 · 峽灣 · 夏天",
+          "category": "travel",
+          "demo": false,
+          "alt": "Phoebe 在挪威峽灣的懸崖邊"
+        }
+      ]
     }
   ],
   "items": [
