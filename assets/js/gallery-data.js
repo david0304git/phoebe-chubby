@@ -73,6 +73,26 @@ window.PHOEBE_GALLERY = {
       alt: "Phoebe 在阿爾卑斯雪山與雪松之間"
     },
     {
+      src: "photos/cosplay/lady-with-ermine.jpg",
+      thumb: "photos/cosplay/thumbs/lady-with-ermine.jpg",
+      portrait: true,
+      title: "白貂菲比",
+      meta: "達文西《抱銀貂的女子》· 1490",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 扮成達文西《抱銀貂的女子》，懷裡抱著白貂"
+    },
+    {
+      src: "photos/cosplay/cubist-phoebe.jpg",
+      thumb: "photos/cosplay/thumbs/cubist-phoebe.jpg",
+      portrait: true,
+      title: "立體派菲比",
+      meta: "畢卡索《戴帽的女子》· 1937",
+      category: "cosplay",
+      demo: false,
+      alt: "Phoebe 扮成立體派畢卡索畫中的女子，戴著白帽與藍絲帶"
+    },
+    {
       src: "photos/cosplay/unknown-woman.jpg",
       thumb: "photos/cosplay/thumbs/unknown-woman.jpg",
       portrait: true,

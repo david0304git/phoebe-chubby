@@ -10,7 +10,7 @@
 ## 這個網站有什麼
 
 - **首頁**：角色主視覺、角色檔案、精選相簿、遊戲專區、小屋日記。
-- **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 10 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（旅行＋旅途日常 10 件，淺色旅行手帳＋拍立得＋紙膠帶）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
+- **古典畫廊（相簿）**：分成兩個展區——**I. 跟著菲比賞名畫**（名畫 cosplay 12 件，深綠展牆＋金色畫框）與 **II. 跟著菲比去旅行**（旅行＋旅途日常 10 件，淺色旅行手帳＋拍立得＋紙膠帶）。燈箱會依作品切換古典畫框或明信片樣式，可點開放大、左右切換（支援鍵盤與手機滑動）。
 - **遊戲專區**：7 款小遊戲，手機可玩，最高分自動存在瀏覽器裡。
 - **關於菲比**：角色小檔案、小故事、網站製作方式、版權說明。
 - **語言切換**：繁體中文、简体中文、English、日本語、한국어；頁首可切換，選擇會存在瀏覽器，套用到全站與遊戲頁。
@@ -93,13 +93,13 @@ phoebe-chubby/
 │       └── breakout.js
 ├── photos/                   # 你的真實照片
 │   ├── travel/               # 旅行照
-│   ├── cosplay/              # 10 件名畫 cosplay（網站用 JPEG）＋ thumbs/ 縮圖
+│   ├── cosplay/              # 12 件名畫 cosplay（網站用 JPEG）＋ thumbs/ 縮圖
 │   └── daily/                # 日常照
 └── tools/
     ├── make_placeholders.py  # 產生 15 張示範插圖（可重跑）
     ├── contact_sheet.jpg     # 15 張示範插圖的檢查表
     ├── build_report.txt      # 產圖報告（尺寸、角色位置）
-    ├── i18n-source.json      # 全站翻譯來源字串（397 條）
+    ├── i18n-source.json      # 全站翻譯來源字串（405 條）
     └── browser-check.mjs     # 開發用：headless Chrome 截圖與錯誤檢查
 ```
 
@@ -107,7 +107,7 @@ phoebe-chubby/
 
 ## 換成自己的照片
 
-相簿目前有 **10 件名畫 cosplay 照片**、**6 張旅行示範插圖**與 **4 張日常示範插圖**；第一展區只顯示 10 件照片，另外 5 張舊的名畫示範插圖（星夜、吶喊、蒙娜麗莎插畫、向日葵、珍珠插畫）已從古典區移出，但檔案仍保留在 `assets/img/gallery/`。
+相簿目前有 **12 件名畫 cosplay 照片**、**6 張旅行示範插圖**與 **4 張日常示範插圖**；第一展區只顯示 12 件照片，另外 5 張舊的名畫示範插圖（星夜、吶喊、蒙娜麗莎插畫、向日葵、珍珠插畫）已從古典區移出，但檔案仍保留在 `assets/img/gallery/`。
 要繼續換成自己的照片，有兩種做法，選一種就好。
 
 ### 目前已加入的名畫 cosplay
@@ -124,13 +124,15 @@ phoebe-chubby/
 | `photos/cosplay/milkmaid.jpg` | `photos/cosplay/08.png` | 維梅爾《倒牛奶的女僕》 | 倒牛奶的菲比 |
 | `photos/cosplay/scream.jpg` | `photos/cosplay/09.png` | 孟克《吶喊》 | 吶喊菲比 |
 | `photos/cosplay/salvator-mundi.jpg` | `photos/cosplay/10.png` | 達文西《救世主》 | 救世主菲比 |
+| `photos/cosplay/lady-with-ermine.jpg` | `photos/cosplay/11.png` | 達文西《抱銀貂的女子》 | 白貂菲比 |
+| `photos/cosplay/cubist-phoebe.jpg` | `photos/cosplay/12.png` | 畢卡索《戴帽的女子》· 1937 | 立體派菲比 |
 
-> 05–10 六張都已加入第一展區；五張舊的示範插圖（星夜、吶喊、蒙娜麗莎插畫、向日葵、珍珠插畫）已從古典區移出，不再顯示。
+> 05–12 八張都已加入第一展區；五張舊的示範插圖（星夜、吶喊、蒙娜麗莎插畫、向日葵、珍珠插畫）已從古典區移出，不再顯示。
 
 作品標題採用菲比化名稱（例如「蒙娜菲比」）；下方小字保留原畫家與原畫名，方便辨識。
 
 - 網站用的大圖已壓成 1400×1867、quality 85 的 JPEG；相簿卡片另外使用 `photos/cosplay/thumbs/` 裡的 600×800 縮圖。
-- 原始高解析 PNG（`01.png`～`10.png`，共約 65 MB）留在 `photos/cosplay/` 當母檔，並已寫進 `.gitignore`，不會被推上 GitHub。
+- 原始高解析 PNG（`01.png`～`12.png`，共約 78 MB）留在 `photos/cosplay/` 當母檔，並已寫進 `.gitignore`，不會被推上 GitHub。
 - 資料設定在 `assets/js/gallery-data.js`；新作品放在 cosplay 分類最前面，卡片的 `portrait: true` 會用 3:4 直式比例，`thumb` 指定縮圖。
 - 翻譯字串在 `assets/js/i18n/<語言>.js`，以繁體中文原文為 key；要改文案時，同步更新語言檔即可。
 - 分區規則：`cosplay` 進第一展區「跟著菲比賞名畫」；`travel` 與 `daily` 進第二展區「跟著菲比去旅行」。

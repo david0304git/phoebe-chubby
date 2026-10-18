@@ -396,5 +396,13 @@ window.PHOEBE_I18N["en"] = {
   "🎮 遊戲小天才": "🎮 Game Prodigy",
   "📷 拍照 100 分": "📷 100/100 Photographer",
   "🖼️ 名畫 cosplay": "🖼️ Famous-Painting Cosplay",
-  "Phoebe 小星球 · 菲比的相簿與遊戲小屋": "Phoebe's Little Planet · Phoebe's Album & Game House"
+  "Phoebe 小星球 · 菲比的相簿與遊戲小屋": "Phoebe's Little Planet · Phoebe's Album & Game House",
+  "白貂菲比": "Phoebe and the Ermine",
+  "立體派菲比": "Cubist Phoebe",
+  "達文西《抱銀貂的女子》· 1490": "da Vinci, Lady with an Ermine · 1490",
+  "畢卡索《戴帽的女子》· 1937": "Picasso, Woman with a Hat · 1937",
+  "Phoebe 扮成達文西《抱銀貂的女子》，懷裡抱著白貂": "Phoebe as the Lady with an Ermine, holding a white ermine",
+  "Phoebe 扮成立體派畢卡索畫中的女子，戴著白帽與藍絲帶": "Phoebe as a Cubist lady by Picasso, wearing a white hat with a blue ribbon",
+  "達文西 · 1490": "da Vinci · 1490",
+  "畢卡索 · 1937": "Picasso · 1937"
 };
