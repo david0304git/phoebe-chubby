@@ -4312,8 +4312,8 @@ html[data-lang="ko"] .page--gallery {
   top: 77.9%;
   left: 49.3%;
   z-index: 2;
-  width: 5.6%;
-  aspect-ratio: 1.32;
+  width: 6.8%;
+  height: 5.2%;
   transform: translate(-50%, -50%);
   pointer-events: none;
   opacity: 0;
@@ -4337,7 +4337,7 @@ html[data-lang="ko"] .page--gallery {
 }
 
 .hero__disc.is-talking .hero-mouth__shape {
-  animation: hero-talk 0.16s ease-in-out infinite alternate;
+  animation: hero-talk 0.24s ease-in-out infinite alternate;
 }
 
 .hero-mouth__shape::after {
@@ -4353,10 +4353,10 @@ html[data-lang="ko"] .page--gallery {
 
 @keyframes hero-talk {
   0% {
-    transform: scale(0.88, 0.2);
+    transform: scale(1.04, 1);
   }
   100% {
-    transform: scale(1.04, 1);
+    transform: scale(0.88, 0.2);
   }
 }
 
